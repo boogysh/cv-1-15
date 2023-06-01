@@ -15,9 +15,9 @@ import { useSelector } from "react-redux";
 function Header() {
   const { t } = useSelector((state) => state.langReducer);
   const activeLink =
-    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1.5px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
+    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
   const normalLink =
-    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1.5px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
+    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
 
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimated, setAnimated] = useState(false);
@@ -105,7 +105,7 @@ function Header() {
     title:
       "absolute top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
     navBar:
-      "w-full h-auto py-[10px] px-0 flex  flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
+      "w-full h-auto py-[10px] px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
     fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
     logo: "w-7 h-7 xs:w-9 xs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
   };
