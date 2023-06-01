@@ -1,0 +1,162 @@
+[
+    {   
+        "id":"pr1-terasse",
+        "title":"Réalisation d'une terasse en travertin et renovation de la piscine",
+        "description":"Réalisation d'une chappe",
+        "cover": "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-1.jpg",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-4.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-5.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-6.jpg"
+            
+        ],
+        "info":[
+            "Réalisation d'une chappe de 6 à 12 cm.",
+            "La pose du travertin ep. 2cm avec un  motif de 4 pieces. ",
+            "La pose des margelles de la piscine ep. 5cm.",
+            "Piscine - pose de la mosaïque 4.5cm x 4.5cm, colle epoxy. ",
+            "Application des deux couches de protection sur la pierre."
+        ]
+    },
+    {
+        "id":"renovation_totale",
+        "title":"Rénovation totale d'un appartement",
+        "cover":"https://boogysh.github.io/cv-api/images/bat/pr2/pr2-1.jpg",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-4.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-5.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-6.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-7.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-8.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-9.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-10.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-11.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-12.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-13.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-14.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-15.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-16.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-17.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-18.jpg"
+            
+        ],
+        "info":[
+            "Démolition et évacuation des gravats.",
+            "Réalisation l'ensamble des cloisons en placostil. ",
+            "Installation des menuiseries.",
+            "Electricité et plomberie",
+            "Enduits et peinture",
+            "Ragréage et chauffage au sol électrique",
+            "Pause du carrelage dans la cuisine et les salles de bains.",
+            "Pose collée du parquet massif dans les chambres"
+        ]
+    },
+    {
+         
+        "id":"ouvertures",
+        "title":"Réalisation des ouvertures",
+        "cover": "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-1.jpg",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-4.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-5.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-6.jpg"
+            
+        ],
+        "info":[
+            "Les calucules des charges des murs, plancher et de la charpante.",
+            "Calculer les dimensions et les profils des fers.",
+            "Réalisation des linteau en deux étapes.",
+            "Réalisation des jambages en béton armé.",
+            "Réalisation de l'ouverture et évacuation des gravats",
+            "Réalisation d'un appui/seuil en béton armé.",
+            "La pose de la menuiserie conforme DTU",
+            "Dégrossi et l'enduisage des tableaux."
+        ] 
+        
+    },
+    {
+        "id":"extension",
+        "title":"Réalisation d'une extension. Gros œuvre. ",
+        "cover":"https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-4.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-5.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-6.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-7.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-8.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-9.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-10.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-11.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-12.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-13.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-14.jpg"
+            
+        ],
+        "info":[
+            "Réalisation des fondations en béton armé profondeur 1.2m.",
+            "Plancher RDC avec des hourdis en polystyrène. ",
+            "Montage des murs en parpaings de 20cm.",
+            "Façada bâti avec de la maçonnerie traditionnelle.",
+            "Charpante avec les racords appropriés",
+            "Chainnage et poteaux en béton armé",
+            "Le toit et le chien assi couverts avec des tuiles plates"
+        ]
+
+
+    },
+    {
+        "id":"isolation-placo",
+        "title":"Isolation des murs exterieurs",
+        "cover":"https://boogysh.github.io/cv-api/images/bat/pr5/pr5-1.jpg",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr5/pr5-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr5/pr5-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr5/pr5-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr5/pr5-4.jpg"
+            
+        ],
+        "info":[
+            "Osature réalisée ave des rails et montants R48 et M48.",
+            "Laine de verre GR32 et eppaisseur de 120mm.",
+            "Membrane d'étanchéité",
+            "Placo BA13 normal/hydro/phonic/coupe feu."
+        ]
+
+    },
+    {
+        "id":"assainissement",
+        "title":"Assainissment et drainage",
+        "cover":"",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-1.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-2.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-3.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-4.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-5.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-6.jpg",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-7.png",
+            "https://boogysh.github.io/cv-api/images/bat/pr6/pr6-8.png"
+            
+
+        ],
+        "info":[
+            "Réalisation des tranchées  avec une pante 2cm au metre",
+            "Encolage des tubes en PVC diametre 100mm pour chaque future évacuation.",
+            "Raccord à l'exterieur de la maison dans un regard",
+            "Installation d'un regard 40x40 avec un tampon associé en béton. ",
+            "Systeme de drainage avec 5 longueurs et une surface de 100 m.c. "
+        ]
+    }
+]

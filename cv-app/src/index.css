@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  .h-ratio {
+    height: calc(95vw * 0.7);
+    min-height: 200px;
+    max-height: 420px;
+  }
+  .title-DD {
+    @apply w-full flex justify-center flex-wrap font-semibold text-[1.4rem] leading-6 xs:text-[1.7rem] xs:leading-9 sm:text-[2.2rem] mb-2 px-4 font-dancing;
+  }
+  .italique {
+    font-style: italic;
+    letter-spacing: -1px;
+  }
+}
+@layer components {
+  .btn-icon {
+    @apply ml-2 xs:ml-4 w-6 h-6 xxs:w-7 xxs:h-7 s:w-8 s:h-8 flex justify-center items-center text-gray-800 border-[1px] border-solid border-transparent rounded-full cursor-pointer hover:border-gray-800/50 hover:bg-[#ebdede];
+  }
+  .icon-technos {
+    @apply w-5 h-5 xs:w-6 xs:h-6 s:w-7 s:h-7 mb-1 xs:mb-2 s:mb-3 text-gray-700;
+  }
+  /* ------------CV-------------- */
+  .cv-section {
+    @apply flex flex-col items-center md:items-start md:justify-center flex-wrap md:flex-row w-full pr-0 md:pb-[10px] md:pt-[10px] md:pr-3  lg:pb-[10px] lg:pt-[20px];
+  }
+  .h3-cv {
+    @apply w-[270px] py-3 text-left xs:w-[380px]  md:w-[250px] lg:w-[320px] md:text-right md:pr-5 md:pt-0 lg:pr-[40px]  text-[24px] md:text-[26px] lg:text-[30px]  pr-0  leading-[20px] md:leading-[30px] xs:pb-5 text-[--primary] font-dancing;
+  }
+
+  .col1 {
+    @apply flex text-xs leading-[16px]  xs:text-sm  lg:text-base pb-1 w-[120px]  xs:w-[150px] md:w-[150px] lg:w-[200px];
+  }
+  .col2 {
+    @apply flex flex-col text-xs leading-[16px] xs:text-sm lg:text-base pb-1 w-[150px] xs:w-[230px] md:w-[300px] lg:w-[450px];
+  }
+  .col3 {
+    @apply flex flex-wrap text-xs xs:text-sm lg:text-base h-auto w-[260px]  xs:w-[380px] md:w-[450px] md:pt-[6px] lg:w-[650px] lg:mb-3;
+  }
+  /*-------- HEADER------------ */
+   /* need for scroll-blocking */
+  .fixed-top {
+    position: fixed;
+    top: 0px;
+  } 
+  /* need for scroll-blocking */
+  .pt-fixed {
+    @apply pt-[46px] xs:pt-[53px] md:pt-[60px];
+  }
+  /* bg nav - items */
+  .bg-arch {
+    background-image: url(/src/assets/pr-arch/pr1-2x.jpg);
+  }
+  .bg-bat {
+    background-image: url(/src/assets/pr-bat/3.png);
+  }
+  .bg_dev {
+    background-image: url(/src/assets/pr-dev/bg.png);
+  }
+}
+/* ----------------------------------- */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: Arial, Helvetica, "Montserrat", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  --p_cv: black;
+  --header: #f3f3f3;
+  --cards_bg: #f7f7f7;
+
+  --primary: #180101;
+
+  --bg_color: #f7f7f7;
+  --bg_body: #fff7f7;
+
+  --bg_body_hover: #e0d1d1;
+
+  --bg_body_dark: #ebdede;
+  /* #ebdede */
+
+  --banner_h1: #ff6060;
+  --banner_h1_font: "Dancing Script";
+  --h3_header: "Dancing Script";
+  --footer: "Dancing Script";
+  --card_link: #ffffff;
+  --DD_bg_color: #f7f7f7;
+  --h1: "Dancing Script";
+
+  --h3_DD: #fff;
+  --h3_DD: #000000;
+
+  --h3_DD_FF: "Dancing Script";
+
+  --dev_card_h2_hover: #fff;
+
+  --slider_nr_color: #fff;
+
+  --tags_color: #fff;
+
+  --DD_title_bg: rgb(106, 168, 250);
+  --DD_title_bg: transparent;
+
+  --box_shadow_dd: rgb(141, 141, 141);
+  --box_shadow_slider: rgb(83, 83, 83);
+  --p_content: black;
+
+  --send_comment: #83f492;
+  --send_comment_hover: #37fa51;
+
+  --card_height: 490px;
+  --cardContent_height: 490px;
+}
+
+h2 {
+  font-family: "Dancing Script";
+  font-size: 40px;
+  color: var(--primary);
+}
+a {
+  text-decoration: none;
+}
+#cards {
+  background: transparent !important;
+}
+
+.shadow {
+  box-shadow: 0px 0px 4px rgb(93, 92, 92);
+}
+.shadow:hover {
+  box-shadow: 0px 0px 15px rgb(93, 92, 92);
+}
+.translate-y-100-percents {
+  transform: translateY(-102%);
+}
+.translate-y-0-percents {
+  transform: translateY(0%);
+}
+.text-shadow {
+  text-shadow: 0 0 1.5px black;
+}
+
+.border-red {
+  outline: 2px solid red;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////// */

@@ -1,0 +1,171 @@
+[   {
+    "id":"pr8-castle",
+    "title":"Créez une application web avec des éléments e-commerce",
+    "cover":"https://boogysh.github.io/cv-api/images/dev/kasa/1.png",
+    "pictures":[
+        "https://boogysh.github.io/cv-api/images/dev/castle/1.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/2.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/3.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/4.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/5.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/6.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/7.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/8.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/9.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/10.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/11.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/12.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/13.jpg",
+        "https://boogysh.github.io/cv-api/images/dev/castle/14.jpg"
+    ],
+    "info":[
+        "Utilisation du redux et react-redux",
+        "Réalisation d'un petit back-end pour gerer les fetch GET, POST",
+        "Utilisation de la BD MongoDB et mongoose",
+        "Envoyer les messages et les commandes sur la base de données",
+        "Recherche des commandes avec l'email où le numéro de la commande",
+        "Afficher l'ensamble de l'aplication en ligne avec Vercel"
+        
+        
+    ],
+    "urlProject":"https://castle-boogysh.vercel.app/"
+},
+    {
+        "id":"pr7-kasa",
+        "title":"Créez une application web de location immobilière avec React",
+        "cover":"https://boogysh.github.io/cv-api/images/dev/kasa/1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/kasa/1.png",
+            "https://boogysh.github.io/cv-api/images/dev/kasa/2.png",
+            "https://boogysh.github.io/cv-api/images/dev/kasa/3.png",
+            "https://boogysh.github.io/cv-api/images/dev/kasa/4.png",
+            "https://boogysh.github.io/cv-api/images/dev/kasa/5.png",
+            "https://boogysh.github.io/cv-api/images/dev/kasa/404.png"
+            
+        ],
+        "info":[
+            "Découpage en composants modulaires et réutilisables",
+            "Configurer la navigation entre les pages avec React Router",
+            "Utilisation des props entre les composants",
+            "Utilisation du state dans les composants quand c'est nécessaire",
+            "Gestion des événements",
+            "La page 404 est renvoyée pour chaque route inexistante, ou il y'a une faute dans l'URL"
+        ],
+        "urlProject":"https://boogysh.github.io/kasa/"
+    },
+    {
+        "id":"pr6-api-piquante",
+        "title":"Construisez une API sécurisée pour une application d'avis gastronomiques",
+        "cover":"https://boogysh.github.io/cv-api/images/dev/piquante/1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/piquante/1.png",
+            "https://boogysh.github.io/cv-api/images/dev/piquante/2.png",
+            "https://boogysh.github.io/cv-api/images/dev/piquante/4.png",
+            "https://boogysh.github.io/cv-api/images/dev/piquante/5.png",
+            "https://boogysh.github.io/cv-api/images/dev/piquante/6.png",
+            "https://boogysh.github.io/cv-api/images/dev/piquante/7.png"
+            
+        ],
+        "info":[
+            "Toutes les routes dispose d'une autorisation type: Bearer <token>",
+            "Le mot de passe de l'utilisateur est haché",
+            "L'adresse électronique dans la base de données MongoDB est unique  (mongoose-unique-validator)",
+            "L'utilisateur est vérifié si il est autorisé de modifier ou supprimer une sauce.",
+            "La remontée des erreurs issues de la base de donnée, par des messages d'erreurs personnalisés"
+        ],
+        "urlProject":"https://github.com/boogysh/piquante"
+    },
+    {
+        "id":"pr5-eCommerce",
+        "title":"Construisez un site e-commerce en JavaScript",
+        "cover":"https://boogysh.github.io/cv-api/images/dev/kanap/1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-1.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-2.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-3.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-4.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-5.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-6.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-7.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-8.png",
+            "https://boogysh.github.io/cv-api/images/dev/kanap/kanap-9.png"
+            
+        ],
+        "info":[
+            "Gérer des événements JavaScript",
+            "Interagir avec un web service avec JavaScript",
+            "Valider des données issues de sources externes",
+            "Créer un plan de test pour une application"
+        ],
+        "urlProject":"https://github.com/boogysh/kanap"  
+
+    },
+    {
+        "id":"pr4-SEO",
+        "title":"Optimisez un site web existant:",
+        "cover":"https://boogysh.github.io/cv-api/images/dev/lapanthere.fr/lapanthere-1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/lapanthere.fr/lapanthere-1.png",
+            "https://boogysh.github.io/cv-api/images/dev/lapanthere.fr/lapanthere-2.png",
+            "https://boogysh.github.io/cv-api/images/dev/lapanthere.fr/lapanthere-3.png",
+            "https://boogysh.github.io/cv-api/images/dev/lapanthere.fr/lapanthere-4.png"
+            
+        ],
+        "info":[
+            "Utiliser un domaine personalisé",
+            "Optimiser la taille et la vitesse d’un site web",
+            "Réaliser une recherche des bonnes pratiques en développement web",
+            "Écrire un code HTML et CSS maintenable",
+            "Assurer l'accessibilité d'un site web",
+            "Optimiser le référencement d'un site web"
+        ],
+        "urlProject":"https://la-panthere.fr/",
+        "urlExistent":"https://boogysh.github.io/la-panthere_initial/"
+
+    },
+    {   
+        "id":"pr3-ohmyfood",
+        "title":"Dynamisez une page web avec des animations CSS",
+        "cover":"https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-1.png",
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-2.png",
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-3.png",
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-4.png",
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-5.png",
+            "https://boogysh.github.io/cv-api/images/dev/ohmyfood/ohmyfood-6.png"
+            
+        ],
+        "info":[
+            "Utiliser un système de gestion de versions pour le suivi du projet et son hébergement",
+            "Mettre en place son environnement Front-End",
+            "Assurer la cohérence graphique d'un site web",
+            "Mettre en place une structure de navigation pour un site web",
+            "Mettre en œuvre des effets CSS graphiques avancés"
+        ],
+        "urlProject":"https://boogysh.github.io/OCR_PR3/"
+    },
+    {   
+        "id":"pr2-booki",
+        "title":"Transformez une maquette en site web avec html et css",
+        "cover": "https://boogysh.github.io/cv-api/images/dev/booki/booki-1.png",
+        "pictures":[
+            "https://boogysh.github.io/cv-api/images/dev/booki/booki-1.png",
+            "https://boogysh.github.io/cv-api/images/dev/booki/booki-2.png",
+            "https://boogysh.github.io/cv-api/images/dev/booki/booki-3.png",
+            "https://boogysh.github.io/cv-api/images/dev/booki/booki-4.png",
+            "https://boogysh.github.io/cv-api/images/dev/booki/booki-5.png"
+            
+        ],
+        "info":[
+            "Découpage de la maquete",
+            "Réalisation de la page hébergements",
+            "Réalisation de la page activités",
+            "Utiliser des balises sémantiques",
+            "Réalisation de la partie responsive",
+            "Validation du code auprès du W3C"
+        ],
+        "urlProject":"https://boogysh.github.io/booki/"
+    }
+    
+]
