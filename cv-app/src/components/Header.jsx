@@ -103,11 +103,11 @@ function Header() {
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
     title:
-      "absolute top-[5%] xxs:top-[7%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
+      "absolute top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
     navBar:
       "w-full h-auto py-[10px] px-0 flex  flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
     fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
-    logo: "w-7 h-7 xxs:w-9 xxs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
+    logo: "w-7 h-7 xs:w-9 xs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
   };
   //-----------
 
@@ -163,7 +163,7 @@ function Header() {
           )}
 
           {isTitle.dev && <h3 className={style.title}>{t.devTitle}</h3>}
-          <div className="absolute top-[40%]  xxs:top-[44%] flex justify-center w-[60%] xxs:w-[50%] md:w-[80%] h-[50px];">
+          <div className="absolute top-[44%]  flex justify-center w-[60%] xxs:w-[50%] md:w-[80%] h-[50px];">
             <img className={style.logo} src={html} alt="html" />
             <img className={style.logo} src={css} alt="css" />
             <img className={style.logo} src={js} alt="js" />

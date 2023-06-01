@@ -66,7 +66,7 @@ function CardProjectNew({
                 </Link>
               )}
               {/* LINK TO PROJECT URL --- only development */}
-              {(uri !== t.ArchNav || t.batNav) && (
+              {(uri !== t.archNav && uri !== t.batNav) && (
                 <a className="text-center" href={urlProject} target="blank">
                   <GiClick className="inline-block mr-5 w-5 h-5" />
                   {truncateString(title, 72)}
