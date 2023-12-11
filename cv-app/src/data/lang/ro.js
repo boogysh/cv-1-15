@@ -370,7 +370,6 @@ export const ro = {
       cover: "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
       pictures: [
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-2.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-3.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-4.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-5.jpg",

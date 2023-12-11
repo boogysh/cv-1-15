@@ -98,12 +98,7 @@ export const fr = {
         "Repos: Sauna, Thérapie, Réstaurant.",
         "Parking: 360 voitures.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr1-maison",
@@ -128,12 +123,7 @@ export const fr = {
         "RDC: cuisine, sale à manger, séjour, bureau, bloc sanitaire.",
         "Étage: 4 chambres et bloc sanitaire. ",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr2-maison",
@@ -156,12 +146,7 @@ export const fr = {
         "RDC: Cuisine, salle à manger, séjour, WC.",
         "Étage: 3 chambres, SDB.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
 
     {
@@ -183,12 +168,7 @@ export const fr = {
         "Restaurants.",
         "Salles destinnées à l'administration.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr5-reconstruction",
@@ -210,12 +190,7 @@ export const fr = {
         "Calcule pour chaque type de fondation.",
         "Consolidation des fondations par tranche de 3m.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr6-urbanime",
@@ -231,12 +206,7 @@ export const fr = {
         "Éspaces aménagé: Pour les enfants 7-12 ans.",
         "Éspaces verts.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr7-sistematisation-verticale",
@@ -251,12 +221,7 @@ export const fr = {
         "Déterminer la cote '0' de chaque bâtiment.",
         "Montrer la section transversale de la  chossée. ",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardBat: [
@@ -280,12 +245,7 @@ export const fr = {
         "Piscine - pose de la mosaïque 4.5cm x 4.5cm, colle epoxy. ",
         "Application des deux couches de protection sur la pierre.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "renovation_totale",
@@ -321,12 +281,7 @@ export const fr = {
         "Pause du carrelage dans la cuisine et les salles de bains.",
         "Pose collée du parquet massif dans les chambres.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "ouvertures",
@@ -350,12 +305,7 @@ export const fr = {
         "La pose de la menuiserie conforme DTU.",
         "Dégrossi et l'enduisage des tableaux.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "extension",
@@ -363,7 +313,6 @@ export const fr = {
       cover: "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
       pictures: [
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-2.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-3.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-4.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-5.jpg",
@@ -386,12 +335,7 @@ export const fr = {
         "Chainnage et poteaux en béton armé.",
         "Le toit et la lucarne sont couverts avec des tuiles plates.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "isolation-placo",
@@ -409,12 +353,7 @@ export const fr = {
         "Membrane d'étanchéité.",
         "Placo BA13 normal/hydro/phonic/coupe feu.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "assainissement",
@@ -437,12 +376,7 @@ export const fr = {
         "Installation d'un regard 40x40 avec un tampon associé en béton. ",
         "Systeme de drainage avec 5 longueurs et une surface de 100 m.c. ",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardDev: [

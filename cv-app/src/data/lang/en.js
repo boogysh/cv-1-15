@@ -102,12 +102,7 @@ export const en = {
         "Rest: Sauna, Therapy, Restaurant.",
         "Parking: 360 cars.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr1-maison",
@@ -132,12 +127,7 @@ export const en = {
         "Ground floor: kitchen, dining room, living room, office, toilet block.",
         "Floor: 4 bedrooms and sanitary block.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr2-maison",
@@ -160,12 +150,7 @@ export const en = {
         "Ground floor: Kitchen, dining room, living room, WC.",
         "Floor: 3 bedrooms, bathroom.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
 
     {
@@ -187,12 +172,7 @@ export const en = {
         "Restaurants.",
         "Rooms for the administration.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr5-reconstruction",
@@ -214,12 +194,7 @@ export const en = {
         "Calculates for each type of foundation.",
         "Foundation consolidation, each sector 3m length.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr6-urbanime",
@@ -235,12 +210,7 @@ export const en = {
         "Landscaped areas: For children 7-12 years.",
         "Green areas.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr7-sistematisation-verticale",
@@ -255,12 +225,7 @@ export const en = {
         "Determine the level '0' of each building.",
         "Show the cross section of the road.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardBat: [
@@ -283,12 +248,7 @@ export const en = {
         "Swimming pool - installation of the mosaic 4.5cm x 4.5cm, epoxy glue.",
         "Application of the two layers of protection on the stone.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "renovation_totale",
@@ -324,12 +284,7 @@ export const en = {
         "Gluing of tiles in the kitchen and bathrooms.",
         "Glued installation of massif parquet in the rooms.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "ouvertures",
@@ -353,12 +308,7 @@ export const en = {
         "The installation of the joinery in accordance with DTU.",
         "Roughing and coating of the frames.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "extension",
@@ -366,7 +316,7 @@ export const en = {
       cover: "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
       pictures: [
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-1.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-2.jpg",
+
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-3.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-4.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr4/pr4-5.jpg",
@@ -389,12 +339,7 @@ export const en = {
         "Reinforced concrete band and columns.",
         "The roof and the skylight are covered with flat tiles.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "isolation-placo",
@@ -412,12 +357,7 @@ export const en = {
         "Waterproofing membrane.",
         "Placo BA13 normal/hydro/phonic/fireproof.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "assainissement",
@@ -440,12 +380,7 @@ export const en = {
         "Installation of a 40x40 manhole with an associated concrete pad.",
         "Drainage system with 5 lengths and a surface of 100 sq.m.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardDev: [
