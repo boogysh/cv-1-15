@@ -381,6 +381,28 @@ export const fr = {
   ],
   cardDev: [
     {
+      id: "pr11-moteur-recherche",
+      title: "Créez un moteur de recherche",
+      cover:
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/1.png",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/1.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/2.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/3.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/4.png",
+      ],
+      info: [
+        "Creez un moteur de recherche avec deux axes",
+        "Creez des tags pour chaque valeur recherchée",
+        "Chercher dans les ingredients, Appareils et Ustensiles",
+        "Afficher l'intersection du resultat de recherche",
+        "Afficher un message personalisé pour un resulatat nul"
+        
+      ],
+      technos: ["html", "css", "js"],
+      urlProject: "https://les-petits-plat.vercel.app/",
+    },
+    {
       id: "pr10-social-media",
       title: "Créez une application web type reseau social",
       cover: "https://boogysh.github.io/cv-api/images/dev/social-media/2.jpg",

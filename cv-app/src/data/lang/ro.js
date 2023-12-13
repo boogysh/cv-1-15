@@ -453,6 +453,28 @@ export const ro = {
   ],
   cardDev: [
     {
+      id: "pr11-moteur-recherche",
+      title: "Crearea unui motor de căutare",
+      cover:
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/1.png",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/1.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/2.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/3.png",
+        "https://boogysh.github.io/cv-api/images/dev/moteur_recherche/4.png",
+      ],
+      info: [
+        "Crearea un motor de căutare cu două axe",
+        "Crearea tagurilor pentru fiecare valoare căutată",
+        "Căutare în Ingrediente, Aparate și ustensile",
+        "Afișarea intersecției rezultatului căutării",
+        "Afișarea unui mesaj personalizat pentru un rezultat nul"
+        
+      ],
+      technos: ["html", "css", "js"],
+      urlProject: "https://les-petits-plat.vercel.app/",
+    },
+    {
       id: "pr10-social-media",
       title: "Crearea unei aplicații web tip rețea socială",
       cover: "https://boogysh.github.io/cv-api/images/dev/social-media/2.jpg",
