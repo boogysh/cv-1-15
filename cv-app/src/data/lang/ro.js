@@ -106,12 +106,7 @@ export const ro = {
         "Odihnă: Saună, Terapie, Restaurant.",
         "Parcare: 360 de mașini.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr1-maison",
@@ -136,12 +131,7 @@ export const ro = {
         "Parter: bucătărie, sală de mese, sufragerie, living, birou, bloc sanitar.",
         "Etaj: 4 dormitoare și bloc sanitar.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr2-maison",
@@ -164,12 +154,7 @@ export const ro = {
         "Parter: bucătărie, sală de mese, living, WC.",
         "Etaj: 3 dormitoare, baie.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
 
     {
@@ -191,12 +176,7 @@ export const ro = {
         "Restaurante.",
         "Săli pentru administraţie.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr5-reconstruction",
@@ -218,12 +198,7 @@ export const ro = {
         "Calcule pentru fiecare tip de fundație.",
         "Consolidarea fundației pe sectoare de 3 m.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr6-urbanime",
@@ -239,12 +214,7 @@ export const ro = {
         "Zone amenajate: Pentru copii cu vârste cuprinse între 7 și 12 ani.",
         "Zone verzi.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "pr7-sistematisation-verticale",
@@ -259,12 +229,7 @@ export const ro = {
         "Determinarea cotei '0' al fiecărei clădiri.",
         "Prezintarea secțiunei transversale a șoselei.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardBat: [
@@ -287,12 +252,7 @@ export const ro = {
         "Piscină - instalarea placilor de mozaic 4,5 cm x 4,5 cm, adertant epoxidic.",
         "Aplicarea a două straturi de protecție pe piatră.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "renovation_totale",
@@ -328,12 +288,7 @@ export const ro = {
         "Gresie și faianţa în bucătărie și băi.",
         "Instalare lipită de parchet masiv în dormitoare.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "ouvertures",
@@ -357,12 +312,7 @@ export const ro = {
         "Montarea tâmplăriei în conformitate cu DTU.",
         "Tencuiala și finisarea tablourilor.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "extension",
@@ -392,12 +342,7 @@ export const ro = {
         "Centura și coloane din beton armat.",
         "Acoperișul și lucarna sunt acoperite cu țiglă plată.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "isolation-placo",
@@ -415,12 +360,7 @@ export const ro = {
         "Membrană de etanșare.",
         "Placo BA13 normal/hidro/fonic/rezistent la foc.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
     {
       id: "assainissement",
@@ -443,15 +383,31 @@ export const ro = {
         "Instalarea unei guri de vizitare 40x40 cu tampon de beton asociat.",
         "Sistem de drenaj cu 5 lungimi și o suprafață de 100 mp.",
       ],
-      technos: [
-        "react",
-        "tailwind",
-        "node",
-        "mongoDB",
-      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
     },
   ],
   cardDev: [
+    {
+      id: "pr12-fiche-eye",
+      title: "Fiche-eye",
+      cover: "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/2.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/3.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/4.png",
+      ],
+      info: [
+        "Crearea unui site pentru fotografi",
+        "Liker imaginile folosind local storage",
+        "Crearea unui slider",
+        "Sortare  fotografiilor după popularitate, dată sau titlu",
+        "Completarea și validarea formularului de contact",
+        "Trimiterea mesajului către baza de date mongoDB",
+      ],
+      technos: ["html", "css", "js", "node", "mongoDB"],
+      urlProject: "https://fich-eye.vercel.app/",
+    },
     {
       id: "pr11-moteur-recherche",
       title: "Crearea unui motor de căutare",
@@ -468,8 +424,7 @@ export const ro = {
         "Crearea tagurilor pentru fiecare valoare căutată",
         "Căutare în Ingrediente, Aparate și ustensile",
         "Afișarea intersecției rezultatului căutării",
-        "Afișarea unui mesaj personalizat pentru un rezultat nul"
-        
+        "Afișarea unui mesaj personalizat pentru un rezultat nul",
       ],
       technos: ["html", "css", "js"],
       urlProject: "https://les-petits-plat.vercel.app/",

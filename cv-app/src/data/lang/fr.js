@@ -381,6 +381,28 @@ export const fr = {
   ],
   cardDev: [
     {
+      id: "pr12-fiche-eye",
+      title: "Fiche-eye",
+      cover: "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/2.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/3.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/4.png",
+      ],
+      info: [
+        "Creez un site pour les phographes",
+        "Liker les images dans le local storage",
+        "Creation d'un slider",
+        "Trier les photos par popularité, date où titre",
+        "Completer et valider le formulaire de contact",
+        "Envoyer le message sur la base de donnés mongoDB",
+
+      ],
+      technos: ["html", "css", "js","node","mongoDB"],
+      urlProject: "https://fich-eye.vercel.app/",
+    },
+    {
       id: "pr11-moteur-recherche",
       title: "Créez un moteur de recherche",
       cover:
@@ -396,8 +418,7 @@ export const fr = {
         "Creez des tags pour chaque valeur recherchée",
         "Chercher dans les ingredients, Appareils et Ustensiles",
         "Afficher l'intersection du resultat de recherche",
-        "Afficher un message personalisé pour un resulatat nul"
-        
+        "Afficher un message personalisé pour un resulatat nul",
       ],
       technos: ["html", "css", "js"],
       urlProject: "https://les-petits-plat.vercel.app/",

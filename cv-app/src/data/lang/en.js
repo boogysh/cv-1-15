@@ -385,6 +385,28 @@ export const en = {
   ],
   cardDev: [
     {
+      id: "pr12-fiche-eye",
+      title: "Fiche-eye",
+      cover: "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/1.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/2.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/3.png",
+        "https://boogysh.github.io/cv-api/images/dev/fiche-eye/4.png",
+      ],
+      info: [
+        "Create a site for phographers",
+        "Liker images using the local storage",
+        "Creating a slider",
+        "Sort photos by popularity, date o",
+        "Complete and validate the contact form",
+        "Send the message to database mongoDB",
+
+      ],
+      technos: ["html", "css", "js","node","mongoDB"],
+      urlProject: "https://fich-eye.vercel.app/",
+    },
+    {
       id: "pr11-moteur-recherche",
       title: "Create a search engine application",
       cover:
