@@ -273,6 +273,17 @@ export const en = {
         "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-16.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-17.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-18.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-19.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-20.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-21.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-22.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-23.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-24.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-25.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-26.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-27.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-28.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-29.jpg",
       ],
       info: [
         "Demolition and evacuation of the rubble.",
@@ -401,9 +412,8 @@ export const en = {
         "Sort photos by popularity, date o",
         "Complete and validate the contact form",
         "Send the message to database mongoDB",
-
       ],
-      technos: ["html", "css", "js","node","mongoDB"],
+      technos: ["html", "css", "js", "node", "mongoDB"],
       urlProject: "https://fich-eye.vercel.app/",
     },
     {
@@ -422,8 +432,7 @@ export const en = {
         "Create tags for each searched value",
         "Search in Ingredients, Appliances and Utensils",
         "Show the intersection of search result",
-        "Display a personalized message for a null result"
-        
+        "Display a personalized message for a null result",
       ],
       technos: ["html", "css", "js"],
       urlProject: "https://les-petits-plat.vercel.app/",
