@@ -55,6 +55,9 @@ export const ro = {
   heres: "Compania “Hères Construction”",
 
   heres_val: "Șef de echipă, Șef pe mai multe echipe, Șef de șantier",
+  dev:"Developer de aplicații - JavaScript React",
+  dev_info:"Programare de aplicații pentru uz personal",
+  renovation: "Renovarea caselor individuale",
   characteristics: "Caracteristici",
   characteristics_val:
     "Responsabilitate, Angajament, Punctualitate, Sociabilitate, Capacitate de a lucra cu clienții pentru a găsi o soluție individuală. Abilitatea de a lucra în echipă, rapid și eficient. Abilitate de a evalua situațiile, de a depăși obstacolele și de a lua măsurile adecvate (soluții) care se potrivesc. Abilitatea și dorința de a de a învăța rapid și eficient, domenii noi.",

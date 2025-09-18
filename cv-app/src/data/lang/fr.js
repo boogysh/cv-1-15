@@ -53,6 +53,9 @@ export const fr = {
   catalan: "Activité Non salariée Polyvalente Société “Catalan Building”",
   heres: "Société “Hères Construction”",
   heres_val: "Chef d'équipe, Chef de plusieurs équipes, Chef de Chantier",
+  dev:"Développeur d'application - JavaScript React",
+  dev_info:"Développement d'applications pour usage personnel",
+  renovation: "Rénovation des maisons individuelles",
   characteristics: "Caractéristiques",
   characteristics_val:
     " Responsabilité, Engagement, Ponctualité, Sociabilité, Aptitude de travailler avec les clients pour trouver une solution individuelle. Aptitude de travailler en équipe, rapide et efficace. Capacité d'évaluer les situations, afin de surmonter les obstacles et prendre des mesures (solutions) qui correspondent. Capacité et envie d'apprendre vite et de façon efficace de nouveaux domaines.",

@@ -38,6 +38,20 @@ export default function Experience() {
             {t.heres}<span className="italique">{t.heres_val}</span>
           </p>
         </div>
+        <div className="flex">
+          <p className="col1">01/2022...</p>
+          <p className="col2">
+            {t.dev}
+            <span className="italique">{t.dev_info}</span>
+          </p>
+        </div>
+        <div className="flex">
+          <p className="col1">08/2024...</p>
+          <p className="col2">
+            {t.renovation}
+            {/* <span className="italique">{t.heres_val}</span> */}
+          </p>
+        </div>
       </div>
     </section>
   );

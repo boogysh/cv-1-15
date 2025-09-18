@@ -53,6 +53,9 @@ export const en = {
   catalan: "Non-salaried activity Multi-tasking Company “Catalan Building”.",
   heres: "Company “Hères Construction”",
   heres_val: "Team leader, many teams leader, Site manager",
+  dev:"Application Developer - JavaScript React",
+  dev_info:" Development of applications for personal use",
+  renovation: "Renovation of residential homes",
   characteristics: "Characteristics",
   characteristics_val:
     "Responsibility, Commitment, Punctuality, Sociability, Ability to work with customers to find an individual solution. Ability to work in a team, fast and efficient. Ability to evaluate situations, to overcome obstacles and to take actions (solutions) that correspond. Ability and willingness to learn new areas quickly and efficiently.",
