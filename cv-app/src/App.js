@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Architecture from "./pages/Architecture";
 import Developpement from "./pages/Developpement";
 import OneProject from "./pages/OneProject";
+import Services from "./pages/Services";
 import Building from "./pages/Building";
 import { useSelector } from "react-redux";
 // import Test from "./pages/Test.jsx";
@@ -32,6 +33,8 @@ function App() {
           path={`/${t.locale}/${t.archNav}/:id`}
           element={<OneProject />}
         />
+        <Route path={`/${t.locale}/${t.servicesNav}`} element={<Services />} />
+        <Route path={`/${t.locale}/${t.servicesNav}/:id`} element={<OneProject />} />
         <Route path={`/${t.locale}/${t.batNav}`} element={<Building />} />
         <Route path={`/${t.locale}/${t.batNav}/:id`} element={<OneProject />} />
         <Route path={`/${t.locale}/${t.devNav}`} element={<Developpement />} />

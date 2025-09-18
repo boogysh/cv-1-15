@@ -7,6 +7,7 @@ function Banner({ src, title }) {
   const hrefArch = window.location.href.includes(t.archNav);
   const hrefBat = window.location.href.includes(t.batNav);
   const hrefDev = window.location.href.includes(t.devNav);
+  const hrefServices = window.location.href.includes(t.servicesNav);
 
   const style = {
     title:
@@ -20,7 +21,7 @@ function Banner({ src, title }) {
       <img className="object-cover w-full h-auto" src={src} alt="banner" />
       <h1
         className={`${hrefArch && style.title}  ${
-          (hrefBat || hrefDev) && style.titleBat
+          (hrefBat || hrefDev || hrefServices) && style.titleBat
         } `}
       >
         {title}

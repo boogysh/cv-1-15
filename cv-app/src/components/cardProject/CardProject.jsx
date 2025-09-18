@@ -29,11 +29,13 @@ function CardProjectNew({
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
     const hrefBat = window.location.href.includes(t.batNav);
+    const hrefServ = window.location.href.includes(t.servicesNav);
     const hrefDev = window.location.href.includes(t.devNav);
     hrefArch && setUri(t.archNav);
     hrefBat && setUri(t.batNav);
+    hrefServ && setUri(t.servicesNav);
     hrefDev && setUri(t.devNav);
-  }, [t.archNav, t.batNav, t.devNav]);
+  }, [t.archNav, t.batNav, t.servicesNav, t.devNav]);
   //----
   const truncateString = (str, num) => {
     if (str?.length > num) {
@@ -59,19 +61,23 @@ function CardProjectNew({
           <div className="flex items-center w-full h-auto p-2  bg-[#f1f1f1] z-10 ">
             <h2 className="flex w-full lg:min-h-[3rem] items-center pl-1 text-lg  leading-4 s:text-2xl s:leading-6 font-dancing font-semibold hover:text-blue-600 ">
               {/* LINK TO ONE-PROJECT-ID  --- only architecture & building*/}
-              {(uri === t.archNav || uri === t.batNav) && (
+              {(uri === t.archNav ||
+                uri === t.batNav ||
+                uri === t.servicesNav) && (
                 <Link className="text-center" to={`/${t.locale}/${uri}/${id}`}>
                   <GiClick className="inline-block mr-5 w-5 h-5" />
                   {truncateString(title, 72)}
                 </Link>
               )}
               {/* LINK TO PROJECT URL --- only development */}
-              {(uri !== t.archNav && uri !== t.batNav) && (
-                <a className="text-center" href={urlProject} target="blank">
-                  <GiClick className="inline-block mr-5 w-5 h-5" />
-                  {truncateString(title, 72)}
-                </a>
-              )}
+              {uri !== t.archNav &&
+                uri !== t.batNav &&
+                uri !== t.servicesNav && (
+                  <a className="text-center" href={urlProject} target="blank">
+                    <GiClick className="inline-block mr-5 w-5 h-5" />
+                    {truncateString(title, 72)}
+                  </a>
+                )}
             </h2>
             <button
               onClick={() => setMoreInfo(!moreInfo)}

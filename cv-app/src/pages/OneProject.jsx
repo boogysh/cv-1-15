@@ -8,11 +8,13 @@ export default function OneProject() {
   const { id } = useParams();
   const hrefArch = window.location.href.includes(t.archNav);
   const hrefBat = window.location.href.includes(t.batNav);
+  const hrefServ = window.location.href.includes(t.servicesNav);
 
   let data;
 
   hrefArch && (data = t.cardArch.find((product) => product.id === id));
   hrefBat && (data = t.cardBat.find((product) => product.id === id));
+  hrefServ && (data = t.cardServices.find((product) => product.id === id));
 
   console.log("data", data);
   const { pictures, title, info } = data;

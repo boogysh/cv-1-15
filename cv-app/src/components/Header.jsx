@@ -238,6 +238,15 @@ function Header() {
             {t.batTitle}
           </NavLink>
           <NavLink
+            onClick={addBgAndTitleBat}
+            id="services"
+            // to="/service"
+            to={`/${t.locale}/${t.servicesNav}`}
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            {t.servicesTitle}
+          </NavLink>
+          <NavLink
             onClick={addBgAndTitleDev}
             id="developpement"
             // to="/developpement"
