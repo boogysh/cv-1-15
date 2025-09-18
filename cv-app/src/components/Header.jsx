@@ -146,7 +146,7 @@ function Header() {
             ></div>
           )}
           {isTitle.bat && <h3 className={style.title}>{t.batTitle}</h3>}
-          <h4 className={style.footer}>2011 - 2021</h4>
+          <h4 className={style.footer}>2011 - 2022...</h4>
         </div>
         <div className={`${style.item}  bg_dev bg-cover bg-center`}>
           <Link

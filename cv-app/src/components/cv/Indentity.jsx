@@ -1,5 +1,5 @@
 import React from "react";
-import myself from "../../assets/eu/me-gr-1.png";
+import myself from "../../assets/eu/eu-png-2025.png";
 import { useSelector } from "react-redux";
 
 export default function Indentity() {
@@ -44,10 +44,10 @@ export default function Indentity() {
           <p className="col1">{t.ssNumber}</p>
           <p className="col2">1 86 05 99 151 027</p>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           <p className="col1">{t.adress}:</p>
           <p className="col2">2B rue Jean Becquerel, 77300 Fontainebleau</p>
-        </div>
+        </div> */}
         <div className="flex">
           <p className="col1">{t.tel}:</p>
           <p className="text-xs xs:text-sm lg:text-base">07 53 75 81 64</p>

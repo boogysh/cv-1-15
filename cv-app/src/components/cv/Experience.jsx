@@ -35,7 +35,7 @@ export default function Experience() {
         <div className="flex">
           <p className="col1">02/2015-01/2022</p>
           <p className="col2">
-            {t.heres}(<span className="italique">{t.heres_val}</span>)
+            {t.heres}<span className="italique">{t.heres_val}</span>
           </p>
         </div>
       </div>

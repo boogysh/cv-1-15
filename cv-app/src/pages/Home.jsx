@@ -10,7 +10,7 @@ import CardProject from "../components/cardProject/CardProject";
 import { MdClose } from "react-icons/md";
 export default function Home() {
   const [show, setShow] = useState(false);
-  
+
   const [topArrow, setTopArrow] = useState(false);
   const toggle = () => {
     setShow(!show);
@@ -33,12 +33,11 @@ export default function Home() {
     // <main className="main-home  main-scroll">
     <main className="min-h-[600px] bg-bg_body  flex flex-col w-auto ">
       <div className="flex items-center">
-        
         <button
           onClick={() => toggle()}
           className="flex ml-auto mx-5 mt-3 px-5 rounded-full text-[20px] md:text-[24px] cursor-pointer z-10 border-[1px] border-black hover:bg-[#ebdede]"
         >
-         New
+          New
         </button>
       </div>
       <section className={`w-auto h-auto flex flex-col items-center p-4 `}>
@@ -97,11 +96,12 @@ export default function Home() {
           </h1>
 
           {/* <a href="https://boogysh.github.io/cv-file/CV-Buga-Victor.docx"> */}
-          <a href={source} target="blank">
+          {/*  DESACTIVATED. NEED TO UPGRADE THE PDF FILES */}
+          {/* <a href={source} target="blank">
             <button className="border-[1px] border-black p-1 cursor-pointer rounded-md hover:bg-[#ebdede]">
               {t.download}
             </button>
-          </a>
+          </a> */}
         </div>
 
         <Identity />

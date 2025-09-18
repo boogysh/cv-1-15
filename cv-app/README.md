@@ -59,3 +59,7 @@ Add Netflix-Youtube
 
 Remove all css, repalce by tailwind. Update cardProject => new Model, add env file client side.
 
+### 1.16
+
+Add projects: 2A & 2A1 to Building page. Update the CV. Delete the adresse. Desactivate the download button until the PDFs files are updated. Update of the logo & cv picture.
+

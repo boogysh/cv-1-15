@@ -38,10 +38,10 @@ function Footer() {
         </div>
         <h5 className=" text-base md:text-[18px]  pb-[10px]  text-white font-dancing">
           &copy; {t.footer_p1}
-          <span className="h5_footer_span">v_1.15</span>
+          <span className="h5_footer_span">v_1.16</span>
         </h5>
         <h5 className="text-[12px] md:text-base pb-5 text-white font-dancing">
-          {t.footer_p2} : <span className="h5_footer_span">01/06/2023</span>{" "}
+          {t.footer_p2} : <span className="h5_footer_span">17/09/2025</span>{" "}
         </h5>
       </footer>
     )

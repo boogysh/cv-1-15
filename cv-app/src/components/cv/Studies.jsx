@@ -15,7 +15,7 @@ export default function Studies() {
         <div className="flex">
           <p className="col1">2000-2004</p>
           <p className="col2">
-            L.R.U.R. (<span className="italique">{t.highSchool}</span>)
+            L.R.U.R. <span className="italique">{t.highSchool}</span>
           </p>
         </div>
         <div className="flex">
@@ -29,11 +29,11 @@ export default function Studies() {
         <div className="flex">
           <p className="col1">09/2008-12/2008</p>
           <p className="col2">
-            {t.master} (
+            {t.master} 
             <span className="italique">
               {t.master_stopped}
             </span>
-            )
+            
           </p>
         </div>
         <div className="flex">
@@ -43,8 +43,8 @@ export default function Studies() {
         <div className="flex">
           <p className="col1">05/2022-11/2022</p>
           <p className="col2">
-            {t.devWeb} (
-            <span className="italique">{t.devWeb_val }</span>)
+            {t.devWeb} 
+            <span className="italique">{t.devWeb_val }</span>
           </p>
         </div>
       </div>
