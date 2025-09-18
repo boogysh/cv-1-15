@@ -339,8 +339,9 @@ export const fr = {
         "Modification de la plomberie",
         "Nouveau ballon eau chaude",
         "Coulage d'une dalle de 12cm d'éppaisseur sur la terrasse",
-        "Pose carrelage exterieur sur la terrase",
-        "Remise en peinture des façades",
+        // "Pose carrelage exterieur sur la terrase",
+        // "Remise en peinture des façades",
+        // version mobile depasse sur la photo du slider
       ],
       technos: ["react", "tailwind", "node", "mongoDB"],
     },
