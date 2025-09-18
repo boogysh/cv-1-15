@@ -23,8 +23,8 @@ export default function Header_contact() {
       </a>
       <a
         className={style.item}
-        href="https://www.linkedin.com/in/buga-victor-540913245/"
-        title="https://www.linkedin.com/in/buga-victor-540913245/"
+        href="https://www.linkedin.com/in/victor-buga"
+        title="https://www.linkedin.com/in/victor-buga"
         target="blank"
       >
         <img className={style.logo} src={logo_linkedin} alt="linkedin" />

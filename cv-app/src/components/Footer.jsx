@@ -29,7 +29,7 @@ function Footer() {
             </a>
             <a
               className="flex items-center mb-[10px] pl-[15px] transition duration-200 ease-in-out hover:scale-[1.02]"
-              href="https://www.linkedin.com/in/buga-victor-540913245/"
+              href="https://www.linkedin.com/in/victor-buga"
               target="blank"
             >
               <img className="w-6 h-6 object-cover" src={logo_linkedin} alt="linkedin" />
