@@ -21,7 +21,7 @@ export default function Home() {
       <div className="flex items-center">
         <button
           onClick={() => toggle()}
-          className="flex mr-auto mt-5 ml-5 px-5 rounded-full text-[20px] md:text-[24px] lg:text-[36px] cursor-pointer z-10 border-[1px] services_title_color-3 border_services_title_color-3 hover:bg-[#e0d1d1]"
+          className="flex mr-auto mt-2 ml-0 px-2 md:ml-5 md:mt-5 rounded-full text-[16px] sm:text-[20px] md:text-[24px] lg:text-[36px] cursor-pointer z-10 border-[1px] services_title_color-3 border_services_title_color-3 hover:bg-[#e0d1d1]"
         >
           New
         </button>
