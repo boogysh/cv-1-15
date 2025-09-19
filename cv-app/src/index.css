@@ -40,11 +40,11 @@
     @apply flex flex-wrap text-xs xs:text-sm lg:text-base h-auto w-[260px]  xs:w-[380px] md:w-[450px] md:pt-[6px] lg:w-[650px] lg:mb-3;
   }
   /*-------- HEADER------------ */
-   /* need for scroll-blocking */
+  /* need for scroll-blocking */
   .fixed-top {
     position: fixed;
     top: 0px;
-  } 
+  }
   /* need for scroll-blocking */
   .pt-fixed {
     @apply pt-[46px] xs:pt-[53px] md:pt-[60px];
@@ -166,7 +166,21 @@ a {
   outline: 2px solid red;
 }
 
-
+.services_title_color {
+  color: #e5bd10;
+}
+.services_title_color-2 {
+  color: #bfa00a;
+}
+.services_title_color-3 {
+  color: #ec6a01;
+}
+.border_services_title_color {
+  border-color: #e5bd10;
+}
+.border_services_title_color-2 {
+  border-color: #bfa00a;
+}
 
 /* ////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////// */

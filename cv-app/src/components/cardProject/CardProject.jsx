@@ -81,14 +81,14 @@ function CardProjectNew({
             </h2>
             <button
               onClick={() => setMoreInfo(!moreInfo)}
-              // className="btn-icon px-[6px]  border-gray-300"
-              className="btn-icon px-[6px] border-[1px]  border-orange-300"
+              className="btn-icon px-[6px]  border-orange-300"
+              // className="btn-icon px-[6px] border-[0.75px]  border_services_title_color-2"
             >
               {!moreInfo && (
-                <FaArrowDown className="w-5 text-orange-600 h-5 s:w-6 s:h-6" />
+                <FaArrowDown className="w-5 services_title_color-3 h-5 s:w-6 s:h-6" />
               )}
               {moreInfo && (
-                <FaArrowUp className="w-5 text-orange-600 h-5 s:w-6 s:h-6" />
+                <FaArrowUp className="w-5 services_title_color-3 h-5 s:w-6 s:h-6" />
               )}
             </button>
           </div>

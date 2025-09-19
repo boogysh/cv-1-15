@@ -233,7 +233,7 @@ function Header() {
             id="batiment"
             // to="/batiment"
             to={`/${t.locale}/${t.batNav}`}
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            className={({ isActive }) => (isActive ? activeLink : normalLink) +"services_title_color-3"}
           >
             {t.batTitle}
           </NavLink>
@@ -242,7 +242,8 @@ function Header() {
             id="services"
             // to="/service"
             to={`/${t.locale}/${t.servicesNav}`}
-            className={({ isActive }) => (isActive ? activeLink : normalLink)+"text-orange-600"}
+             className={({ isActive }) => (isActive ? activeLink : normalLink)+"services_title_color-3 "}
+            // className={({ isActive }) => (isActive ? activeLink : normalLink)+"services_title_color-2"}
           >
             {t.servicesTitle}
           </NavLink>
