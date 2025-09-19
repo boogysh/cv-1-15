@@ -1,6 +1,7 @@
 // import "./banner.css";
 import { useSelector } from "react-redux";
 import banner_logo from "../assets/icon-9.png";
+import ButtonNewProjects from "../components/ButtonNewProjects";
 
 function Banner({ src, title }) {
   const { t } = useSelector((state) => state.langReducer);
@@ -22,7 +23,11 @@ function Banner({ src, title }) {
   return (
     <div className="flex justify-end items-start w-full h-auto">
       <div className="flex w-full h-auto bg-gray-900">
-        <img className="object-cover w-full h-auto opacity-70" src={src} alt="banner" />
+        <img
+          className="object-cover w-full h-auto opacity-70"
+          src={src}
+          alt="banner"
+        />
       </div>
       <h1
         className={`${hrefArch && style.title}  ${
@@ -31,19 +36,22 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
-
+       <div className="absolute w-full h-auto left-2 bg-none" >
+            <ButtonNewProjects />
+          </div>
       {(hrefBat || hrefServices) && (
+        
         <div className="absolute flex w-full justify-center items-center text-center  mt-5 md:mt-8 lg:mt-12 xl:mt-[100px]">
           <img
             src={banner_logo}
             alt="logo Boogysh"
             className=" w-[55px] xs:w-[70x] sm:w-[90px] md:w-[110px] lg:w-[140px]"
           />
-          {
-            <h2 className={`${style.h2TitleServices} text-shadow2`}>
-              oogysh Construction
-            </h2>
-          }
+
+          <h2 className={`${style.h2TitleServices} text-shadow2`}>
+            oogysh Construction
+          </h2>
+          
         </div>
       )}
     </div>
