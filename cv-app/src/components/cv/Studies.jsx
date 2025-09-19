@@ -8,10 +8,10 @@ export default function Studies() {
     <section id="studies" className="cv-section "> 
       <h3 className="h3-cv">{t.studies}:</h3>
       <div>
-        <div className="flex">
+        {/* <div className="flex">
           <p className="col1">1992-2000</p>
           <p className="col2">{t.school}</p>
-        </div>
+        </div> */}
         <div className="flex">
           <p className="col1">2000-2004</p>
           <p className="col2">

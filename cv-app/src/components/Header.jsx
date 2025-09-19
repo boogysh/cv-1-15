@@ -15,9 +15,9 @@ import { useSelector } from "react-redux";
 function Header() {
   const { t } = useSelector((state) => state.langReducer);
   const activeLink =
-    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
+    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-[14px] lg:text-[16px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
   const normalLink =
-    "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
+    "block decoration-none ml-0 py-2 uppercase text-[12px] md:text-[12px] lg:text-[14px]  md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
 
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimated, setAnimated] = useState(false);
@@ -242,7 +242,7 @@ function Header() {
             id="services"
             // to="/service"
             to={`/${t.locale}/${t.servicesNav}`}
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            className={({ isActive }) => (isActive ? activeLink : normalLink)+"text-orange-600"}
           >
             {t.servicesTitle}
           </NavLink>

@@ -27,6 +27,7 @@ function App() {
         <Route path={`/${t.locale}`} element={<Home />} />
         <Route path={`/${t.locale}/defaultsite`} element={<Home />} />
         <Route path={`/defaultsite`} element={<Home />} />
+
         {/* <Route path={`/test`} element={<Test />} /> */}
         <Route path={`/${t.locale}/${t.archNav}`} element={<Architecture />} />
         <Route

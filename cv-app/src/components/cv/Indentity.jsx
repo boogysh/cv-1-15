@@ -28,14 +28,14 @@ export default function Indentity() {
           <p className="col1">{t.birthDay}:</p>
           <p className="col2">10/05/1986 </p>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           <p className="col1">{t.birthPlace}:</p>
           <p className="col2">Gura Bicului</p>
-        </div>
-        <div className="flex">
+        </div> */}
+        {/* <div className="flex">
           <p className="col1">{t.countryOfBirth}:</p>
           <p className="col2">{t.country}</p>
-        </div>
+        </div> */}
         <div className="flex">
           <p className="col1">{t.nationalities}:</p>
           <p className="col2">{t.nationalities_val}</p>

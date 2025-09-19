@@ -14,6 +14,8 @@ function Banner({ src, title }) {
       "absolute font-dancing font-semibold text-[24px] xs:text-[36px] sm:text-[48px] lg:text-[60px] 2xl:text-[72px] px-2 xs:px-5 lg:px-8 2xl:px-10",
     titleBat:
       "absolute font-dancing font-semibold text-[24px] xs:text-[36px] sm:text-[48px] lg:text-[60px] 2xl:text-[72px] px-2 xs:px-5 lg:px-8 2xl:px-10 text-white",
+    h2TitleServices:
+      " absolute  w-full text-center  font-dancing font-semibold text-[22px] xs:text-[28px] sm:text-[48px] md:text-[54px] lg:text-[60px] 2xl:text-[72px] mt-8 md:mt-10 lg:mt-14 xl:mt-[100px] text-orange-600  ",
   };
 
   return (
@@ -26,6 +28,11 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
+      {(hrefBat || hrefServices) && (
+        <h2 className={`${style.h2TitleServices} text-shadow2`}>
+          Boogysh Construction
+        </h2>
+      )}
     </div>
   );
 }
