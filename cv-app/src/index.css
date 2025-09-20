@@ -15,6 +15,8 @@
     letter-spacing: -1px;
   }
 }
+
+
 @layer components {
   .btn-icon {
     @apply ml-2 xs:ml-4 w-6 h-6 xxs:w-7 xxs:h-7 s:w-8 s:h-8 flex justify-center items-center text-gray-800 border-[1px] border-solid border-transparent rounded-full cursor-pointer hover:border-gray-800/50 hover:bg-[#ebdede];

@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
@@ -5,7 +6,6 @@ module.exports = {
     extend: {
       fontFamily: {
         dancing: "Dancing Script",
-        
       },
       colors: {
         bg_body: "#fff7f7",
@@ -23,3 +23,7 @@ module.exports = {
   },
   plugins: [],
 };
+
+
+
+

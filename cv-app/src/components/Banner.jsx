@@ -1,6 +1,8 @@
-// import "./banner.css";
 import { useSelector } from "react-redux";
-import banner_logo from "../assets/icon-9.png";
+import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.png";
+// alternative bg-opacity: 55-60-70-80-100
+// alternative bg-opacity: 55-60-70-80-100
+// alternative bg-opacity: 55-60-70-80-100
 import ButtonNewProjects from "../components/ButtonNewProjects";
 
 function Banner({ src, title }) {
@@ -23,11 +25,7 @@ function Banner({ src, title }) {
   return (
     <div className="flex justify-end items-start w-full h-auto">
       <div className="flex w-full h-auto bg-gray-900">
-        <img
-          className="object-cover w-full h-auto opacity-70"
-          src={src}
-          alt="banner"
-        />
+        <img className="object-cover w-full h-auto " src={src} alt="banner" />
       </div>
       <h1
         className={`${hrefArch && style.title}  ${
@@ -36,22 +34,16 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
-       <div className="absolute w-full h-auto left-2 bg-none" >
-            <ButtonNewProjects />
-          </div>
+      <div className="absolute w-full h-auto left-2 bg-none">
+        <ButtonNewProjects />
+      </div>
       {(hrefBat || hrefServices) && (
-        
-        <div className="absolute flex w-full justify-center items-center text-center  mt-5 md:mt-8 lg:mt-12 xl:mt-[100px]">
+        <div className="absolute flex w-full justify-center items-center text-center  mt-3 xs:mt-2 md:mt-5 lg:mt-12 xl:mt-10 2xl:mt-[50px]" >
           <img
-            src={banner_logo}
+            src={logo_boogysh_construction}
             alt="logo Boogysh"
-            className=" w-[55px] xs:w-[70x] sm:w-[90px] md:w-[110px] lg:w-[140px]"
+            className="w-[200px] xs:w-[280px] sm:w-[360px] md:w-[440px] lg:w-[600px] xl:w-[650px] 2xl:w-[800px]"
           />
-
-          <h2 className={`${style.h2TitleServices} text-shadow2`}>
-            oogysh Construction
-          </h2>
-          
         </div>
       )}
     </div>
