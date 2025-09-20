@@ -52,6 +52,13 @@ function Header() {
     setIsOpen(!isOpen);
     setAnimated(!isAnimated);
   };
+  // for closing  burgerMenu onScroll then is opened & isBlocked onTop 1 of 4
+  const closeToggleNav = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      setAnimated(false);
+    }
+  };
 
   //---------scroll limit-----------------
 
@@ -64,6 +71,10 @@ function Header() {
   const [matches_md, setmatches_md] = useState(
     window.matchMedia("(min-width: 768px) ").matches
   );
+  // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 2 of 4
+  const [match_mobile_mode, setMatch_mobile_mode] = useState(
+    window.matchMedia("(max-width: 767px) ").matches
+  );
 
   useEffect(() => {
     window
@@ -75,13 +86,22 @@ function Header() {
     window
       .matchMedia("(min-width: 768px)")
       .addEventListener("change", (e) => setmatches_md(e.matches_md));
+    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 3of 4
+    window
+      .matchMedia("(max-width: 767px)")
+      .addEventListener("change", (e) =>
+        setMatch_mobile_mode(e.match_mobile_mode)
+      );
   }, []);
 
   const scrollFunction = () => {
     const element = document.querySelector("#navBar");
+    const burger_menu_isBlocked = element.classList.contains("fixed-top");
+    const burger_menu_isOpened = element.classList.contains("flex");
     const scroll = document.documentElement.scrollTop > 430;
     const scroll_xs = document.documentElement.scrollTop > 520;
     const scroll_md = document.documentElement.scrollTop > 220;
+
     if (matches && scroll) {
       element && element.classList.add("fixed-top", "pt-fixed");
     } else if (matches_xs && scroll_xs) {
@@ -90,6 +110,10 @@ function Header() {
       element && element.classList.add("fixed-top", "pt-fixed");
     } else {
       element && element.classList.remove("fixed-top", "pt-fixed");
+    }
+    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 4of 4
+    if (match_mobile_mode && burger_menu_isOpened && burger_menu_isBlocked) {
+      closeToggleNav();
     }
   };
   window.onload = scrollFunction;
@@ -198,9 +222,10 @@ function Header() {
           <HeaderBurger toggle={toggleNav} isAnimated={isAnimated} />
         </div>
         <nav
+          // id="burgerMenu"
           className={`${
             isOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row items-center pt-5 md:pt-0 h-auto`}
+          } md:flex flex-col md:flex-row items-center pt-5 md:pt-0 w-full h-full`}
         >
           {/* <NavLink
             onClick={removeAllBgAndTitles}
@@ -233,7 +258,9 @@ function Header() {
             id="batiment"
             // to="/batiment"
             to={`/${t.locale}/${t.batNav}`}
-            className={({ isActive }) => (isActive ? activeLink : normalLink) +"services_title_color-3"}
+            className={({ isActive }) =>
+              (isActive ? activeLink : normalLink) + "services_title_color-3"
+            }
           >
             {t.batTitle}
           </NavLink>
@@ -242,7 +269,9 @@ function Header() {
             id="services"
             // to="/service"
             to={`/${t.locale}/${t.servicesNav}`}
-             className={({ isActive }) => (isActive ? activeLink : normalLink)+"services_title_color-3 "}
+            className={({ isActive }) =>
+              (isActive ? activeLink : normalLink) + "services_title_color-3 "
+            }
             // className={({ isActive }) => (isActive ? activeLink : normalLink)+"services_title_color-2"}
           >
             {t.servicesTitle}
