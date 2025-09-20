@@ -225,7 +225,7 @@ function Header() {
           // id="burgerMenu"
           className={`${
             isOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row items-center pt-5 md:pt-0 w-full h-full`}
+          } md:flex flex-col md:flex-row items-center pt-5 md:pt-0 h-full `}
         >
           {/* <NavLink
             onClick={removeAllBgAndTitles}
