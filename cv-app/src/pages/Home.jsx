@@ -14,7 +14,8 @@ export default function Home() {
     <main className="min-h-[600px] bg-bg_body  flex flex-col w-auto ">
       {/* CV */}
       <section className="w-full">
-        <div className="flex flex-col md:flex-row justify-center items-center relative">
+        {/* <div className="flex flex-col md:flex-row justify-center items-center relative"> */}
+        <div className="flex flex-col md:flex-row justify-center items-center ">
           <h1 className="text-center p-5 text-[26px] md:text-[40px] ">
             Curriculum Vitae
           </h1>

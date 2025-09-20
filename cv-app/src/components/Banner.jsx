@@ -23,8 +23,8 @@ function Banner({ src, title }) {
   };
 
   return (
-    <div className="flex justify-end items-start w-full h-auto">
-      <div className="flex w-full h-auto bg-gray-900">
+    <div className="flex justify-end items-start w-full h-auto relative">
+      <div className="flex w-full h-auto bg-gray-900 " >
         <img className="object-cover w-full h-auto " src={src} alt="banner" />
       </div>
       <h1
@@ -34,7 +34,7 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
-      <div className="absolute w-full h-auto left-2 bg-none">
+      <div className="absolute w-auto h-auto left-2 bg-none">
         <ButtonNewProjects />
       </div>
       {(hrefBat || hrefServices) && (

@@ -83,15 +83,16 @@ function Header() {
     window
       .matchMedia("(min-width: 481px) and (max-width:767px)")
       .addEventListener("change", (e) => setMatches_xs(e.matches_xs));
-    window
-      .matchMedia("(min-width: 768px)")
-      .addEventListener("change", (e) => setmatches_md(e.matches_md));
-    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 3of 4
+
     window
       .matchMedia("(max-width: 767px)")
       .addEventListener("change", (e) =>
         setMatch_mobile_mode(e.match_mobile_mode)
       );
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (e) => setmatches_md(e.matches_md));
+    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 3of 4
   }, []);
 
   const scrollFunction = () => {
@@ -99,6 +100,7 @@ function Header() {
     const burger_menu_isBlocked = element.classList.contains("fixed-top");
     const burger_menu_isOpened = element.classList.contains("flex");
     const scroll = document.documentElement.scrollTop > 430;
+    // const scroll_xs = document.documentElement.scrollTop > 520;
     const scroll_xs = document.documentElement.scrollTop > 520;
     const scroll_md = document.documentElement.scrollTop > 220;
 
@@ -112,6 +114,7 @@ function Header() {
       element && element.classList.remove("fixed-top", "pt-fixed");
     }
     // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 4of 4
+
     if (match_mobile_mode && burger_menu_isOpened && burger_menu_isBlocked) {
       closeToggleNav();
     }
@@ -122,15 +125,15 @@ function Header() {
   //----------
   const style = {
     container:
-      "flex flex-col items-center  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px]",
+      "flex flex-col items-center pb-[1px]  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px]",
     item: "relative overflow-hidden flex flex-col justify-center items-center bg-cover h-[130px] xs:h-[160px] md:h-[200px] mb-[10px] w-full md:w-[32.5%]  md:rounded-[5px] shadow",
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
     title:
       "absolute top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
     navBar:
-      "w-full h-auto py-[10px] px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
-    fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
+      "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
+    // fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
     logo: "w-7 h-7 xs:w-9 xs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
   };
   //-----------
@@ -211,9 +214,9 @@ function Header() {
       </div>
       {/* ---------------------------------- */}
       {/* <div id="navBar" className={`${style.navBar} scroll`}> */}
-      <div id="navBar" className={`${style.navBar} w-full h-auto`}>
+      <div id="navBar" className={`${style.navBar} `}>
         <div className="w-[95%]  md:w-full flex items-center justify-between">
-          <div className="flex justify-center items-center">
+          <div className=" flex justify-center items-center">
             <h3 className="font-dancing text-[26px] pr-4 hidden xxs:block">
               Buga Victor
             </h3>
@@ -227,7 +230,6 @@ function Header() {
           className={`${
             isOpen ? "flex" : "hidden"
           } h-auto md:flex flex-col md:flex-row items-center pt-5 md:pt-0  `}
-          
         >
           {/* <NavLink
             onClick={removeAllBgAndTitles}

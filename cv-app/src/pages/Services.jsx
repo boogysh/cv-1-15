@@ -8,7 +8,9 @@ export default function Building() {
   const { t } = useSelector((state) => state.langReducer);
 
   return (
-    <main className="flex flex-col items-center bg-bg_body  main-scroll">
+    // <main className="min-h-[600px] flex flex-col items-center bg-bg_body  main-scroll">
+    <main className="min-h-[600px] flex flex-col items-center bg-bg_body w-auto">
+      
       <Banner title={t.servicesTitle} src={banner_services} />
       <section
         id="cards"
