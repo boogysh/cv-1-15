@@ -210,8 +210,9 @@ function Header() {
         </div>
       </div>
       {/* ---------------------------------- */}
-      <div id="navBar" className={`${style.navBar} scroll`}>
-        <div className="w-[95%] md:w-full flex items-center justify-between">
+      {/* <div id="navBar" className={`${style.navBar} scroll`}> */}
+      <div id="navBar" className={`${style.navBar} w-full h-auto`}>
+        <div className="w-[95%]  md:w-full flex items-center justify-between">
           <div className="flex justify-center items-center">
             <h3 className="font-dancing text-[26px] pr-4 hidden xxs:block">
               Buga Victor
@@ -225,7 +226,8 @@ function Header() {
           // id="burgerMenu"
           className={`${
             isOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row items-center pt-5 md:pt-0 h-full `}
+          } h-auto md:flex flex-col md:flex-row items-center pt-5 md:pt-0  `}
+          
         >
           {/* <NavLink
             onClick={removeAllBgAndTitles}
