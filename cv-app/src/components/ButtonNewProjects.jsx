@@ -28,10 +28,10 @@ export default function Home() {
       </div>
       <section className={`w-auto h-auto flex flex-col items-center p-4 `}>
         {show && (
-          <div className="fixed flex justify-center items-center top-0 z-[100] bg-black/50  w-full h-full ">
-            <div className="flex flex-col items-center w-full xs:w-[97%] md:w-[700px] h-[70%] xs:h-[75%] md:h-[80%]  bg-bg_body xs:rounded-[20px] overflow-hidden">
+          <div className="fixed flex justify-center items-center top-0 left-0 z-[100] bg-black/50  w-full h-full ">
+            <div className="flex flex-col items-center w-full xs:w-[97%] md:w-[700px] h-[80%] md:h-[90%] bg-bg_body xs:rounded-[20px] overflow-hidden">
               {/* HEADER */}
-              <div className="flex bg-[#f1f1f1] items-center w-full border-[1px] border-b-black">
+              <div className="flex bg-[#f1f1f1] items-center w-full  border-[1px] border-b-black">
                 <h2 className=" w-full h-auto text-center p-1 pr-0 ml-auto  text-[24px] font-semibold md:text-[36px] ">
                   New Projects
                 </h2>
