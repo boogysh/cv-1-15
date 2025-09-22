@@ -30,8 +30,9 @@ export default function Home() {
     firstName: `${val.firstName}`,
     lastName: `${val.lastName}`,
     email: `${val.email}`,
-    message: `${val.message}`,
+    messageTxt: `${val.message}`,
   };
+  console.log("newMessage",newMessage)
   //////
   const sendMessage = async (e) => {
     e.preventDefault();

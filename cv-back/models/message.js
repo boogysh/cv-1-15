@@ -8,9 +8,8 @@ const messageSchema = mongoose.Schema(
   {
     firstName: { type: String },
     lastName: { type: String },
-    messageTxt: { type: String },
     email: { type: String },
-    project: { type: String },
+    messageTxt: { type: String },
   },
   opts //   { timestamps: true }
 );

@@ -1,8 +1,8 @@
 const MESSAGE = require("../models/message");
 
 exports.createMessage = (req, res) => {
-  const { firstName, lastName, email, commentTxt } = req.body;
-  const message = new  MESSAGE({ firstName, lastName, email, commentTxt });
+  const { firstName, lastName, email, messageTxt} = req.body;
+  const message = new  MESSAGE({ firstName, lastName, email, messageTxt });
   message
     .save()
     .then((message) => res.status(200).json(message))
