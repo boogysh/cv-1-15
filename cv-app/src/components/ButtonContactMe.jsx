@@ -32,27 +32,41 @@ export default function Home() {
     email: `${val.email}`,
     messageTxt: `${val.message}`,
   };
-  console.log("newMessage",newMessage)
+  console.log("newMessage", newMessage);
   //////
   const sendMessage = async (e) => {
     e.preventDefault();
     if (val.firstName && val.lastName && val.email && val.message) {
-      const savedMessageResponse = await axios.post(
-        
-        //
-        // Back-End => creaza adresa corecta
+      //   const savedMessageResponse = await axios.post(
+
+      //     //
+      //     // Back-End => creaza adresa corecta
+      //     `${process.env.REACT_APP_URL}/api/messages`,
+      //     newMessage,
+      //     {
+      //       headers: {
+      //         //"Content-Type": "multipart/form-data",
+      //         "Content-Type": "application/json", // ?????? type ??????
+      //       },
+      //     }
+      //   );
+
+      //////////////////////////////
+      // important backend server is from cv 1.11 (first repository on github)
+      ////////////////////////////////
+      const savedMessagePost = fetch(
+        // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
         `${process.env.REACT_APP_URL}/api/messages`,
-        newMessage,
         {
-          headers: {
-            //"Content-Type": "multipart/form-data", 
-            "Content-Type": "application/json", // ?????? type ??????
-          },
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newMessage),
         }
       );
-      console.log("savedMessageResponse", savedMessageResponse); //
 
-      if (savedMessageResponse) {
+      console.log("savedMessagePost", savedMessagePost); //
+
+      if (savedMessagePost) {
         resetValues();
         // display message: Votre message à été envoyé
         // navigate("/");
@@ -79,7 +93,7 @@ export default function Home() {
         {show && (
           <div className="fixed flex justify-center items-center top-0 left-0 z-[99] bg-black/50  w-full h-full  ">
             {/* <div className="flex flex-col items-center w-full xs:w-[97%] md:w-[700px] h-[90%]   md:h-[90%] bg-bg_body xs:rounded-[20px] overflow-hidden">   */}
-                <div className="flex flex-col items-center w-95%  max-w-[400px] h-[90%] max-h-[620px]  xs:max-h-none xs:h-auto bg-bg_body rounded-[20px] overflow-hidden z-[99]">  
+            <div className="flex flex-col items-center w-95%  max-w-[400px] h-[90%] max-h-[620px]  xs:max-h-none xs:h-auto bg-bg_body rounded-[20px] overflow-hidden z-[99]">
               {/* HEADER */}
               <div className="flex rounded-tl-[20px] xxs:rounded-tl-[20px] rounded-tr-[20px] bg-[#f1f1f1] items-center w-full  border-[1px] border-b-black">
                 <h2 className=" w-full h-auto text-center p-1 pr-0 ml-auto  text-[24px] font-semibold md:text-[30px] ">
