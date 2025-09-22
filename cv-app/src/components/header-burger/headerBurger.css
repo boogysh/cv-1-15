@@ -71,10 +71,12 @@
 @media all and (max-width: 767px) {
   .menu_toggle {
     display: flex;
+    /* margin: left 0; */
   }
 }
 @media all and (max-width: 370px) {
   .menu_toggle {
-    transform: scale(0.7);
+    transform: scale(0.9);
+
   }
 }

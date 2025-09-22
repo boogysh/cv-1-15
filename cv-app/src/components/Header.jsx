@@ -8,6 +8,7 @@ import node from "../assets/pr-dev/node.png";
 import balise_ouvr from "../assets/pr-dev/balise-ouvr.png";
 import balise_ferm from "../assets/pr-dev/balise-ferm.png";
 import HeaderContact from "./HeaderContact.jsx";
+import ButtonContactMe from "./ButtonContactMe.jsx";
 import HeaderBurger from "./header-burger/HeaderBurger";
 import LangSelect from "./langSelect";
 import { useSelector } from "react-redux";
@@ -217,11 +218,19 @@ function Header() {
       <div id="navBar" className={`${style.navBar} `}>
         <div className="w-[95%]  md:w-full flex items-center justify-between">
           <div className=" flex justify-center items-center">
-            <h3 className="font-dancing text-[26px] pr-4 hidden xxs:block">
-              Buga Victor
-            </h3>
+            {!matches && (
+              <h3 className="font-dancing text-[26px] pr-4 hidden xxs:block">
+                Victor Buga
+              </h3>
+            )}
+            {matches && (
+              <h3 className="font-dancing text-[20px]  mr-3 hidden xxs:block">
+                V. B.
+              </h3>
+            )}
             <LangSelect />
             <HeaderContact />
+            <ButtonContactMe />
           </div>
           <HeaderBurger toggle={toggleNav} isAnimated={isAnimated} />
         </div>

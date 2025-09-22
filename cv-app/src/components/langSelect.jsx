@@ -44,7 +44,8 @@ export default function LangSelect() {
     <>
       <select
         // className="langSelect"
-        className="flex items-center mx-[10px]  h-5 xs:h-7 rounded-lg"
+        // className="flex items-center mx-0  xs:mx-[10px]  h-5 xs:h-7 rounded-lg"
+        className="flex items-center mr-0  xxs:mr-[5px] xs:mr-[10px] h-5 xs:h-7 rounded-lg"
         defaultValue={(Fr && "fr") || (En && "en") || (Ro && "ro")}
         onChange={langChange}
         id="lang-change"
