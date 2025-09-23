@@ -48,8 +48,9 @@
   }
   /* need for scroll-blocking */
   .pt-fixed {
-    /* @apply pt-[46px] xs:pt-[53px] md:pt-[60px]; */
-    padding-top: 10px;
+    @apply pt-[46px] xs:pt-[53px] md:pt-[60px];
+    /* padding-top: 10px; */
+    /* padding-top: 500px; */
   }
   /* bg nav - items */
   .bg-arch {
