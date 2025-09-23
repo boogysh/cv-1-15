@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  { useState } from "react";
 import { FN, LN, E_MAIL, MSG } from "./adviceMatch";
 
 const useForm = () => {
@@ -12,7 +12,6 @@ const useForm = () => {
   const [borderRed, setBorderRed] = useState({
     firstName: false,
     lastName: false,
-    tel: false,
     email: false,
     message: false,
   });
@@ -25,7 +24,7 @@ const useForm = () => {
     if (value.length === 0) {
       FN_ErrMsg.innerHTML = "";
       setVal({ ...val, firstName: "" });
-      setBorderRed({ ...borderRed, firstName: false });
+      // setBorderRed({ ...borderRed, firstName: false });
     } else if (value.length < 3 || value.length > 25) {
       FN_ErrMsg.innerHTML = FN.adviceLength;
       setVal({ ...val, firstName: "" });
@@ -48,7 +47,7 @@ const useForm = () => {
     if (value.length === 0) {
       LN_ErrMsg.innerHTML = "";
       setVal({ ...val, lastName: "" });
-      setBorderRed({ ...borderRed, lastName: false });
+      // setBorderRed({ ...borderRed, lastName: false });
     } else if (value.length < 3 || value.length > 25) {
       LN_ErrMsg.innerHTML = LN.adviceLength;
       setVal({ ...val, lastName: "" });
@@ -83,7 +82,7 @@ const useForm = () => {
     } else if (!matched) {
       EMAIL_ErrMsg.innerHTML = E_MAIL.adviceContent;
       setVal({ ...val, email: "" });
-      //   setBorderRed({ ...borderRed, email: true });
+      setBorderRed({ ...borderRed, email: true });
     }
   };
 
@@ -97,7 +96,7 @@ const useForm = () => {
     if (value.length === 0) {
       MSG_ErrMsg.innerHTML = "";
       setVal({ ...val, message: "" });
-      setBorderRed({ ...borderRed, message: false });
+      // setBorderRed({ ...borderRed, message: false });
     } else if (value.length < 10) {
       MSG_ErrMsg.innerHTML = MSG.adviceLength;
       setVal({ ...val, message: "" });
@@ -130,6 +129,7 @@ const useForm = () => {
     if (!val.message) setBorderRed({ ...borderRed, message: true });
     else return;
   };
+  
   return {
     matchFN,
     matchLN,

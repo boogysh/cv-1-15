@@ -68,7 +68,7 @@
   animation: rotate45deg 0.5s forwards ease-in-out;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1023px) {
   .menu_toggle {
     display: flex;
     /* margin: left 0; */

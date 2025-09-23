@@ -133,7 +133,7 @@ function Header() {
     title:
       "absolute top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
     navBar:
-      "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[5px] md:flex-row items-center md:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
+      "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] md:py-[10px] lg:flex-row items-center lg:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
     // fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
     logo: "w-7 h-7 xs:w-9 xs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
   };
@@ -218,16 +218,14 @@ function Header() {
       <div id="navBar" className={`${style.navBar} `}>
         <div className="w-[95%]  md:w-full flex items-center justify-between">
           <div className=" flex justify-center items-center">
-            {!matches && (
-              <h3 className="font-dancing text-[26px] pr-4 hidden xxs:block">
-                Victor Buga
-              </h3>
-            )}
-            {matches && (
-              <h3 className="font-dancing text-[20px]  mr-3 hidden xxs:block">
-                V. B.
-              </h3>
-            )}
+            <h3 className="font-dancing text-[26px] pr-4 hidden sm:block">
+              Victor Buga
+            </h3>
+
+            <h3 className="font-dancing text-[20px]  mr-3 hidden xxs:block sm:hidden">
+              V. B.
+            </h3>
+
             <LangSelect />
             <HeaderContact />
             <ButtonContactMe />
@@ -238,7 +236,7 @@ function Header() {
           // id="burgerMenu"
           className={`${
             isOpen ? "flex" : "hidden"
-          } h-auto md:flex flex-col md:flex-row items-center pt-5 md:pt-0  `}
+          } h-auto lg:flex flex-col md:flex-row items-center pt-5 md:pt-0  `}
         >
           {/* <NavLink
             onClick={removeAllBgAndTitles}

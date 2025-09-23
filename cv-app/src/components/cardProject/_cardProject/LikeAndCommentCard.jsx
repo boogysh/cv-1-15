@@ -73,7 +73,9 @@ export default function LikeAndCommentCardNew(props) {
     if (ip && props.id && myIpList) {
       const fetchLikePost = fetch(
         //`process.env.API_LIKES`,
-        "https://cv-back-git-main-boogysh.vercel.app/api/likes",
+        // "https://cv-back-git-main-boogysh.vercel.app/api/likes",
+        "https://cv-back-25.vercel.app/api/likes",
+        // `${process.env.REACT_APP_URL}/api/likes`,
         // "http://localhost:4000/api/likes/",
         {
           method: "POST",
