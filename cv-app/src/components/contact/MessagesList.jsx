@@ -41,7 +41,7 @@ const MessagesList = () => {
 
   //
   return (
-    <div className="mb-5 ">
+    <div className="mb-5  ml-auto">
       {messages.map((message, idx) => {
         // return <Loader  />
         // ) : (
@@ -50,7 +50,7 @@ const MessagesList = () => {
         ) : (
           <div
             key={uuidv4()}
-            className="p-1 sm:p-[10px] mt-[15px] relative  bg-[#f1f1f1] rounded-[10px] w-auto"
+            className=" mx-auto p-[20px] mt-[15px] relative  bg-[#f1f1f1] rounded-[10px]"
           >
             <div className="flex items-center">
               <h3 className="p-2 font-semibold text-sm sm:text-base ">
@@ -61,7 +61,9 @@ const MessagesList = () => {
                 <strong> à: </strong> {message.createdAt.slice(11, 19)}
               </span>
             </div>
-            <p className="pl-[10px] w-[700px]">{message.messageTxt}</p>
+            {/* <p className="pl-[10px] w-95% max-w-[700px]"> */}
+            {/* <p className="pl-[10px] w-full ">{message.messageTxt}</p> */}
+            <p className="pl-[10px] w-95% max-w-[700px] ">{message.messageTxt}</p>
 
             {/* DOTS MENU  */}
             <div

@@ -91,7 +91,7 @@ const useForm = () => {
     const value = e.target.value;
     const MSG_ErrMsg = document.getElementById("MSG_ErrorMsg");
     const matched = value.match(
-      /^[a-zA-Z0-9~!@#$%^&*()`{};':,./<>?|"+£¤áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]+$/
+      /^[a-zA-Z0-9~!@#$%^&*()`{};':,./<>?|"+£¤áțșăâàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]+$/
     );
     if (value.length === 0) {
       MSG_ErrMsg.innerHTML = "";
