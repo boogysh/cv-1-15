@@ -13,6 +13,7 @@ import Developpement from "./pages/Developpement";
 import OneProject from "./pages/OneProject";
 import Services from "./pages/Services";
 import Building from "./pages/Building";
+import Messages from "./pages/Messages";
 import { useSelector } from "react-redux";
 // import Test from "./pages/Test.jsx";
 
@@ -35,10 +36,14 @@ function App() {
           element={<OneProject />}
         />
         <Route path={`/${t.locale}/${t.servicesNav}`} element={<Services />} />
-        <Route path={`/${t.locale}/${t.servicesNav}/:id`} element={<OneProject />} />
+        <Route
+          path={`/${t.locale}/${t.servicesNav}/:id`}
+          element={<OneProject />}
+        />
         <Route path={`/${t.locale}/${t.batNav}`} element={<Building />} />
         <Route path={`/${t.locale}/${t.batNav}/:id`} element={<OneProject />} />
         <Route path={`/${t.locale}/${t.devNav}`} element={<Developpement />} />
+        <Route path={`/${t.locale}/messages`} element={<Messages />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

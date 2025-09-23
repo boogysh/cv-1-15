@@ -76,7 +76,7 @@ const FormContact = () => {
           {/* ---FIRST NAME--- */}
           <label
             className="relative bg-white px-2 rounded top-2 left-3"
-            htmlFor="firstName"
+            htmlFor="firstName"   
           >
             Prénom
           </label>
