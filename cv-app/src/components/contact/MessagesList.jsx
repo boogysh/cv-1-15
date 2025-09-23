@@ -42,8 +42,9 @@ const MessagesList = ({ messages, isLoading }) => {
   const deleteMessage = async (id) => {
     // await fetch(`${process.env.REACT_APP_URL}/api/messages}`, {
     //https://cv-back-25.vercel.app/api/messages
-    console.log("id-----------------",id)
-    await fetch(`https://cv-back-25.vercel.app/api/message/${id}`, {
+    console.log("id-----------------", id);
+    // await fetch(`https://cv-back-25.vercel.app/api/message/${id}`, {
+    await fetch(`https://cv-back-25.vercel.app/api/messages`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -105,6 +106,7 @@ const MessagesList = ({ messages, isLoading }) => {
                 </button>
               )}
               <button
+                id={message._id}
                 onClick={() => setShowDotsMenu(!showDotsMenu)}
                 className={`w-7 h-7 flex  justify-center items-center rounded-full `}
               >
