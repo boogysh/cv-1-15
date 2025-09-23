@@ -26,9 +26,10 @@ exports.getOneMessage = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 exports.deleteOneMessage= (req, res, next) => {
-  
+   
 
   MESSAGE.deleteOne({ _id: req.params.id })
+
 
     .then((message) => res.status(200).json(message))
     .catch((error) => res.status(400).json({ error }));

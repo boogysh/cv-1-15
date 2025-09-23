@@ -11,24 +11,48 @@ const MessagesList = ({ messages, isLoading }) => {
   //
   //
 
-  const deleteMessage = async () => {
-    const response = await fetch(`${process.env.REACT_APP_URL}/api/messages}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // body: JSON.stringify({ userId: loggedInUserId }),
-    });
-  };
+  // const findMessageToDelete = (id) => {
+  //   const oneMessage = messages.filter((item) => {
+  //     return item._id === id;
+  //   });
+  //   setMessageToDelete(oneMessage);
+  //   //
+  //   const deleteMessage = async () => {
+  //     const response = await fetch(
+  //       `${process.env.REACT_APP_URL}/api/messages}`,
+  //       {
+  //         method: "DELETE",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({ _id: IsMessageToDelete[0]._id }),
+  //       }
+  //     );
+  //   };
+  // };
 
   const findMessageToDelete = (id) => {
     const oneMessage = messages.filter((item) => {
       return item._id === id;
     });
     setMessageToDelete(oneMessage);
+    //
   };
 
-  console.log("++++++++++++++++++", IsMessageToDelete);
+  const deleteMessage = async (id) => {
+    // await fetch(`${process.env.REACT_APP_URL}/api/messages}`, {
+    //https://cv-back-25.vercel.app/api/messages
+    console.log("id-----------------",id)
+    await fetch(`https://cv-back-25.vercel.app/api/message/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ _id: id }),
+    });
+  };
+
+  // console.log("++++++++++++++++++", IsMessageToDelete[0]._id);
 
   // export function likesFilter(data2, id, setIpList, setLikesQty) {
   // data2.filter((like) => {
@@ -73,9 +97,8 @@ const MessagesList = ({ messages, isLoading }) => {
               {showDotsMenu && (
                 <button
                   id={message._id}
-                  // onClick={deleteMessage}
-                  //onClick={() => delFunc(id)}
-                  onClick={() => findMessageToDelete(message._id)}
+                  // onClick={() => findMessageToDelete(message._id)}
+                  onClick={() => deleteMessage(message._id)}
                   className={`w-7 h-7 flex ml-px mr-4 justify-center items-center rounded-full `}
                 >
                   <MdDelete className={`w-5 h-5 `} />
