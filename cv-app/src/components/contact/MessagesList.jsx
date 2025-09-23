@@ -1,75 +1,48 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Loader from "../loader/LoaderMessages";
-// import trash from "../../assets/trash.png";
 import { MdDelete } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
+// import { UseFetch } from "../../hooks/useFetch";
+import { UseFetch2 } from "../../hooks/useFetch2";
 
-const MessagesList = ({ messages, isLoading }) => {
-  const [showDotsMenu, setShowDotsMenu] = useState(false);
-  const [IsMessageToDelete, setMessageToDelete] = useState("");
-  //
-  //
+// const MessagesList = ({ messages, isLoading }) => {
+const MessagesList = () => {
+  const [messagesUpdate, setMessagesUpdate] = useState(0);
 
-  // const findMessageToDelete = (id) => {
-  //   const oneMessage = messages.filter((item) => {
-  //     return item._id === id;
-  //   });
-  //   setMessageToDelete(oneMessage);
-  //   //
-  //   const deleteMessage = async () => {
-  //     const response = await fetch(
-  //       `${process.env.REACT_APP_URL}/api/messages}`,
-  //       {
-  //         method: "DELETE",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({ _id: IsMessageToDelete[0]._id }),
-  //       }
-  //     );
-  //   };
-  // };
+  const { data2, isLoading } = UseFetch2(
+    // `${process.env.REACT_APP_URL}/api/messages`,
+    `https://cv-back-25.vercel.app/api/messages`,
+    messagesUpdate
+  );
+  const messages = data2;
 
-  const findMessageToDelete = (id) => {
-    const oneMessage = messages.filter((item) => {
-      return item._id === id;
-    });
-    setMessageToDelete(oneMessage);
-    //
+  const [open, setOpen] = useState(Array.from(messages, () => false));
+  const toggle = (index, value) => {
+    const newOpenState = [...open];
+    newOpenState[index] = value ?? !newOpenState[index];
+    setOpen(newOpenState);
   };
+  //---------------------FETCH---------------------------------
 
+  // DELETE MESSAGE
   const deleteMessage = async (id) => {
-    // await fetch(`${process.env.REACT_APP_URL}/api/messages}`, {
-    //https://cv-back-25.vercel.app/api/messages
-    console.log("id-----------------", id);
-    // await fetch(`https://cv-back-25.vercel.app/api/message/${id}`, {
-    await fetch(`https://cv-back-25.vercel.app/api/messages`, {
+    // await fetch(`${process.env.REACT_APP_URL}/api/messages/${id}`, {
+    await fetch(`https://cv-back-25.vercel.app/api/messages/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ _id: id }),
     });
+    setMessagesUpdate(messagesUpdate + 1);
+    //ref refresh!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   };
 
-  // console.log("++++++++++++++++++", IsMessageToDelete[0]._id);
-
-  // export function likesFilter(data2, id, setIpList, setLikesQty) {
-  // data2.filter((like) => {
-  //   if (like.project === id) {
-  //     setIpList(like.ipList);
-  //     setLikesQty(like.likes);
-  //   }
-  //   return like.ipList && like.likes;
-  // });
-
-  // const notAuthorized = await response.json();
-  // console.log("Authorized-?:", notAuthorized.message);
   //
   return (
     <div className="mb-5 ">
-      {messages.map((message) => {
+      {messages.map((message, idx) => {
         // return <Loader  />
         // ) : (
         return isLoading ? (
@@ -91,13 +64,13 @@ const MessagesList = ({ messages, isLoading }) => {
             <p className="pl-[10px] w-[700px]">{message.messageTxt}</p>
 
             {/* DOTS MENU  */}
-            {/* {userIdEgalPostUserId && ( */}
             <div
               className={`flex w-fit ml-auto  border-[1px]  h-fit rounded-full`}
             >
-              {showDotsMenu && (
+              {/* {showDotsMenu && ( */}
+              {open[idx] && (
                 <button
-                  id={message._id}
+                  key={uuidv4()}
                   // onClick={() => findMessageToDelete(message._id)}
                   onClick={() => deleteMessage(message._id)}
                   className={`w-7 h-7 flex ml-px mr-4 justify-center items-center rounded-full `}
@@ -106,8 +79,9 @@ const MessagesList = ({ messages, isLoading }) => {
                 </button>
               )}
               <button
-                id={message._id}
-                onClick={() => setShowDotsMenu(!showDotsMenu)}
+                key={uuidv4()}
+                // isOpen={open[idx]}
+                onClick={() => toggle(idx)}
                 className={`w-7 h-7 flex  justify-center items-center rounded-full `}
               >
                 <BsThreeDots className={`w-4 h-4 `} />

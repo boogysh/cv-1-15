@@ -28,7 +28,6 @@ export function UseFetch2(url, state) {
     }
     fetchData2();
     // }, [url, id]);
-  }, [url, state]);
-  // }, [url, data2]);
+  }, [url, state]);    //url+statePage
   return { isLoading, data2, error };
 }
