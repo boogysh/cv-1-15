@@ -34,6 +34,8 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
+      {(hrefBat || hrefServices) && <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-[#ec6a01]  text-[10px] xxs:text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px]">SIRET: En cours d'attribution</span>
+      }
       <div className="absolute w-auto h-auto left-2 bg-none">
         <ButtonNewProjects />
       </div>
