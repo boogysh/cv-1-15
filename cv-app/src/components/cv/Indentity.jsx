@@ -57,6 +57,10 @@ export default function Indentity() {
           <p className="col2">bugavictor86@gmail.com</p>
         </div>
         <div className="flex">
+          <p className="col1">linkedin</p>
+          <p className="col2">www.linkedin.com/in/victor-buga</p>
+        </div>
+        <div className="flex">
           <p className="col1">{t.civilStatus}</p>
           <p className="col2">{t.civilStatus_val}</p>
         </div>

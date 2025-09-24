@@ -16,8 +16,9 @@ function Footer() {
     show && (
       <footer className="w-full min-h-[100px] bg-[#171717] flex flex-col justify-center items-center m-0 pt-[10px] md:pt-[20px]">
         <div className="flex">
-          <h3 className="text-[22px]  md:text-[28px] pr-[10px]  text-white font-dancing ">Contact:</h3>
+          <h3 className="text-[22px]  md:text-[28px] pr-[10px] leading-0  text-white font-dancing flex items-center">Contact:</h3>
           <div className="flex  pt-[7px]">
+            <p className="text-white  flex items-center pb-1 text-[16px] xxs:text-[18px] xs:text-[20px] sm:text-[22px]">07.53.75.81.64</p>
             <a className="flex items-center mb-[10px] pl-[15px] transition duration-200 ease-in-out hover:scale-[1.02] " href="tel:+33753758164">
               <img className="w-6 h-6 object-cover" src={logo_tel} alt="telephone" />
             </a>
