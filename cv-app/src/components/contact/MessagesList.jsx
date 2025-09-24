@@ -4,18 +4,23 @@ import Loader from "../loader/LoaderMessages";
 import { MdDelete } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
 // import { UseFetch } from "../../hooks/useFetch";
-import { UseFetch2 } from "../../hooks/useFetch2";
+// import { UseFetch2 } from "../../hooks/useFetch2";
 
-// const MessagesList = ({ messages, isLoading }) => {
-const MessagesList = () => {
-  const [messagesUpdate, setMessagesUpdate] = useState(0);
+const MessagesList = ({
+  messages,
+  isLoading,
+  messagesUpdate,
+  setMessagesUpdate,
+}) => {
+  // const MessagesList = () => {
+  // const [messagesUpdate, setMessagesUpdate] = useState(0);
 
-  const { data2, isLoading } = UseFetch2(
-    // `${process.env.REACT_APP_URL}/api/messages`,
-    `https://cv-back-25.vercel.app/api/messages`,
-    messagesUpdate
-  );
-  const messages = data2;
+  // const { data2, isLoading } = UseFetch2(
+  //   // `${process.env.REACT_APP_URL}/api/messages`,
+  //   `https://cv-back-25.vercel.app/api/messages`,
+  //   messagesUpdate
+  // );
+  // const messages = data2;
 
   const [open, setOpen] = useState(Array.from(messages, () => false));
   const toggle = (index, value) => {
@@ -36,7 +41,7 @@ const MessagesList = () => {
       body: JSON.stringify({ _id: id }),
     });
     setMessagesUpdate(messagesUpdate + 1);
-    //ref refresh!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //refresh!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   };
 
   //
@@ -63,7 +68,9 @@ const MessagesList = () => {
             </div>
             {/* <p className="pl-[10px] w-95% max-w-[700px]"> */}
             {/* <p className="pl-[10px] w-full ">{message.messageTxt}</p> */}
-            <p className="pl-[10px] w-95% max-w-[700px] ">{message.messageTxt}</p>
+            <p className="pl-[10px] w-95% max-w-[700px] ">
+              {message.messageTxt}
+            </p>
 
             {/* DOTS MENU  */}
             <div

@@ -1,7 +1,7 @@
 function LoaderMessages() {
   return (
-    <div className="w-full h-full  flex justify-center items-center">
-      <div className="absolute flex my-auto w-8 h-8 rounded-full animate-spin border-[4px] border-solid border-orange-500   border-b-transparent"></div>
+    <div className="mt-[70px] w-full h-full  flex justify-center items-center">
+      <div className="absolute flex   my-auto w-8 h-8 rounded-full animate-spin border-[4px] border-solid border-orange-500   border-b-transparent"></div>
     </div>
   );
 }

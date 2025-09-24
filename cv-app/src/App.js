@@ -15,6 +15,7 @@ import Services from "./pages/Services";
 import Building from "./pages/Building";
 import Messages from "./pages/Messages";
 import { useSelector } from "react-redux";
+import Diplomes from "./pages/Diplomes";
 // import Test from "./pages/Test.jsx";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path={`/${t.locale}/${t.batNav}/:id`} element={<OneProject />} />
         <Route path={`/${t.locale}/${t.devNav}`} element={<Developpement />} />
         <Route path={`/${t.locale}/messages`} element={<Messages />} />
+        <Route path={`/${t.locale}/diplomes`} element={<Diplomes />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <Footer />

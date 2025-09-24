@@ -1,15 +1,18 @@
-// import { useEffect} from "react";
+import { useState } from "react";
 import MessagesList from "../components/contact/MessagesList";
-// import { UseFetch } from "../hooks/useFetch";
+import Loader from "../components/loader/LoaderMessages";
+//  import { UseFetch } from "../hooks/useFetch";
 import { UseFetch2 } from "../hooks/useFetch2";
 export default function Messages() {
   // const { t } = useSelector((state) => state.langReducer);
+  const [messagesUpdate, setMessagesUpdate] = useState(0);
 
   //---------------------FETCH---------------------------------
-  const { data2 } = UseFetch2(
+  const { isLoading, data2 } = UseFetch2(
     // `https://cv-back-git-main-boogysh.vercel.app/api/comments`,
-    `https://cv-back-25.vercel.app/api/messages`
     // `${process.env.REACT_APP_URL}/api/messages`,
+    `https://cv-back-25.vercel.app/api/messages`,
+    messagesUpdate
   );
 
   return (
@@ -22,12 +25,15 @@ export default function Messages() {
             Messages
           </h1>
           <div className="p-1  w-auto h-auto">
-            {data2.length > 0 ? (
+            {isLoading ? (
+              <Loader />
+            ) : data2.length > 0 ? (
               <MessagesList
-              // messages={data}
-              // isLoading={isLoading}
-              // showDotsMenu={showDotsMenu}
-              // setShowDotsMenu={setShowDotsMenu}
+                messages={data2}
+                isLoading={isLoading}
+                // setLoading={setLoading}
+                messagesUpdate={messagesUpdate}
+                setMessagesUpdate={setMessagesUpdate}
               />
             ) : (
               <p className={`pl-3 text-sm sm:text-base font-sans`}>
@@ -35,6 +41,23 @@ export default function Messages() {
               </p>
             )}
           </div>
+          {/* <div className="p-1  w-auto h-auto">
+            {data2.length > 0 ? (
+              <MessagesList
+                messages={data2}
+                isLoading={isLoading}
+                // setLoading={setLoading}
+                messagesUpdate={messagesUpdate}
+                setMessagesUpdate={setMessagesUpdate}
+              />
+            ) : isLoading ? (
+              <Loader />
+            ) : (
+              <p className={`pl-3 text-sm sm:text-base font-sans`}>
+                The list is empty
+              </p>
+            )}
+          </div> */}
         </div>
       </section>
     </main>
