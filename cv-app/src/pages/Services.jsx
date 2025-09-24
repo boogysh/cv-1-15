@@ -29,13 +29,11 @@ export default function Building() {
         </div>
         <section className="flex flex-wrap p-[30px]">
           <h3 className="text-center w-full text-[18px] s:text-[22px] lg:text-[24px] pt-0 sm:pt-3 mb-7">
-            Vous avez des travaux de rénovation à réaliser ou des petites
-            interventions?
+            Voulez vous rénover votre logement ou une des vos pièces ?
           </h3>
 
           <p className="indent-5 text-sm xs:text-base lg:text-lg pb-5 ">
-            Voulez vous faire des économies jusqu' à 40% sur vos travaux ? C'est
-            simple. Réglez vous même les matériaux, dans les magasins pro au
+            Faites des économies jusqu' à 40% sur vos travaux. Réglez vous même les matériaux, dans les magasins pro au
             prix négocié et payez que la main d'œuvre. Moi je ferai le reste,
             des rénovation du sol au plafond.
           </p>
