@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.png";
+// import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.png";
+import logo_boogysh_construction_2 from "../assets/logo-boogysh-construction-2-70.png";
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
@@ -24,7 +25,7 @@ function Banner({ src, title }) {
 
   return (
     <div className="flex justify-end items-start w-full h-auto relative">
-      <div className="flex w-full h-auto bg-gray-900 " >
+      <div className="flex w-full h-auto bg-gray-900 ">
         <img className="object-cover w-full h-auto " src={src} alt="banner" />
       </div>
       <h1
@@ -34,19 +35,30 @@ function Banner({ src, title }) {
       >
         {title}
       </h1>
-      {(hrefBat || hrefServices) && <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-[#ec6a01]  text-[10px] xxs:text-[12px] xs:text-[14px] sm:text-[16px] md:text-[18px]">SIRET: En cours d'attribution</span>
-      }
+      {(hrefBat || hrefServices) && (
+        <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-[#ec6a01]  text-[10px] xxs:text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] tracking-[-0.4px]">
+          SIRET: En cours d'attribution
+        </span>
+      )}
       <div className="absolute w-auto h-auto left-2 bg-none">
         <ButtonNewProjects />
       </div>
       {(hrefBat || hrefServices) && (
-        <div className="absolute flex w-full justify-center items-center text-center  mt-3 xs:mt-2 md:mt-5 lg:mt-12 xl:mt-10 2xl:mt-[50px]" >
+        // small logo
+        <div className="absolute top-[-25px] xxs:top-[-20px] xs:top-[-10px] flex w-full justify-center items-center text-center  mt-3 xs:mt-2 md:mt-5 lg:mt-12 xl:mt-10 2xl:mt-[70px] ">
           <img
-            src={logo_boogysh_construction}
+            src={logo_boogysh_construction_2}
             alt="logo Boogysh"
-            className="w-[200px] xs:w-[280px] sm:w-[360px] md:w-[440px] lg:w-[600px] xl:w-[650px] 2xl:w-[800px]"
+            className="w-[120px] xxs:w-[130px] xs:w-[150px] sm:w-[200px] md:w-[230px] lg:w-[280px] xl:w-[340px] 2xl:w-[400px]"
           />
         </div>
+        // <div className="absolute flex w-full justify-center items-center text-center  mt-3 xs:mt-2 md:mt-5 lg:mt-12 xl:mt-10 2xl:mt-[50px]" >
+        //   <img
+        //     src={logo_boogysh_construction}
+        //     alt="logo Boogysh"
+        //     className="w-[200px] xs:w-[280px] sm:w-[360px] md:w-[440px] lg:w-[600px] xl:w-[650px] 2xl:w-[800px]"
+        //   />
+        // </div>
       )}
     </div>
   );
