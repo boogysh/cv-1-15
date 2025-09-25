@@ -10,7 +10,23 @@ import { useSelector } from "react-redux";
 import { GiClick } from "react-icons/gi";
 
 export default function Home() {
-   const { t } = useSelector((state) => state.langReducer);
+  const { t } = useSelector((state) => state.langReducer);
+
+  const Fr = window.location.href.includes("/fr");
+  const En = window.location.href.includes("/en");
+  const Ro = window.location.href.includes("/ro");
+
+  let source;
+
+  Fr &&
+    (source =
+      "https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-fr-pdf.pdf "); // https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-fr-pdf.pdf   !!! format is important  !!!
+  En &&
+    (source =
+      "https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-en-pdf.pdf"); //https://boogysh.github.io/cv-file/cv-buga-victor-en.pdf  !!! format is important  !!!
+  Ro &&
+    (source =
+      "https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-ro-pdf.pdf");
 
   return (
     <main className="min-h-[600px] bg-bg_body  flex flex-col w-auto relative ">
@@ -21,8 +37,10 @@ export default function Home() {
             src={DiplomeArchitecture}
             alt="diplome architecture"
           />
-          <GiClick className="inline-block absolute top-[80px] sm:top-[100px] md:top-[80px] lg:top-[130px] 
-          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6 lg:w-10 lg:h-10 text-[#ec6a01]" />
+          <GiClick
+            className="inline-block absolute top-[80px] sm:top-[100px] md:top-[80px] lg:top-[130px] 
+          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6 lg:w-10 lg:h-10 text-[#ec6a01]"
+          />
         </div>
       </Link>
       {/* CV */}
@@ -35,11 +53,11 @@ export default function Home() {
 
           {/* <a href="https://boogysh.github.io/cv-file/CV-Buga-Victor.docx"> */}
           {/*  DESACTIVATED. NEED TO UPGRADE THE PDF FILES */}
-          {/* <a href={source} target="blank">
+          <a href={source} target="blank">
             <button className="border-[1px] border-black p-1 cursor-pointer rounded-md hover:bg-[#ebdede]">
               {t.download}
             </button>
-          </a> */}
+          </a>
         </div>
 
         <Identity />
