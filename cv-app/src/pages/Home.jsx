@@ -38,8 +38,8 @@ export default function Home() {
             alt="diplome architecture"
           />
           <GiClick
-            className="inline-block absolute top-[80px] sm:top-[100px] md:top-[80px] lg:top-[130px] 
-          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6 lg:w-10 lg:h-10 text-[#ec6a01] " 
+            className="inline-block absolute top-[65px] xs:top-[65px] sm:top-[100px] md:top-[70px] lg:top-[110px] 
+          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6  lg:w-10 lg:h-10 text-[#ec6a01] " 
           />
         </div>
       </Link>
