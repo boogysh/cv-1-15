@@ -29,32 +29,32 @@ export default function Home() {
       "https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-ro-pdf.pdf");
 
   return (
-    <main className="min-h-[600px] bg-bg_body  flex flex-col w-auto relative ">
+    <main className="min-h-[600px] bg-bg_body flex flex-col w-auto relative ">
       <Link to={`/${t.locale}/diplomes`}>
-        <div className=" w-auto h-auto ml-auto absolute top-0 right-0  m-10 mr-5 mt-[60px]  md:m-5 md:mt-10  lg:m-10  border-[1px]  border-[#ec6a01]">
+        <div className=" w-auto h-auto ml-auto absolute  top-[50px]  right-[0px] md:top-0 md:right-0 rounded-[10px]  m-10 mr-5 mt-[60px] xs:mr-5   md:m-5 md:mt-8 lg:m-8  border-[1px]  border-[#ec6a01] shadow shadow:hover overflow-hidden">
           <img
-            className="h-[auto] w-[140px] xs:w-[160px] sm:w-[180px] md:w-[150px] lg:w-[240px] "
+            className="h-[auto] w-[120px] sm:w-[180px] md:w-[130px] lg:w-[200px]  "
             src={DiplomeArchitecture}
             alt="diplome architecture"
           />
           <GiClick
             className="inline-block absolute top-[80px] sm:top-[100px] md:top-[80px] lg:top-[130px] 
-          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6 lg:w-10 lg:h-10 text-[#ec6a01]"
+          right-[0px] md:right-[0px] lg:right-[20px] mr-5 w-6  h-6 lg:w-10 lg:h-10 text-[#ec6a01] " 
           />
         </div>
       </Link>
       {/* CV */}
       <section className="w-full">
         {/* <div className="flex flex-col md:flex-row justify-center items-center relative"> */}
-        <div className="flex flex-col md:flex-row justify-center items-center ">
-          <h1 className="text-center p-5 text-[26px] md:text-[40px] ">
+        <div className="flex flex-col md:flex-row justify-center items-center mb-2">
+          <h1 className="text-center p-3 sm:p-5 text-[26px] md:text-[40px] ">
             Curriculum Vitae
           </h1>
 
           {/* <a href="https://boogysh.github.io/cv-file/CV-Buga-Victor.docx"> */}
           {/*  DESACTIVATED. NEED TO UPGRADE THE PDF FILES */}
           <a href={source} target="blank">
-            <button className="border-[1px] border-black p-1 cursor-pointer rounded-md hover:bg-[#ebdede]">
+            <button className="border-[1px] border-black p-1 cursor-pointer rounded-md hover:bg-[#ebdede] shadow shadow:hover">
               {t.download}
             </button>
           </a>
