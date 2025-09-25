@@ -114,15 +114,17 @@ export const fr = {
         "Maison pour une famille avec 3-4 enfants. Les photos sont des rendus (renders) realisées avec 3D'S MAX + V-ray.",
       cover: "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
       pictures: [
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-2.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-2.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-3.jpg",
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-4.png",
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-5.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-4.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-5.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-6.png",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-7.png",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-8.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-9.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-10.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-11.jpg",
       ],
       info: [
         "Maison en blocs de calcaires.",
@@ -162,9 +164,9 @@ export const fr = {
       title: "Boogysh Cinéma",
       description:
         "Le projet Boogysh Cinéma, répresente la solution aux problèmes comme: la physique du son, calcule de visibilité en respectant les règles de l'art.",
-      cover: "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-1.png",
+      cover: "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-0.jpg",
       pictures: [
-        "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-2.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-0.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-1.png",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-2.png",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-3.png",

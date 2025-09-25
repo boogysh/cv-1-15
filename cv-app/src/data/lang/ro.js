@@ -120,15 +120,17 @@ export const ro = {
         "Casă pentru o familie cu 3-4 copii. Fotografiile sunt randări realizate cu 3D'S MAX + V-ray.",
       cover: "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
       pictures: [
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-2.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-2.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-3.jpg",
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-4.png",
-        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-5.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-4.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-5.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-6.png",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-7.png",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-8.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-9.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-10.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-11.jpg",
       ],
       info: [
         "Casă din blocuri de calcar.",
@@ -168,9 +170,9 @@ export const ro = {
       title: "Boogysh Cinema",
       description:
         "Proiectul Boogysh Cinema este o soluție la probleme precum: fizica sunetului si calculul vizibilității, respectînd regulile de artă.",
-      cover: "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-1.png",
+      cover: "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-0.jpg",
       pictures: [
-        "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-2.png",
+        "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-0.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-1.png",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-2.png",
         "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-3.png",
