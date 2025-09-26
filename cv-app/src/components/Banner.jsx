@@ -6,7 +6,6 @@ import logo_boogysh_construction_2 from "../assets/logo-boogysh-construction-2-7
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
 import ButtonNewProjects from "../components/ButtonNewProjects";
-import Loader from "./loader/Loader";
 
 function Banner({ src, title }) {
   const [loading, setLoading] = useState(true);
