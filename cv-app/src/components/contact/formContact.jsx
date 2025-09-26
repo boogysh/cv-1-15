@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { FiEdit2 } from "react-icons/fi";
 import LoaderBtnContact from "../loader/loaderBtnContact";
 import useForm from "../../hooks/useForm/useFormContact";
+import emailjs from "@emailjs/browser";
 
 // const FormContact = ({ sendMessage }) => {
 const FormContact = () => {
@@ -32,6 +33,31 @@ const FormContact = () => {
   // console.log("newMessage", newMessage);
 
   const allValues = val.firstName && val.lastName && val.email && val.message;
+
+  //-------  SEND MAIL -----------------
+
+  const templateParams = {
+    name: newMessage.firstName +  " " + newMessage.lastName,
+    notes: newMessage.messageTxt,
+    email: newMessage.email
+  };
+
+  const sendMail = () => {
+    
+    emailjs
+      .send("service_rzuujy6", "template_wzrwyn8", templateParams, {
+        publicKey: "OQTtdAZ2AH8XyZRag",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
+  };
+  console.log(sendMail);
 
   // const sendMessage = async () => {
   const sendMessage = async (e) => {
@@ -76,7 +102,7 @@ const FormContact = () => {
           {/* ---FIRST NAME--- */}
           <label
             className="relative bg-white px-2 rounded top-2 left-3"
-            htmlFor="firstName"   
+            htmlFor="firstName"
           >
             Prénom
           </label>
@@ -161,7 +187,7 @@ const FormContact = () => {
             className="z-10 relative flex w-auto h-auto justify-center items-center"
           >
             <button
-              onClick={(e) => sendMessage(e)}
+              onClick={(e) => sendMessage(e) && sendMail()}
               type="submit"
               // disabled={!allValues}
               className="z-99 w-full h-14  my-5 mt-2 xs:mt-5 bg-orange-500 rounded-md text-white  outline-2 text-xs font-medium  hover:bg-orange-400"
@@ -179,7 +205,11 @@ const FormContact = () => {
           </div>
         </form>
       )}
-      {isSending && <h2 className="text-[22px] xs:text-[26px] md:text-[30 px] p-3 ">Message envoyé avec succes</h2>}
+      {isSending && (
+        <h2 className="text-[22px] xs:text-[26px] md:text-[30 px] p-3 ">
+          Message envoyé avec succes
+        </h2>
+      )}
     </div>
   );
 };

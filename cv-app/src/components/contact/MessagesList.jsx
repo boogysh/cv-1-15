@@ -57,18 +57,24 @@ const MessagesList = ({
             key={uuidv4()}
             className=" mx-auto p-[20px] mt-[15px] relative  bg-[#f1f1f1] rounded-[10px]"
           >
-            <div className="flex items-center">
-              <h3 className="p-2 font-semibold text-sm sm:text-base ">
-                {message.lastName} {message.firstName}{" "}
-              </h3>
-              <span className="text-sm sm:text-base">
-                <strong>le:</strong> {message.createdAt.slice(0, 10)}{" "}
-                <strong> à: </strong> {message.createdAt.slice(11, 19)}
-              </span>
+            <div className="flex flex-col ">
+              <div className="flex items-center">
+                <h3 className="p-2 font-semibold text-sm sm:text-base ">
+                  {message.lastName} {message.firstName}{" "}
+                </h3>
+
+                <span className="text-sm sm:text-base">
+                  <strong>le:</strong> {message.createdAt.slice(0, 10)}
+                  <strong> à:</strong> {message.createdAt.slice(11, 16)}
+                </span>
+              </div>
+              <div>
+                <strong className="pl-2">Email:</strong> {message.email}
+              </div>
             </div>
             {/* <p className="pl-[10px] w-95% max-w-[700px]"> */}
             {/* <p className="pl-[10px] w-full ">{message.messageTxt}</p> */}
-            <p className="pl-[10px] w-95% max-w-[700px] ">
+            <p className="p-[10px] pt-4 w-95% max-w-[700px] ">   
               {message.messageTxt}
             </p>
 
