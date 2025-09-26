@@ -19,13 +19,13 @@ function Slider({ slides }) {
     setcurrentIndex(newIndex);
   };
   return (
-    <div className="w-full h-auto relative bg-[#ebdede] border-[8px] border-solid border-[#ebdede]">
+    <div className="w-full h-auto  relative bg-[#ebdede] border-[8px] border-solid border-[#ebdede]">
       <img
         className="w-full h-full absolute top-0 rounded-[10px] object-cover "
         src={slides[currentIndex]}
         alt="project details"
       />
-      <div className="w-full h-full flex justify-between items-center absolute">
+      <div className="w-full h-full flex  justify-between items-center absolute">
         <button
           onClick={goToPrevious}
           className="w-auto h-auto bg-transparent border-none"
