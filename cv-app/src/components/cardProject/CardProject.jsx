@@ -26,6 +26,7 @@ function CardProjectNew({
   const [moreInfo, setMoreInfo] = useState(false);
 
   const { t } = useSelector((state) => state.langReducer);
+  const hrefDev = window.location.href.includes(t.devNav);
 
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
@@ -105,9 +106,9 @@ function CardProjectNew({
               </div>
             )}
             {/* TECHNOS */}
-            <div className="w-7 xs:w-8 s:w-10 h-auto flex flex-col justify-center items-center py-3 pr-[6px] bg-[#ebdede] z-10">
+          { hrefDev && (<div className="w-7 xs:w-8 s:w-10 h-auto flex flex-col justify-center items-center py-3 pr-[6px] bg-[#ebdede] z-10">
               <Technos technos={technos} />
-            </div>
+            </div>)}
             {/* INFO */}
             <MoreInfo
               title={title}
