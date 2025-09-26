@@ -1,12 +1,15 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 // import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.png";
 import logo_boogysh_construction_2 from "../assets/logo-boogysh-construction-2-70.png";
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
 import ButtonNewProjects from "../components/ButtonNewProjects";
+import Loader from "./loader/Loader";
 
 function Banner({ src, title }) {
+  const [loading, setLoading] = useState(true);
   const { t } = useSelector((state) => state.langReducer);
 
   const hrefArch = window.location.href.includes(t.archNav);
@@ -26,7 +29,16 @@ function Banner({ src, title }) {
   return (
     <div className="flex justify-end items-start w-full h-auto relative">
       <div className="flex w-full h-auto bg-gray-900 ">
-        <img className="object-cover w-full h-auto " src={src} alt="banner" />
+        {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}
+        {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}
+        <img
+          className={`object-cover w-full h-auto ${
+            loading ? "opacity-0" : "opacity-100"
+          }`}
+          src={src}
+          alt="banner"
+          onLoad={() => setLoading(false)}
+        />
       </div>
       <h1
         className={`${hrefArch && style.title}  ${
