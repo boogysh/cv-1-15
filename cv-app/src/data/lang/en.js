@@ -438,10 +438,14 @@ export const en = {
       pictures: [
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-1.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-2.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-3.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-4.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-3.png",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-4.png",
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-5.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-6.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-7.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-8.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-9.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-10.jpg",
       ],
       info: [
         "Calculation of transmitted weight from walls, floor and roof.",
@@ -570,8 +574,8 @@ export const en = {
       pictures: [
         //ouvertures
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-2.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-3.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-6.jpg",
+        "https://boogysh.github.io/cv-api/images/bat/pr3/pr3-9.jpg",
         //menuiserie
         "https://boogysh.github.io/cv-api/images/serv/pr1/pr1-1.png",
         "https://boogysh.github.io/cv-api/images/serv/pr1/pr1-2.png",
