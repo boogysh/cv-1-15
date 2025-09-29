@@ -1,7 +1,8 @@
 import React from "react";
 import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
-import banner_bat from "../assets/pr-bat/7.png";
+// import banner_bat from "../assets/pr-bat/7.png";
+import banner_bat from "../assets/pr-bat/7-1.jpg";
 import { useSelector } from "react-redux";
 
 export default function Building() {

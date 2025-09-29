@@ -12,14 +12,12 @@ import ButtonContactMe from "./ButtonContactMe.jsx";
 import HeaderBurger from "./header-burger/HeaderBurger";
 import LangSelect from "./langSelect";
 import { useSelector } from "react-redux";
+// import Header3ImagesBgLoading from "./Header_3_Images_bg_loading.jsx";
 
 function Header() {
   const { t } = useSelector((state) => state.langReducer);
-  // const activeLink =
-  //   "block decoration-none ml-0 py-2 uppercase text-[14px] md:text-[16px] lg:text-[18px] md:text-base md:py-4 md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
-  // const normalLink =
-  //   "block decoration-none ml-0 py-2 uppercase text-[12px] md:text-[12px] lg:text-[14px]   md:py-4 md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
-   const activeLink =
+
+  const activeLink =
     "block decoration-none ml-0 py-2 md:py-0 uppercase text-[14px] md:text-[16px] lg:text-[18px] md:text-base   md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
   const normalLink =
     "block decoration-none ml-0 py-2 md:py-0  uppercase text-[12px] md:text-[12px] lg:text-[14px]   md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
@@ -127,11 +125,21 @@ function Header() {
   window.onload = scrollFunction;
   window.onscroll = scrollFunction;
 
+  // const batBannerHigh = document.getElementById("batHighDiv");
+
+  // const zzz = () => {
+  //   console.log(" batBannerHigh", batBannerHigh);
+  //   batBannerHigh.classList.remove("bg-bat-onload");
+  //   // batBannerHigh.classList.add("bg-bat");
+  // };
+
+  // window.onload = zzz();
+
   //----------
   const style = {
     container:
       "flex flex-col items-center pb-[1px]  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px]",
-    item: "relative overflow-hidden flex flex-col justify-center items-center bg-cover h-[130px] xs:h-[160px] md:h-[200px] mb-[10px] w-full md:w-[32.5%]  md:rounded-[5px] shadow",
+    item: " relative overflow-hidden flex flex-col justify-center items-center bg-cover h-[130px] xs:h-[160px] md:h-[200px] mb-[10px] w-full md:w-[32.5%]  md:rounded-[5px] shadow",
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
     title:
@@ -148,7 +156,10 @@ function Header() {
       {/* ----------------------- */}
 
       <div className={style.container}>
-        <div className={`${style.item} bg-arch bg-cover bg-center`}>
+        <div
+          id="archHighDiv"
+          className={`${style.item} bg-arch bg-cover bg-center`}
+        >
           <Link
             className="absolute w-full h-full z-20"
             onClick={addBgAndTitleArch}
@@ -164,7 +175,16 @@ function Header() {
           {isTitle.arch && <h3 className={style.title}>{t.archTitle}</h3>}
           <h4 className={style.footer}>2004 - 2011</h4>
         </div>
-        <div className={`${style.item} bg-bat bg-cover bg-center`}>
+        <div
+          className={`${style.item} bg-bat bg-cover bg-center`}
+          id="batHighDiv"
+        >
+        {/* BATIMENT */}
+        {/* <Header3ImagesBgLoading
+          style={style.item}
+          bgSmall="bg-bat-onload"
+          bgLarge="bg-bat"
+        > */}
           <Link
             className="absolute w-full h-full z-20"
             onClick={addBgAndTitleBat}
@@ -179,6 +199,8 @@ function Header() {
           )}
           {isTitle.bat && <h3 className={style.title}>{t.batTitle}</h3>}
           <h4 className={style.footer}>2011 - 2022...</h4>
+          
+         {/* </Header3ImagesBgLoading> */}
         </div>
         <div className={`${style.item}  bg_dev bg-cover bg-center`}>
           <Link

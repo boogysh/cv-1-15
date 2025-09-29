@@ -54,13 +54,22 @@
   }
   /* bg nav - items */
   .bg-arch {
-    background-image: url(/src/assets/pr-arch/pr1-2x-4.jpg);
+    background-image: url(/src/assets/pr-arch/pr1-2x-4-4.jpg);
   }
+  /* ------BATIMENT ---------*/
   .bg-bat {
-    background-image: url(/src/assets/pr-bat/3.png);
+    background-image: url(/src/assets/pr-bat/3.jpg);
   }
+  .bg-bat-onload {
+    background-image: url(/src/assets/pr-bat/3-7.jpg);
+  }
+  /* .bg-bat {
+    background-image: url("https:boogysh.github.io/cv-api/images/assets/bg-bat.jpg");
+  } */
+   /* ---------------------------------- */
+
   .bg_dev {
-    background-image: url(/src/assets/pr-dev/bg.png);
+    background-image: url(/src/assets/pr-dev/bg-2.jpg);
   }
 }
 /* ----------------------------------- */

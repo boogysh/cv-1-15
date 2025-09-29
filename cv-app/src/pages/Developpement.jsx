@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Banner from "../components/Banner";
-import banner_dev from "../assets/pr-dev/banner1_dev.png";
+// import banner_dev from "../assets/pr-dev/banner1_dev.png";
+import banner_dev from "../assets/pr-dev/banner1_dev-1.jpg";
 import { useSelector } from "react-redux";
 import CardProject from "../components/cardProject/CardProject";
 

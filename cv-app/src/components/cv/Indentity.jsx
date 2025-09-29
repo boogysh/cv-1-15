@@ -1,5 +1,5 @@
 import React from "react";
-import myself from "../../assets/eu/eu-png-2025.png";
+import myself from "../../assets/eu/eu-png-2025-2.png";
 import { useSelector } from "react-redux";
 
 export default function Indentity() {

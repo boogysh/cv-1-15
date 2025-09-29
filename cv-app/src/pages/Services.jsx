@@ -1,7 +1,8 @@
 import React from "react";
 import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
-import banner_services from "../assets/pr-bat/8.png";
+// import banner_services from "../assets/pr-bat/8.png";
+import banner_services from "../assets/pr-bat/8-2.jpg";
 import { useSelector } from "react-redux";
 
 export default function Building() {
@@ -33,9 +34,10 @@ export default function Building() {
           </h3>
 
           <p className="indent-5 text-sm xs:text-base lg:text-lg pb-5 ">
-            Faites des économies jusqu' à 40% sur vos travaux. Réglez vous même les matériaux, dans les magasins pro au
-            prix négocié et payez que la main d'œuvre. Moi je ferai le reste,
-            des rénovation du sol au plafond.
+            Faites des économies jusqu' à 40% sur vos travaux. Réglez vous même
+            les matériaux, dans les magasins pro au prix négocié et payez que la
+            main d'œuvre. Moi je ferai le reste, des rénovation du sol au
+            plafond.
           </p>
           <h3 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
             Pourquoi choisir mes services?

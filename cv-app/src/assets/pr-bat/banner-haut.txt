@@ -1,0 +1,6 @@
+w-240px h-ratio => identic
+g blur 1.4px
+save quality 7
+
+exist 1Mb => resized 100kb => blur 17kb
+

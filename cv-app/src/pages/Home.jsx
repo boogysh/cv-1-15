@@ -5,7 +5,7 @@ import Studies from "../components/cv/Studies";
 import Experience from "../components/cv/Experience";
 import Characteristics from "../components/cv/Characteristics";
 import Aptitude from "../components/cv/Aptitude";
-import DiplomeArchitecture from "../assets/diplomes/architecture-1.jpg";
+import DiplomeArchitecture from "../assets/diplomes/architecture-1-2.jpg";
 import { useSelector } from "react-redux";
 import { GiClick } from "react-icons/gi";
 
