@@ -143,7 +143,7 @@ function Header() {
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
     title:
-      "absolute top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
+      "absolute flex flex-wrap justify-center top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
     navBar:
       "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] lg:py-[15px] lg:flex-row items-center lg:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
     // fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",

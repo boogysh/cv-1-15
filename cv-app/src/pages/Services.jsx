@@ -2,7 +2,8 @@ import React from "react";
 import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
 // import banner_services from "../assets/pr-bat/8.png";
-import banner_services from "../assets/pr-bat/8-2.jpg";
+// import banner_services from "../assets/pr-bat/8-2.jpg";
+import banner_services from "../assets/pr-bat/9-7.jpg"; 
 import { useSelector } from "react-redux";
 
 export default function Building() {
