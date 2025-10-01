@@ -24,7 +24,7 @@ export default function LikeAndCommentCardNew(props) {
     statePage //refresh after liking or unliked !!!!!!!!!!!
   );
   // console.log("liked", liked);
-  console.log("process.env.URL", process.env.REACT_APP_URL);
+  // console.log("process.env.URL", process.env.REACT_APP_URL);
   //--------------------------AXIOS---------------------------------------
   async function getIp() {
     const res = await axios.get("https://geolocation-db.com/json/");

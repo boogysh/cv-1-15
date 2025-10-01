@@ -3,15 +3,22 @@ import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
 // import banner_services from "../assets/pr-bat/8.png";
 // import banner_services from "../assets/pr-bat/8-2.jpg";
-import banner_services from "../assets/pr-bat/9-7.jpg"; 
+import banner_services from "../assets/pr-bat/9-7.jpg";
 import { useSelector } from "react-redux";
+import Devis from "../components/serviceComponents/Devis";
+// import { v4 as uuidv4 } from "uuid";
 
 export default function Building() {
   const { t } = useSelector((state) => state.langReducer);
+  const idOpening = "opening";
+  const layingTiles = "layingTiles";
+  const layingParquet = "layingParquet";
+  const installDoor = "installDoor";
+  const wallPlacostil = "wallPlacostil";
 
   return (
     // <main className="min-h-[600px] flex flex-col items-center bg-bg_body  main-scroll">
-    <main className="min-h-[600px] flex flex-col items-center bg-bg_body w-auto">
+    <main className="min-h-[600px] flex flex-col items-center bg-bg_body w-auto pb-2">
       <Banner title={t.servicesTitle} src={banner_services} />
       <section
         id="cards"
@@ -82,6 +89,34 @@ export default function Building() {
           );
         })}
       </section>
+      {/* Devis opening */}
+      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+        Devis de création d'une baie vitrée dans un mur de 60cm d'épaisseur,
+        voir dans les images gros œuvres.
+      </h4>
+      <p className="indent-5 text-sm xs:text-base lg:text-lg p-2 pb-8">
+        Selon le cas de figure il faut prevoir la construction des marches en
+        beton armé, coté exterieur et les raccords d'isolant, platre, enduit,
+        peinture,plinthes, sol pour les finitions interieres.
+      </p>
+      <Devis id={idOpening} />
+      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+        Devis pour la pose de 60 metres carrés de carrelage.
+      </h4>
+      <Devis id={layingTiles} />;
+      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+        Devis pour la pose de 60 metres carrés du parquet, pose flotante où
+        vinyl compatible avec les pièces humides.
+      </h4>
+      <Devis id={layingParquet} />;
+      <h5 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+        Devis pour la pose d'un bloc porte intérieur
+      </h5>
+      <Devis id={installDoor} />;
+      <h5 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+        Devis pour la création d'une cloison en placostil
+      </h5>
+      <Devis id={wallPlacostil} />
     </main>
   );
 }

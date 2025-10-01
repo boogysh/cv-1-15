@@ -899,4 +899,595 @@ export const fr = {
       urlProject: "https://boogysh.github.io/booki/",
     },
   ],
+  cardDevis: [
+    {
+      id: "opening",
+      mainTitle: `Création d'une baie vitrée L240xH220 ( mur épaisseur 60cm )`,
+      content: [
+        {
+          title: `Etayage et mise en sécurité.`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 60,
+          time: 4,
+        },
+        {
+          title: `Réalisation d'une saigné d'une coté du mur et préparation des assises.`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 10,
+          time: 6,
+        },
+        {
+          title:
+            "Réalisation d'un linteau en béton armé avec poutrelles en béton ou fourniture et pose d'un fer dimmensionné avec une couche d'antirouille",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 241.04,
+          time: 6,
+        },
+        {
+          title: "Maçonner l'espace crée au dessus du linteau",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 8,
+          time: 4,
+        },
+        {
+          title:
+            "Réalisation d'une saigné de l'autre coté du mur et préparation des assises.",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 10.0,
+          time: 6,
+        },
+        {
+          title:
+            "Réalisation d'un linteau en béton armé avec poutrelles en béton ou fourniture et pose d'un fer dimmensionné avec une couche d'antirouille",
+          qty: "1",
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 241.04,
+          time: 6,
+        },
+        {
+          title: "Maçonner l'éspace crée au dessus du linteau",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 8,
+          time: 4,
+        },
+        {
+          title: "Réalisation de l'ouverture",
+          qty: 2.46,
+          qtyUnit: "m3",
+          itemPrice: 4, //!!!!!!!!!
+          itemPriceUnit: "h/m3",
+          supply: 10.0,
+          //time: 9.84,
+        },
+        {
+          title: "Evacuation des gravas en decharge droit inclus",
+          qty: 3.51,
+          qtyUnit: "m3",
+          itemPrice: 4, //!!!!!!!!!
+          itemPriceUnit: "h/m3",
+          supply: 170.58,
+          // time: 14.04,
+        },
+        {
+          title:
+            "Réalisation des jambages armés et réalisation du tableau intérieur avec ébrasement",
+          qty: 2,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 110.0,
+          time: 16,
+        },
+        {
+          title: "Réalisation d'un seuil en mortier de ciment moulé",
+          qty: 2.4,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 42,
+          time: 4.8,
+        },
+        {
+          title: "Réalisation du tableau éxterieur",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 52.35,
+          time: 8,
+        },
+        {
+          title: "Réalisation des bandeaux. Dégrossi et enduit de finition.",
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: "",
+          itemPriceUnit: "",
+          supply: 82.5,
+          time: 8,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Nettoyage de fin de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "",
+          supply: 0,
+          time: 4,
+        },
+      ],
+    },
+
+    // ---------------POSE CARRELAGE-------------
+    {
+      id: "layingTiles",
+      mainTitle: `Pose du carrelage 60x60  (pose pieds-droits)`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du carrelage. 60mc +10%`,
+          qty: 66,
+          qtyUnit: "m2",
+          itemPrice: 25,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Colle flex (double encollage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 4.5,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Joints (matériaux)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 3,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Plinthes assorties ou profilés de finition 42ml + 10%`,
+          qty: 46.2,
+          qtyUnit: "ml",
+          itemPrice: 11.9,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du produit d'accrochage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 1.32,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du ragréage P3`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 8.9,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 4,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Réalisation du ragréage P3`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.5,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose carrelage 60×60 (pose pieds-droits, double encollage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 1,
+          itemPriceUnit: "h/m2",
+          supply: 65.72,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Découpes (les bordures, obstacles, angles)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 35.5,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Réalisation des joints de finition & nettoyage final`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.5,
+          itemPriceUnit: "h/m2",
+          supply: 25.82,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des plinthes et joints associés 42ml`,
+          qty: 42,
+          qtyUnit: "ml",
+          itemPrice: 0.4,
+          itemPriceUnit: "h/ml",
+          supply: 8.2,
+          // time: 0,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des seuils, decoupes des portes & mise des butées `,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 24,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Nettoyage de fin de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "",
+          supply: 0,
+          time: 4,
+        },
+      ],
+    },
+    // -------------POSE PARQUET FLOTTANT -----------
+    {
+      id: "layingParquet",
+      mainTitle: `Pose du parquet flottant`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du parquet contrecollé, stratifié où vinyl - compatible avec les pièces humides`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 35,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des plinthes en medium`,
+          qty: 46.2,
+          qtyUnit: "m2",
+          itemPrice: 1.5,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Sous-couche isolante / pare-vapeur`,
+          qty: 46.2,
+          qtyUnit: "m2",
+          itemPrice: 4,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Seuils des portes`,
+          qty: 4,
+          qtyUnit: "u",
+          itemPrice: 18,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du produit d'accrochage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 1.32,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du ragréage P3`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 8.9,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 4,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Réalisation du ragréage P3`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.5,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose sous-couche isolante / pare-vapeur`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 3.5,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose parquet flottant clipsé`,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.6,
+          itemPriceUnit: "h/m2",
+          supply: 12,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Découpes finitions  `,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 24,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des seuils, decoupes des portes & mise des butées `,
+          qty: 60,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 24,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des plinthes avec finition acrylique`,
+          qty: 42,
+          qtyUnit: "m2",
+          itemPrice: 0.4,
+          itemPriceUnit: "h/ml",
+          supply: 18,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Nettoyage de fin de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "",
+          supply: 0,
+          time: 4,
+        },
+      ],
+    },
+    // -------------POSE PORTE PLEINE -----------
+    {
+      id: "installDoor",
+      mainTitle: `Pose d'un bloc porte intérieur`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture d'un bloc-porte pleine`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 195,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose d'un bloc porte intérieur coeur plein`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 4,
+          itemPriceUnit: "h/u",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Raccords de platre associés, hors enduits et peinture`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 4,
+          itemPriceUnit: "h/u",
+          supply: 16,
+          // time: 0,
+        },
+      ],
+    },
+    // -------------CREATION CLOISON PLACOSTIL -----------
+    {
+      id: "wallPlacostil",
+      mainTitle: `Devis de creation d'une cloison placostil`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des rails R48`,
+          qty: 5,
+          qtyUnit: "u",
+          itemPrice: 2.79,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des montants M48`,
+          qty: 14,
+          qtyUnit: "u",
+          itemPrice: 2.79,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture de bande résiliante en mousse autocollante 50mm, Ep 3mm`,
+          qty: 10,
+          qtyUnit: "u",
+          itemPrice: 0.33,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture de la laine de verre 45mm`,
+          qty: 11,
+          qtyUnit: "u",
+          itemPrice: 3.29,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des plaques BA13 2.5m x 1.2m KNAUF`,
+          qty: 21,
+          qtyUnit: "mp",
+          itemPrice: 3.6,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des plinthes`,
+          qty: 9,
+          qtyUnit: "ml",
+          itemPrice: 1.49,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Création structure placostil avec bande résiliante`,
+          qty: 10,
+          qtyUnit: "m2",
+          itemPrice: 0.35,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose laine de verre 45mm`,
+          qty: 10,
+          qtyUnit: "m2",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Vissage des plaque BA13`,
+          qty: 20,
+          qtyUnit: "m2",
+          itemPrice: 0.35,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Collage des bandes avec 2 couches de finition`,
+          qty: 20,
+          qtyUnit: "m2",
+          itemPrice: 0.3,
+          itemPriceUnit: "h/m2",
+          supply: 14,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des plinthes avec finition acrylique`,
+          qty: 8,
+          qtyUnit: "ml",
+          itemPrice: 0.4,
+          itemPriceUnit: "h/ml",
+          supply: 14,
+          // time: 0,
+        },
+      ],
+    },
+  ],
 };
