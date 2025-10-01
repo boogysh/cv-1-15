@@ -47,7 +47,7 @@ export default function Building() {
             main d'œuvre. Moi je ferai le reste, des rénovation du sol au
             plafond.
           </p>
-          <h3 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+          <h3 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
             Pourquoi choisir mes services?
           </h3>
           <p className="indent-5 text-sm xs:text-base lg:text-lg pb-5">
@@ -66,11 +66,11 @@ export default function Building() {
             professionnelle, en tant que salarié.
           </p>
 
-          {/* <h3 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+          {/* <h3 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
             Seconds œuvres disponible dans l'immédiat et gros œuvres disponible 
             partiellement.
           </h3> */}
-          <h3 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+          <h3 className="text-center w-full text-[18px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
             Soyez le client suivant et profiter de votre logement après une
             transformation irreconaissable.
           </h3>
@@ -90,30 +90,30 @@ export default function Building() {
         })}
       </section>
       {/* Devis opening */}
-      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+      <h4 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3">
         Devis de création d'une baie vitrée dans un mur de 60cm d'épaisseur,
         voir dans les images gros œuvres.
       </h4>
-      <p className="indent-5 text-sm xs:text-base lg:text-lg p-2 pb-8">
+      <p className="indent-5 text-sm xs:text-base lg:text-lg p-2">
         Selon le cas de figure il faut prevoir la construction des marches en
         beton armé, coté exterieur et les raccords d'isolant, platre, enduit,
         peinture,plinthes, sol pour les finitions interieres.
       </p>
       <Devis id={idOpening} />
-      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <h4 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
         Devis pour la pose de 60 metres carrés de carrelage.
       </h4>
       <Devis id={layingTiles} />;
-      <h4 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <h4 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
         Devis pour la pose de 60 metres carrés du parquet, pose flotante où
         vinyl compatible avec les pièces humides.
       </h4>
       <Devis id={layingParquet} />;
-      <h5 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <h5 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
         Devis pour la pose d'un bloc porte intérieur
       </h5>
       <Devis id={installDoor} />;
-      <h5 className="text-center w-full text-[20px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <h5 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
         Devis pour la création d'une cloison en placostil
       </h5>
       <Devis id={wallPlacostil} />

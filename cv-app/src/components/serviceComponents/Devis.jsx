@@ -36,7 +36,7 @@ const Devis = ({ id }) => {
   }, [id]);
 
   return (
-    <section className="p-0 md:p-5 md:pb-0 w-full md:w-fit">
+    <section className="p-0 pt-2 md:p-5 md:pb-0 w-full md:w-fit">
       <div className="w-full md:w-fit max-w-[1000px] h-auto relative overflow-auto border-black border-[2px] shadow-md md:rounded-lg">
         <table className="w-fit min-w-[600px] text-[12px]  sm:text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
