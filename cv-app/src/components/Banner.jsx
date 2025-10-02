@@ -50,8 +50,8 @@ function Banner({ src, title }) {
         </h1>
       )}
       {(hrefBat || hrefServices) && (
-        <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-black font-bold  text-[9px] xxs:text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] tracking-[-0.4px]">
-          SIRET: En cours d'attribution
+        <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-[#ec6a01] font-semibold text-shadow2  text-[10px] xxs:text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] tracking-[-0.4px]">
+          SIRET: 75056847900026
         </span>
       )}
       <div className="absolute w-auto h-auto left-2 bg-none">
