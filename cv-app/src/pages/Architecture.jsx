@@ -1,7 +1,8 @@
 import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
 // import banner from "../assets/pr-arch/front-1200.jpg";
-import banner from "../assets/pr-arch/front-1200-1.jpg";
+// import banner from "../assets/pr-arch/front-1200-1.jpg";
+ import banner from "../assets/pr-arch/front-new-lg-q8.jpg";
 import { useSelector } from "react-redux";
 
 export default function Architecture() {
