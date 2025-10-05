@@ -9,7 +9,8 @@ export default function Slider({ slides = [] }) {
   const startX = useRef(0);
   const translate = useRef(0);
   const dragging = useRef(false);
-  const threshold = 50;
+  // const threshold = 50;
+  const threshold = (containerRef.current?.offsetWidth || 300) * 0.15; // need to swipe 25% of slide width
 
   const goTo = (i) => setIndex((i + slides.length) % slides.length);
   const goPrev = () => goTo(index - 1);
@@ -42,14 +43,14 @@ export default function Slider({ slides = [] }) {
     const x = e.clientX || e.changedTouches?.[0]?.clientX;
     const dx = x - startX.current;
     //  swipe fluide
-      const time = e.timeStamp - e.nativeEvent.timeStamp;
-      const velocity = Math.abs(dx / time);
-      if (velocity > 0.5) {
-        if (dx < 0) goNext();
-        else goPrev();
-        return;
-      }
-    //
+    // const time = e.timeStamp - e.nativeEvent.timeStamp;
+    // const velocity = Math.abs(dx / time);
+    // if (velocity > 0.5) {
+    //   if (dx < 0) goNext();
+    //   else goPrev();
+    //   return;
+    // }
+    // //
     if (dx < -threshold) goNext();
     else if (dx > threshold) goPrev();
     else
