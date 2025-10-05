@@ -42,13 +42,13 @@ export default function Slider({ slides = [] }) {
     const x = e.clientX || e.changedTouches?.[0]?.clientX;
     const dx = x - startX.current;
     //  swipe fluide
-    const time = e.timeStamp - e.nativeEvent.timeStamp;
-    const velocity = Math.abs(dx / time);
-    if (velocity > 0.3) {
-      if (dx < 0) goNext();
-      else goPrev();
-      return;
-    }
+      const time = e.timeStamp - e.nativeEvent.timeStamp;
+      const velocity = Math.abs(dx / time);
+      if (velocity > 0.5) {
+        if (dx < 0) goNext();
+        else goPrev();
+        return;
+      }
     //
     if (dx < -threshold) goNext();
     else if (dx > threshold) goPrev();
