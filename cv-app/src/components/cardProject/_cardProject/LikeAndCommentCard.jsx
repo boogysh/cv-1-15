@@ -104,7 +104,7 @@ export default function LikeAndCommentCardNew(props) {
             <>
               <img
                 src={liked ? like2 : like}
-                className="w-4 s:w-5 h-4 s:h-5"
+                className="w-5 h-5 s:w-[22px] s:h-[22px]"
                 alt="like"
               />
             </>
@@ -116,7 +116,7 @@ export default function LikeAndCommentCardNew(props) {
           onClick={() => props.setShowComments(!props.showComments)}
           className="btn-icon"
         >
-          <img src={comment} className="w-4 h-5 s:w-5 s:h-6" alt="like" />
+          <img src={comment} className="w-5 h-6 s:w-[22px] s:h-[26px]" alt="like" />
         </button>
         <span className="pl-1 text-sm s:text-base">{props.commentsQty}</span>
         {/* --------------- */}

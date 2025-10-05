@@ -61,7 +61,7 @@ function CardProjectNew({
         <div className="w-full h-auto flex flex-col">
           {/* TITLE */}
           <div className="flex items-center w-full h-auto p-2  bg-[#f1f1f1] z-10 ">
-            <h2 className="flex w-full lg:min-h-[3rem] items-center pl-1 text-lg  leading-4 s:text-2xl s:leading-6 font-dancing font-semibold hover:text-blue-600 ">
+            <h2 className="flex w-full lg:min-h-[3rem] items-center pl-1 text-[20px]  leading-4 s:text-2xl s:leading-6 font-dancing font-semibold hover:text-blue-600 ">
               {/* LINK TO ONE-PROJECT-ID  --- only architecture & building*/}
               {(uri === t.archNav ||
                 uri === t.batNav ||
