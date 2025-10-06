@@ -149,6 +149,7 @@ export const fr = {
         "Maison pour une famille avec 3-4 enfants. Les photos sont des rendus (renders) realisées avec 3D'S MAX + V-ray.",
       cover: "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
       pictures: [
+        "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-0.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-2.jpg",
         "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-3.jpg",

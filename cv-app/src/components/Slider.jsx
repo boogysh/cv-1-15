@@ -10,7 +10,7 @@ export default function Slider({ slides = [] }) {
   const translate = useRef(0);
   const dragging = useRef(false);
   // const threshold = 50;
-  const threshold = (containerRef.current?.offsetWidth || 300) * 0.15; // need to swipe 25% of slide width
+  const threshold = (containerRef.current?.offsetWidth || 300) * 0.15; // need to swipe 15% of slide width
 
   const goTo = (i) => setIndex((i + slides.length) % slides.length);
   const goPrev = () => goTo(index - 1);
