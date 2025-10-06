@@ -2072,9 +2072,9 @@ export const fr = {
         },
         {
           // h/m2 || h/ml supply=value & notime
-          title: `Depose du 7mc de carrelage`,
+          title: `Depose du 7m2 de carrelage`,
           qty: 7,
-          qtyUnit: "mc",
+          qtyUnit: "m2",
           itemPrice: 0.55,
           itemPriceUnit: "h/m2",
           supply: 4,
@@ -2082,9 +2082,9 @@ export const fr = {
         },
         {
           // h/m2 || h/ml supply=value & notime
-          title: `Depose du 13.5mc de faïence`,
+          title: `Depose du 13.5m2 de faïence`,
           qty: 13.5,
-          qtyUnit: "mc",
+          qtyUnit: "m2",
           itemPrice: 0.55,
           itemPriceUnit: "h/m2",
           supply: 4,
