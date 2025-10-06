@@ -15,6 +15,15 @@ export default function Building() {
   const layingParquet = "layingParquet";
   const installDoor = "installDoor";
   const wallPlacostil = "wallPlacostil";
+  const EnduitPeinture = "EnduitPeinture";
+  const windowOrDorReplace = "windowOrDorReplace";
+  const doorReplace = "doorReplace";
+  const SDB = "SDB";
+
+  const style = {
+    title_h4_h5:
+      "text-center w-full max-w-[900px] text-[16px] s:text-[22px] lg:text-[24px] pt-3",
+  };
 
   return (
     // <main className="min-h-[600px] flex flex-col items-center bg-bg_body  main-scroll">
@@ -70,7 +79,7 @@ export default function Building() {
             Seconds œuvres disponible dans l'immédiat et gros œuvres disponible 
             partiellement.
           </h3> */}
-          <h3 className="text-center w-full text-[18px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
+          <h3 className="text-center w-full  text-[18px] s:text-[22px] lg:text-[24px] pt-3 mb-5">
             Soyez le client suivant et profiter de votre logement après une
             transformation irreconaissable.
           </h3>
@@ -94,29 +103,47 @@ export default function Building() {
         Devis de création d'une baie vitrée dans un mur de 60cm d'épaisseur,
         voir dans les images gros œuvres.
       </h4>
-      <p className="indent-5 text-sm xs:text-base lg:text-lg p-2">
+      <p className="indent-5  max-w-[900px] text-sm xs:text-base lg:text-lg p-2">
         Selon le cas de figure il faut prevoir la construction des marches en
         beton armé, coté exterieur et les raccords d'isolant, platre, enduit,
         peinture,plinthes, sol pour les finitions interieres.
       </p>
       <Devis id={idOpening} />
-      <h4 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <h4 className={style.title_h4_h5}>
         Devis pour la pose de 60 metres carrés de carrelage.
       </h4>
-      <Devis id={layingTiles} />;
-      <h4 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <Devis id={layingTiles} />
+      <h4 className={style.title_h4_h5}>
         Devis pour la pose de 60 metres carrés du parquet, pose flotante où
         vinyl compatible avec les pièces humides.
       </h4>
-      <Devis id={layingParquet} />;
-      <h5 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
+      <Devis id={layingParquet} />
+      <h5 className={style.title_h4_h5}>
         Devis pour la pose d'un bloc porte intérieur
       </h5>
-      <Devis id={installDoor} />;
-      <h5 className="text-center w-full text-[16px] s:text-[22px] lg:text-[24px] pt-3 ">
-        Devis pour la création d'une cloison en placostil
+      <Devis id={installDoor} />
+      <h5 className={style.title_h4_h5}>
+        Devis pour la création d'une cloison de 10 metres carrés en placostil
       </h5>
       <Devis id={wallPlacostil} />
+      <h5 className={style.title_h4_h5}>
+        Devis de réalisation d'enduits 3 couches et l'application de 2 couches
+        de peinture, salle à manger. Pour peinture couleur 3 couches d'enduits sont 
+        fortement conseillés.
+      </h5>
+      <Devis id={EnduitPeinture} />
+      <h5 className={style.title_h4_h5}>
+        Devis de remplacement d'une fenetre exterieure bois, pvc, alu 1.5m x1.4m
+      </h5>
+      <Devis id={windowOrDorReplace} />
+      <h5 className={style.title_h4_h5}>
+        Devis de remplacement d'une porte exterieure bois, pvc, alu 2.1m x 0.9m
+      </h5>
+      <Devis id={doorReplace} />
+      <h5 className={style.title_h4_h5}>
+        Devis rénovation salle de bain 7m2 au sol  murs-27m2, faiilance 50% de murs soit 13.5m2, le autres 13.5m2  enduits 3 couches et 2 couches de peinture.
+      </h5>
+      <Devis id={SDB} />
     </main>
   );
 }

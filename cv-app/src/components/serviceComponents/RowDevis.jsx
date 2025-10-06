@@ -25,11 +25,14 @@ const RowDevis = ({
       <td className="px-2 py-1  dark:bg-gray-800">{itemPrice}</td>
       <td className="px-2 py-1 bg-gray-50 dark:bg-gray-800">{itemPriceUnit}</td>
       {supply && <td className={`supplies ${id} px-2 py-1`}>{supply}</td>}
+      
+      
       {/* {!supply && supplyResult !== 0 && (
         <td className={`supplies ${id} px-2 py-1`}>{supplyResult}</td>
       )} */}
       {(itemPriceUnit === "€/m2" ||
         itemPriceUnit === "€/ml" ||
+        itemPriceUnit === "€/l" ||
         itemPriceUnit === "€/u") && (
         <td className={`supplies ${id} px-2 py-1`}>{supplyResult}</td>
       )}
@@ -38,7 +41,6 @@ const RowDevis = ({
           {time}
         </td>
       )}
-
       {/* {!time && time !== 0 && timeResult && (
         <td className={`hours ${id} px-2 py-1 bg-gray-50 dark:bg-gray-800 `}>
           {timeResult}

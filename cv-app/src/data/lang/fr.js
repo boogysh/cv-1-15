@@ -561,7 +561,7 @@ export const fr = {
         "Cloisons en Placostil et carreau de plâtre",
         "Enduits et peinture",
         "Parquet collé et flottant",
-        "Etanchéité, Carrelage et faillance murale",
+        "Etanchéité, Carrelage et faïence murale",
         "Raccord de l'électricité et de la plomberie",
         "Assemblage et installation des meubles",
       ],
@@ -1488,6 +1488,710 @@ export const fr = {
           supply: 14,
           // time: 0,
         },
+      ],
+    },
+    // -------------Devis enduit et peinture SAM 15mc au sol avec ouverture de 3m sur le salon -----------
+    {
+      id: "EnduitPeinture",
+      mainTitle: `Devis de réalisation des enduit et peinture salle à manger`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture enduit Prestonett F`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 32.9,
+          itemPriceUnit: "€/l",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture impression Zolpan`,
+          qty: 5,
+          qtyUnit: "l",
+          itemPrice: 15.65,
+          itemPriceUnit: "€/l",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture peinture velours murs`,
+          qty: 5,
+          qtyUnit: "u",
+          itemPrice: 15.65,
+          itemPriceUnit: "€/l",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture peinture mat plafond`,
+          qty: 3,
+          qtyUnit: "l",
+          itemPrice: 15.65,
+          itemPriceUnit: "€/l",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture protection polyane fin`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 9.99,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture diverse rouleau,scotch, papier abrasif, acrylique`,
+          qty: 43,
+          qtyUnit: "u",
+          itemPrice: 1.6,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Degraissage des murs`,
+          qty: 40,
+          qtyUnit: "m2",
+          itemPrice: 0.08,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Protection / masquage`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.08,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Arachage du papier peint`,
+          qty: 0,
+          qtyUnit: "m2",
+          itemPrice: 0.17,
+          itemPriceUnit: "h/m2",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Traitement des fissures (0.1-0.2 h/ml), collage des bandes`,
+          qty: 10,
+          qtyUnit: "ml",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application impression haute de gamme`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application d'enduits 1-ère couche`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.2,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Gratage des imperfections après la 1-ère couche`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application d'enduits 2-ème couche, passe croisée`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.18,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Gratage des imperfections après la 2-ème couche`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application d'enduits 3-ème couche, finition parfaite`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.16,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Ponçage et dépoussiérage`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.2,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application impression haute de gamme`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.11,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application peinture Zolpan haute de gamme au rouleau 1-ère couche`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.12,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application peinture Zolpan haute de gamme au rouleau 2-ème couche`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.12,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Nettoyage / finitions`,
+          qty: 43,
+          qtyUnit: "m2",
+          itemPrice: 0.08,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+      ],
+    },
+    // -------------Devis Remplacement menuiserie exterieure -----------
+    {
+      id: "windowOrDorReplace",
+      mainTitle: `Devis de remplacement d'une fenetre exterieure bois, pvc, alu 1.5m x1.4m`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture de la menuiserie par le client`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des joint précomprimés`,
+          qty: 5.8,
+          qtyUnit: "ml",
+          itemPrice: 1.2,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des pates de scellement`,
+          qty: 8,
+          qtyUnit: "u",
+          itemPrice: 1.5,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Protection des lieux`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: 12,
+          // time: 0,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Decouped'une bande de 30cm du placo autour de la menuiserie, ou piochage du platre`,
+          qty: 5.8,
+          qtyUnit: "ml",
+          itemPrice: 0.35,
+          itemPriceUnit: "h/ml",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Dépose de l'ancienne menuiserie`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 2,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Fixation`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 4,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose joints précomprimés`,
+          qty: 5.8,
+          qtyUnit: "ml",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application mastic de finition coté exterieur`,
+          qty: 5.8,
+          qtyUnit: "ml",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Raccord du plâtre associé, ou placo avec les bandes collées, hors peinture`,
+          qty: 5.8,
+          qtyUnit: "ml",
+          itemPrice: 0.7,
+          itemPriceUnit: "h/u",
+          supply: 12,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Replie de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+      ],
+    },
+    // -------------Devis Remplacement porte exterieure -----------
+    {
+      id: "doorReplace",
+      mainTitle: `Devis de remplacement d'une porte exterieure bois, pvc, alu 2.1m x 0.9m`,
+      content: [
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture de la menuiserie par le client`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des joint précomprimés`,
+          qty: 6.2,
+          qtyUnit: "ml",
+          itemPrice: 1.2,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture des pates de scellement`,
+          qty: 8,
+          qtyUnit: "u",
+          itemPrice: 1.5,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Protection des lieux`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: 12,
+          // time: 0,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Decoupe d'une bande de 30cm du placo autour de la menuiserie, ou piochage du platre`,
+          qty: 6.2,
+          qtyUnit: "ml",
+          itemPrice: 0.35,
+          itemPriceUnit: "h/ml",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Dépose de l'ancienne menuiserie`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 2,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Fixation`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 4,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose joints précomprimés`,
+          qty: 6.2,
+          qtyUnit: "ml",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application mastic de finition coté exterieur`,
+          qty: 6.2,
+          qtyUnit: "ml",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/u",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Raccord du plâtre associé, ou placo avec les bandes collées, hors peinture`,
+          qty: 6.2,
+          qtyUnit: "ml",
+          itemPrice: 0.7,
+          itemPriceUnit: "h/u",
+          supply: 12,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Replie de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+      ],
+    },
+    // -------------Devis Remplacement porte exterieure -----------
+    {
+      id: "SDB",
+      mainTitle: `Devis rénovation salle de bain 7m2 au sol  murs-27m2, faiilance 50% de murs soit 13.5m2, le autres 13.5m2  enduits 3 couches et peinture`,
+      content: [
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Installation du receveur de douche ou la baignoire, la paroi de douche, la robinetrie et les meubles seront installées par le plombier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "u",
+          supply: "0",
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du carrelage par le client`,
+          qty: 7.7,
+          qtyUnit: "m2",
+          itemPrice: 30,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Plinthes assorties ou profilés de finition 5.4ml + 10%`,
+          qty: 5.4,
+          qtyUnit: "ml",
+          itemPrice: 11.9,
+          itemPriceUnit: "€/ml",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture de la faïence murale par le client`,
+          qty: 14.85,
+          qtyUnit: "m2",
+          itemPrice: 30,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Colle flex (double encollage)`,
+          qty: 20.5,
+          qtyUnit: "m2",
+          itemPrice: 4.5,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Joints (matériaux)`,
+          qty: 20.5,
+          qtyUnit: "m2",
+          itemPrice: 3,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture Résine d'étanchéité sous carrelage 5kg Mapei `,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 50.9,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture Bande d'armature pour étanchéité 10ml - Mapei `,
+          qty: 2,
+          qtyUnit: "u",
+          itemPrice: 29.9,
+          itemPriceUnit: "€/u",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture raagreage P3`,
+          qty: 7.7,
+          qtyUnit: "m2",
+          itemPrice: 8.9,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+        {
+          // €/m2 || €/ml no-supply
+          title: `Fourniture du produit d'accrochage`,
+          qty: 7,
+          qtyUnit: "m2",
+          itemPrice: 1.32,
+          itemPriceUnit: "€/m2",
+          // supply
+          time: 0,
+        },
+
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Protection des lieux`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 1,
+          itemPriceUnit: "h/u",
+          supply: 12,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Depose des meubles et sanitaires et évacuation`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 3,
+          itemPriceUnit: "h/u",
+          supply: "0",
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Depose du 7mc de carrelage`,
+          qty: 7,
+          qtyUnit: "mc",
+          itemPrice: 0.55,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Depose du 13.5mc de faïence`,
+          qty: 13.5,
+          qtyUnit: "mc",
+          itemPrice: 0.55,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          qty: 7,
+          qtyUnit: "m2",
+          itemPrice: 0.15,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 4,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Réalisation du ragréage P3`,
+          qty: 7,
+          qtyUnit: "m2",
+          itemPrice: 0.5,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Encollage bandes d'armature pour étanchéité`,
+          qty: 16,
+          qtyUnit: "ml",
+          itemPrice: 0.2,
+          itemPriceUnit: "h/ml",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application produit d'étanchéité 2 couches`,
+          qty: 13.5,
+          qtyUnit: "m2",
+          itemPrice: 0.4,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose carrelage et faïence (pose pieds-droits, double encollage)`,
+          qty: 20.5,
+          qtyUnit: "m2",
+          itemPrice: 1,
+          itemPriceUnit: "h/m2",
+          supply: 18,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Découpes (les bordures, obstacles, angles)`,
+          qty: 20.5,
+          qtyUnit: "m2",
+          itemPrice: 0.1,
+          itemPriceUnit: "h/m2",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Pose des plinthes et joints associés`,
+          qty: 5.4,
+          qtyUnit: "ml",
+          itemPrice: 0.4,
+          itemPriceUnit: "h/ml",
+          supply: 4,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Réalisation des joints de finition & nettoyage final`,
+          qty: 20.5,
+          qtyUnit: "m2",
+          itemPrice: 0.5,
+          itemPriceUnit: "h/m2",
+          supply: 8,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Application d'impression, enduits 3 couches, ponçage, impression et 2 couches de peinture + 2.5m2 la porte + 7m2 le plafond`,
+          qty: 23.0,
+          qtyUnit: "m2",
+          itemPrice: 1.5,
+          itemPriceUnit: "h/m2",
+          supply: 217.69,
+          // time: 0,
+        },
+        {
+          // h/m2 || h/ml supply=value & notime
+          title: `Nettoyage de fin de chantier`,
+          qty: 1,
+          qtyUnit: "u",
+          itemPrice: 0,
+          itemPriceUnit: "",
+          supply: 0,
+          time: 1.5,
+        },
+        
+        
       ],
     },
   ],
