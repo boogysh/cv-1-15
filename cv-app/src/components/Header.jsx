@@ -1,55 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
-import html from "../assets/pr-dev/html.png";
-import css from "../assets/pr-dev/css.png";
-import js from "../assets/pr-dev/js.png";
-import react from "../assets/pr-dev/react.png";
-import node from "../assets/pr-dev/node.png";
-import balise_ouvr from "../assets/pr-dev/balise-ouvr.png";
-import balise_ferm from "../assets/pr-dev/balise-ferm.png";
+
 import HeaderContact from "./HeaderContact.jsx";
 import ButtonContactMe from "./ButtonContactMe.jsx";
 import HeaderBurger from "./header-burger/HeaderBurger";
 import LangSelect from "./langSelect";
 import { useSelector } from "react-redux";
+import logo from "../assets/logo-boogysh-construction-2-70.png";
 // import Header3ImagesBgLoading from "./Header_3_Images_bg_loading.jsx";
 
 function Header() {
   const { t } = useSelector((state) => state.langReducer);
-
+  const hrefArch = window.location.href.includes(t.archNav);
+  const hrefBat = window.location.href.includes(t.batNav);
+  const hrefServices = window.location.href.includes(t.servicesNav);  
+  //
+  const FR = t.batNav === "batiment";
+  //
   const activeLink =
     "block decoration-none ml-0 py-2 md:py-0 uppercase text-[14px] md:text-[16px] lg:text-[18px] md:text-base   md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
   const normalLink =
     "block decoration-none ml-0 py-2 md:py-0  uppercase text-[12px] md:text-[12px] lg:text-[14px]   md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
 
+  // const [showServices, setShowServices] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+
   const [isAnimated, setAnimated] = useState(false);
   const [isBG, setBG] = useState({
-    arch: false,
+    arch: true,
     bat: false,
-    dev: false,
-  });
-  const [isTitle, setTitle] = useState({
-    arch: false,
-    bat: false,
-    dev: false,
+    services: false,
   });
 
-  const addBgAndTitleArch = () => {
+  const addBgArch = () => {
     setBG({ arch: true });
-    setTitle({ arch: true });
   };
-  const addBgAndTitleBat = () => {
+  const addBgBat = () => {
     setBG({ bat: true });
-    setTitle({ bat: true });
   };
-  const addBgAndTitleDev = () => {
-    setBG({ dev: true });
-    setTitle({ dev: true });
+  const addBgServices = () => {
+    setBG({ services: true });
   };
-  const removeAllBgAndTitles = () => {
+  const removeBg = () => {
     setBG(false);
-    setTitle(false);
   };
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -80,6 +73,11 @@ function Header() {
   );
 
   useEffect(() => {
+    hrefArch && addBgArch();
+    hrefBat && addBgBat();
+    hrefServices && addBgServices();
+
+    //
     window
       .matchMedia("(min-width: 200px) and (max-width:480px)")
       .addEventListener("change", (e) => setMatches(e.matches));
@@ -96,7 +94,7 @@ function Header() {
       .matchMedia("(min-width: 768px)")
       .addEventListener("change", (e) => setmatches_md(e.matches_md));
     // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 3of 4
-  }, []);
+  }, [hrefArch, hrefBat, hrefServices]);
 
   const scrollFunction = () => {
     const element = document.querySelector("#navBar");
@@ -125,25 +123,19 @@ function Header() {
   window.onload = scrollFunction;
   window.onscroll = scrollFunction;
 
-  // const batBannerHigh = document.getElementById("batHighDiv");
-
-  // const zzz = () => {
-  //   console.log(" batBannerHigh", batBannerHigh);
-  //   batBannerHigh.classList.remove("bg-bat-onload");
-  //   // batBannerHigh.classList.add("bg-bat");
-  // };
-
-  // window.onload = zzz();
-
   //----------
+  // const baseTitle =
+  //   "absolute flex flex-wrap justify-center top-[25%] xs:top-[30%]   text-shadow3 text-[36px]  lg:text-[52px] font-dancing font-light";
   const style = {
     container:
       "flex flex-col items-center pb-[1px]  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px]",
     item: " relative overflow-hidden flex flex-col justify-center items-center bg-cover h-[130px] xs:h-[160px] md:h-[200px] mb-[10px] w-full md:w-[32.5%]  md:rounded-[5px] shadow",
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
+
     title:
-      "absolute flex flex-wrap justify-center top-[3%] xs:top-[4%] text-[#f1f1f1] text-shadow text-[36px] md:text-[32px]  lg:text-[40px] font-dancing font-light",
+      "absolute flex flex-wrap  justify-cente  qq top-[25%] xs:top-[30%]  text-[#ec6a01] text-shadow2 text-[36px]  lg:text-[52px] font-dancing font-bold rounded-[80px] px-2 ",
+    // title_active: `${baseTitle} text-[#ec6a01]`,
     navBar:
       "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] lg:py-[15px] lg:flex-row items-center lg:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
     // fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
@@ -162,32 +154,29 @@ function Header() {
         >
           <Link
             className="absolute w-full h-full z-20"
-            onClick={addBgAndTitleArch}
+            onClick={addBgArch}
             // to="/architecture"
             to={`/${t.locale}/${t.archNav}`}
           ></Link>
+
           {isBG.arch && (
             <div
               id="bg_arch_hover"
               className="absolute w-full h-full bg-black/50"
             ></div>
           )}
-          {isTitle.arch && <h3 className={style.title}>{t.archTitle}</h3>}
-          <h4 className={style.footer}>2004 - 2011</h4>
+          <h3 className={style.title}>{t.archTitle}</h3>
+          {/* <h4 className={style.footer}>2004 - 2011</h4> */}
         </div>
         <div
           className={`${style.item} bg-bat bg-cover bg-center`}
           id="batHighDiv"
         >
-        {/* BATIMENT */}
-        {/* <Header3ImagesBgLoading
-          style={style.item}
-          bgSmall="bg-bat-onload"
-          bgLarge="bg-bat"
-        > */}
+          {/* BATIMENT */}
+
           <Link
             className="absolute w-full h-full z-20"
-            onClick={addBgAndTitleBat}
+            onClick={addBgBat}
             // to="/batiment"
             to={`/${t.locale}/${t.batNav}`}
           ></Link>
@@ -197,46 +186,31 @@ function Header() {
               className="absolute w-full h-full bg-black/50"
             ></div>
           )}
-          {isTitle.bat && <h3 className={style.title}>{t.batTitle}</h3>}
-          <h4 className={style.footer}>2011 - 2022...</h4>
-          
-         {/* </Header3ImagesBgLoading> */}
+          <h3 className={style.title}>{t.batTitle}</h3>
+          {/* <h4 className={style.footer}>2011 - 2022...</h4> */}
         </div>
-        <div className={`${style.item}  bg_dev bg-cover bg-center`}>
-          <Link
-            className="absolute w-full h-full z-20"
-            onClick={addBgAndTitleDev}
-            // to="/developpement"
-            to={`/${t.locale}/${t.devNav}`}
-          ></Link>
-          {isBG.dev && (
+        <div className={`${style.item}  bg_services bg-cover bg-center`}>
+          {/* ---TO SERVICES ------ */}
+          {FR && (
+            <Link
+              className="absolute w-full h-full z-20"
+              onClick={addBgServices}
+              // to="/services"
+              to={`/${t.locale}/${t.servicesNav}`}
+            ></Link>
+          )}
+
+          {isBG.services && (
             <div
               id="bg_dev_hover"
               className="absolute w-full h-full bg-black/50"
             ></div>
           )}
-
-          {isTitle.dev && <h3 className={style.title}>{t.devTitle}</h3>}
-          <div className="absolute top-[44%]  flex justify-center w-[60%] xxs:w-[50%] md:w-[80%] h-[50px];">
-            <img className={style.logo} src={html} alt="html" />
-            <img className={style.logo} src={css} alt="css" />
-            <img className={style.logo} src={js} alt="js" />
-            <img className={style.logo} src={react} alt="react" />
-            <img className={style.logo} src={node} alt="node" />
-          </div>
-          <div className={style.footer}>
-            <img
-              className="w-[30px] h-auto"
-              src={balise_ouvr}
-              alt="balise ouvrante"
-            />
-            <h4 className="w-fit px-4">2022... </h4>
-            <img
-              className="w-[30px] h-auto"
-              src={balise_ferm}
-              alt="balise fermante"
-            />
-          </div>
+          <img
+            className="absolute w-[300px] h-auto"
+            src={logo}
+            alt="boogysh construction logo"
+          />
         </div>
       </div>
       {/* ---------------------------------- */}
@@ -262,27 +236,11 @@ function Header() {
           // id="burgerMenu"
           className={`${
             isOpen ? "flex" : "hidden"
-          } h-auto lg:flex flex-col md:flex-row items-center pt-5 md:py-3 lg:p-0`} //r pt-5 md:py-3
+          } h-auto lg:flex flex-col md:flex-row items-center pt-5 md:py-3 lg:p-0`}
         >
-          {/* <NavLink
-            onClick={removeAllBgAndTitles}
-            id="test"
-            to="/test"
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-          >
-            Test
-          </NavLink> */}
           <NavLink
-            onClick={removeAllBgAndTitles}
-            id="cv"
-            to="/"
-            // to={t.homeNav}
-            className={({ isActive }) => (isActive ? activeLink : normalLink)}
-          >
-            CV
-          </NavLink>
-          <NavLink
-            onClick={addBgAndTitleArch}
+            // onClick={addBgArch}
+            onClick={addBgArch}
             id="architecture"
             // to="/architecture"
             to={`/${t.locale}/${t.archNav}`}
@@ -291,7 +249,8 @@ function Header() {
             {t.archTitle}
           </NavLink>
           <NavLink
-            onClick={addBgAndTitleBat}
+            // onClick={addBgBat}
+            onClick={addBgBat}
             id="batiment"
             // to="/batiment"
             to={`/${t.locale}/${t.batNav}`}
@@ -301,26 +260,37 @@ function Header() {
           >
             {t.batTitle}
           </NavLink>
+          {FR && (
+            <NavLink
+              onClick={addBgServices}
+              id="services"
+              // to="/service"
+              to={`/${t.locale}/${t.servicesNav}`}
+              className={({ isActive }) =>
+                (isActive ? activeLink : normalLink) + "services_title_color-3 "
+              }
+            >
+              {t.servicesTitle}
+            </NavLink>
+          )}
+
           <NavLink
-            onClick={addBgAndTitleBat}
-            id="services"
-            // to="/service"
-            to={`/${t.locale}/${t.servicesNav}`}
-            className={({ isActive }) =>
-              (isActive ? activeLink : normalLink) + "services_title_color-3 "
-            }
-            // className={({ isActive }) => (isActive ? activeLink : normalLink)+"services_title_color-2"}
-          >
-            {t.servicesTitle}
-          </NavLink>
-          <NavLink
-            onClick={addBgAndTitleDev}
+            onClick={removeBg}
             id="developpement"
             // to="/developpement"
             to={`/${t.locale}/${t.devNav}`}
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
           >
             {t.devTitleNav}
+          </NavLink>
+          <NavLink
+            onClick={removeBg}
+            id="cv"
+            to={`/${t.locale}/cv`}
+            // to={t.homeNav}
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            CV
           </NavLink>
         </nav>
       </div>

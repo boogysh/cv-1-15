@@ -88,7 +88,7 @@ const Devis = ({ id }) => {
                     <RowDevis
                       id={id}
                       key={uuidv4()}
-                      title={title}
+                         title={title}
                       qty={qty}
                       qtyUnit={qtyUnit}
                       itemPrice={itemPrice}

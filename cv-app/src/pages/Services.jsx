@@ -105,8 +105,8 @@ export default function Building() {
       </h4>
       <p className="indent-5  max-w-[900px] text-sm xs:text-base lg:text-lg p-2">
         Selon le cas de figure il faut prevoir la construction des marches en
-        beton armé, coté exterieur et les raccords d'isolant, platre, enduit,
-        peinture,plinthes, sol pour les finitions interieres.
+        beton armé, coté exterieur et les raccords d'isolant, plâtre, enduit,
+        peinture,plinthes, sol pour les finitions intérieures.
       </p>
       <Devis id={idOpening} />
       <h4 className={style.title_h4_h5}>
@@ -128,8 +128,8 @@ export default function Building() {
       <Devis id={wallPlacostil} />
       <h5 className={style.title_h4_h5}>
         Devis de réalisation d'enduits 3 couches et l'application de 2 couches
-        de peinture, salle à manger. Pour peinture couleur 3 couches d'enduits sont 
-        fortement conseillés.
+        de peinture, salle à manger. Pour peinture couleur 3 couches d'enduits
+        sont fortement conseillés.
       </h5>
       <Devis id={EnduitPeinture} />
       <h5 className={style.title_h4_h5}>
@@ -141,7 +141,9 @@ export default function Building() {
       </h5>
       <Devis id={doorReplace} />
       <h5 className={style.title_h4_h5}>
-        Devis rénovation salle de bain 7m2 au sol  murs-27m2, faiilance 50% de murs soit 13.5m2, le autres 13.5m2  enduits 3 couches et 2 couches de peinture.
+        Devis rénovation salle de bain 7m2 au sol murs-27m2, faiilance 50% de
+        murs soit 13.5m2, le autres 13.5m2 enduits 3 couches et 2 couches de
+        peinture.
       </h5>
       <Devis id={SDB} />
     </main>

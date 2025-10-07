@@ -6,6 +6,11 @@ import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.pn
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
 import ButtonNewProjects from "../components/ButtonNewProjects";
+import html from "../assets/pr-dev/html.png";
+import css from "../assets/pr-dev/css.png";
+import js from "../assets/pr-dev/js.png";
+import react from "../assets/pr-dev/react.png";
+import node from "../assets/pr-dev/node.png";
 
 function Banner({ src, title }) {
   const [loading, setLoading] = useState(true);
@@ -23,6 +28,7 @@ function Banner({ src, title }) {
       "absolute font-dancing font-semibold text-[24px] xs:text-[30px] sm:text-[40px] lg:text-[60px] 2xl:text-[72px] px-2 xs:px-5 lg:px-8 2xl:px-10 text-white",
     h2TitleServices:
       "font-dancing font-semibold text-[22px] xs:text-[28px] sm:text-[32px] md:text-[54px] lg:text-[60px] 2xl:text-[72px] services_title_color-3",
+      logo: "w-6 h-6 xxs:w-8 xxs:h-8 md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] mx-1 md:mx-2",
   };
 
   return (
@@ -64,6 +70,15 @@ function Banner({ src, title }) {
             alt="logo Boogysh"
             className="w-[200px] xs:w-[280px] sm:w-[360px] md:w-[440px] lg:w-[600px] xl:w-[650px] 2xl:w-[800px]"
           />
+        </div>
+      )}
+      {hrefDev && (
+        <div className="absolute top-[50%] left-0 flex justify-center w-full h-auto;">
+          <img className={style.logo} src={html} alt="html" />
+          <img className={style.logo} src={css} alt="css" />
+          <img className={style.logo} src={js} alt="js" />
+          <img className={style.logo} src={react} alt="react" />
+          <img className={style.logo} src={node} alt="node" />
         </div>
       )}
     </div>

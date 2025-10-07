@@ -7,7 +7,7 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Error404 from "./components/errors/Error404";
-import Home from "./pages/Home";
+import CV from "./pages/CV";
 import Architecture from "./pages/Architecture";
 import Developpement from "./pages/Developpement";
 import OneProject from "./pages/OneProject";
@@ -25,12 +25,13 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route index element={<Navigate replace to={t.localeNav} />} />
-        <Route path={`/${t.locale}`} element={<Home />} />
-        <Route path={`/${t.locale}/defaultsite`} element={<Home />} />
-        <Route path={`/defaultsite`} element={<Home />} />
+        <Route
+          index
+          element={<Navigate replace to={`/${t.locale}/${t.archNav}`} />}
+        />
+        <Route path={`/${t.locale}`} element={<Architecture />} />
+        <Route path={`/defaultsite`} element={<Architecture />} />
 
-        {/* <Route path={`/test`} element={<Test />} /> */}
         <Route path={`/${t.locale}/${t.archNav}`} element={<Architecture />} />
         <Route
           path={`/${t.locale}/${t.archNav}/:id`}
@@ -44,6 +45,7 @@ function App() {
         <Route path={`/${t.locale}/${t.batNav}`} element={<Building />} />
         <Route path={`/${t.locale}/${t.batNav}/:id`} element={<OneProject />} />
         <Route path={`/${t.locale}/${t.devNav}`} element={<Developpement />} />
+        <Route path={`/${t.locale}/cv`} element={<CV />} />
         <Route path={`/${t.locale}/messages`} element={<Messages />} />
         <Route path={`/${t.locale}/diplomes`} element={<Diplomes />} />
         <Route path="*" element={<Error404 />} />
