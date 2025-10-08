@@ -257,7 +257,7 @@ function Header() {
       {/* ---------------------------------- */}
       {/* <div id="navBar" className={`${style.navBar} scroll`}> */}
       <div id="navBar" className={`${style.navBar} `}>
-        <div className="w-[95%]  md:w-full flex items-center justify-between">
+        <div className="w-[95%]  md:w-full flex items-center justify-between pr-3">
           <div className=" flex justify-center items-center">
             <h3 className="font-dancing text-[26px] pr-4 hidden sm:block">
               Victor Buga
