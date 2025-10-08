@@ -41,14 +41,14 @@
     @apply flex flex-wrap text-xs xs:text-sm lg:text-base h-auto w-[260px]  xs:w-[380px] md:w-[450px] md:pt-[6px] lg:w-[650px] lg:mb-3;
   }
   /*-------- HEADER------------ */
-  /* need for scroll-blocking */
+  /* need for scroll-blocking */  
   .fixed-top {
     position: fixed;
     top: 0px;
   }
   /* need for scroll-blocking */
   .pt-fixed {
-    @apply pt-[46px] xs:pt-[53px] md:pt-[60px];
+    @apply pt-[46px] xxs:pt-[52px] xs:pt-[50px] md:pt-[65px] lg:pt-[65px];
     /* padding-top: 10px; */
     /* padding-top: 500px; */
   }

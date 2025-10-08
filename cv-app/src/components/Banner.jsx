@@ -32,7 +32,7 @@ function Banner({ src, title }) {
   };
 
   return (
-    <div className="flex justify-end items-start w-full h-auto relative">
+    <div className="banner flex pt-fixed justify-end items-start w-full h-auto relative">
       <div className="flex w-full h-auto bg-gray-900 ">
         {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}
         {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}

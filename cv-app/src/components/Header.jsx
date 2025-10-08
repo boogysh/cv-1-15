@@ -13,7 +13,7 @@ function Header() {
   const { t } = useSelector((state) => state.langReducer);
   const hrefArch = window.location.href.includes(t.archNav);
   const hrefBat = window.location.href.includes(t.batNav);
-  const hrefServices = window.location.href.includes(t.servicesNav);  
+  const hrefServices = window.location.href.includes(t.servicesNav);
   //
   const FR = t.batNav === "batiment";
   //
@@ -49,12 +49,6 @@ function Header() {
     setAnimated(!isAnimated);
   };
   // for closing  burgerMenu onScroll then is opened & isBlocked onTop 1 of 4
-  const closeToggleNav = () => {
-    if (isOpen) {
-      setIsOpen(false);
-      setAnimated(false);
-    }
-  };
 
   //---------scroll limit-----------------
 
@@ -67,8 +61,8 @@ function Header() {
   const [matches_md, setmatches_md] = useState(
     window.matchMedia("(min-width: 768px) ").matches
   );
-  // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 2 of 4
-  const [match_mobile_mode, setMatch_mobile_mode] = useState(
+  // to close opened burger menu on-scroll  then is opened &  isBlocked onTop
+  const [match_under_1023px, setMatch_under_1023px] = useState(
     window.matchMedia("(max-width: 767px) ").matches
   );
 
@@ -77,51 +71,88 @@ function Header() {
     hrefBat && addBgBat();
     hrefServices && addBgServices();
 
-    //
-    window
-      .matchMedia("(min-width: 200px) and (max-width:480px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
-    window
-      .matchMedia("(min-width: 481px) and (max-width:767px)")
-      .addEventListener("change", (e) => setMatches_xs(e.matches_xs));
+    const closeToggleNav = () => {
+      if (isOpen) {
+        setIsOpen(false);
+        setAnimated(false);
+      }
+    };
 
-    window
-      .matchMedia("(max-width: 767px)")
-      .addEventListener("change", (e) =>
-        setMatch_mobile_mode(e.match_mobile_mode)
-      );
-    window
-      .matchMedia("(min-width: 768px)")
-      .addEventListener("change", (e) => setmatches_md(e.matches_md));
-    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 3of 4
-  }, [hrefArch, hrefBat, hrefServices]);
+    const m200 = window.matchMedia("(min-width: 200px) and (max-width:480px)");
+    const mXs = window.matchMedia("(min-width: 481px) and (max-width:767px)");
+    const mMd = window.matchMedia("(min-width: 768px)");
+    const mob_and_Md = window.matchMedia("(max-width: 1023px)");
 
-  const scrollFunction = () => {
-    const element = document.querySelector("#navBar");
-    const burger_menu_isBlocked = element.classList.contains("fixed-top");
-    const burger_menu_isOpened = element.classList.contains("flex");
-    const scroll = document.documentElement.scrollTop > 430;
-    // const scroll_xs = document.documentElement.scrollTop > 520;
-    const scroll_xs = document.documentElement.scrollTop > 520;
-    const scroll_md = document.documentElement.scrollTop > 220;
+    const handleMatches = () => {
+      setMatches(m200.matches);
+      setMatches_xs(mXs.matches);
+      setmatches_md(mMd.matches);
+      setMatch_under_1023px(mob_and_Md.matches);
+    };
 
-    if (matches && scroll) {
-      element && element.classList.add("fixed-top", "pt-fixed");
-    } else if (matches_xs && scroll_xs) {
-      element && element.classList.add("fixed-top", "pt-fixed");
-    } else if (matches_md && scroll_md) {
-      element && element.classList.add("fixed-top", "pt-fixed");
-    } else {
-      element && element.classList.remove("fixed-top", "pt-fixed");
-    }
-    // to close opened burger menu on-scroll  then is opened &  isBlocked onTop 4of 4
+    handleMatches();
 
-    if (match_mobile_mode && burger_menu_isOpened && burger_menu_isBlocked) {
-      closeToggleNav();
-    }
-  };
-  window.onload = scrollFunction;
-  window.onscroll = scrollFunction;
+    // Add listeners
+    m200.addEventListener("change", handleMatches);
+    mXs.addEventListener("change", handleMatches);
+    mMd.addEventListener("change", handleMatches);
+    mob_and_Md.addEventListener("change", handleMatches);
+
+    // Elements
+    const navBar = document.querySelector("#navBar");
+    const banner = document.querySelector(".banner");
+
+    const fix = () => {
+      navBar?.classList.add("fixed-top");
+      banner?.classList.add("pt-fixed");
+    };
+
+    const unFix = () => {
+      navBar?.classList.remove("fixed-top");
+      banner?.classList.remove("pt-fixed");
+    };
+
+    const scrollFunction = () => {
+      const scroll = document.documentElement.scrollTop;
+      const burger_menu_isBlocked = navBar?.classList.contains("fixed-top");
+      const burger_menu_isOpened = navBar?.classList.contains("flex");
+
+      // 👉 Added condition: close burger menu when scrolling in mobile mode
+      if (match_under_1023px && burger_menu_isOpened && burger_menu_isBlocked) {
+        closeToggleNav();
+      }
+
+      if (
+        (matches && scroll > 430) ||
+        (matches_xs && scroll > 520) ||
+        (matches_md && scroll > 220)
+      ) {
+        fix();
+      } else {
+        unFix();
+      }
+    };
+
+    window.addEventListener("scroll", scrollFunction);
+
+    // Cleanup listeners on unmount
+    return () => {
+      m200.removeEventListener("change", handleMatches);
+      mXs.removeEventListener("change", handleMatches);
+      mMd.removeEventListener("change", handleMatches);
+      mob_and_Md.removeEventListener("change", handleMatches);
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, [
+    hrefArch,
+    hrefBat,
+    hrefServices,
+    matches,
+    matches_xs,
+    matches_md,
+    match_under_1023px,
+    isOpen,
+  ]);
 
   //----------
   // const baseTitle =
@@ -207,7 +238,7 @@ function Header() {
             ></div>
           )}
           <img
-            className="absolute w-[300px] h-auto"
+            className="absolute w-[200px] s:w-[240px] h-auto"
             src={logo}
             alt="boogysh construction logo"
           />
