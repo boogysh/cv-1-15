@@ -18,7 +18,7 @@ function Header() {
   const FR = t.batNav === "batiment";
   //
   const activeLink =
-    "block decoration-none ml-0 py-2 md:py-0 uppercase text-[14px] md:text-[16px] lg:text-[18px] md:text-base   md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
+    "block decoration-none ml-0  py-2 md:py-0 uppercase text-[14px] md:text-[16px] lg:text-[18px] md:text-base   md:ml-5 font-medium after:content-[''] after:block after:w-[0%]  hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out  after:w-[100%] ";
   const normalLink =
     "block decoration-none ml-0 py-2 md:py-0  uppercase text-[12px] md:text-[12px] lg:text-[14px]   md:ml-5 font-medium after:content-[''] after:block   hover:after:w-[100%] after:h-[1px] after:bg-black transition-all after:mx-auto after:duration-500 ease-in-out   after:w-[0%] ";
 
@@ -101,16 +101,21 @@ function Header() {
     // Elements
     const navBar = document.querySelector("#navBar");
     const banner = document.querySelector(".banner");
+    const mainCv = document.querySelector("#mainCv");
 
     const fix = () => {
       navBar?.classList.add("fixed-top");
       banner?.classList.add("pt-fixed");
+      mainCv?.classList.add("pt-fixed");
     };
 
     const unFix = () => {
       navBar?.classList.remove("fixed-top");
       banner?.classList.remove("pt-fixed");
+      mainCv?.classList.remove("pt-fixed");
     };
+
+
 
     const scrollFunction = () => {
       const scroll = document.documentElement.scrollTop;
@@ -142,6 +147,7 @@ function Header() {
       mMd.removeEventListener("change", handleMatches);
       mob_and_Md.removeEventListener("change", handleMatches);
       window.removeEventListener("scroll", scrollFunction);
+      window.onload = null;
     };
   }, [
     hrefArch,
@@ -159,7 +165,7 @@ function Header() {
   //   "absolute flex flex-wrap justify-center top-[25%] xs:top-[30%]   text-shadow3 text-[36px]  lg:text-[52px] font-dancing font-light";
   const style = {
     container:
-      "flex flex-col items-center pb-[1px]  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px]",
+      "flex flex-col items-center pb-[1px]  md:flex-row justify-around w-full h-auto  pt-[10px] px-[10px] ",
     item: " relative overflow-hidden flex flex-col justify-center items-center bg-cover h-[130px] xs:h-[160px] md:h-[200px] mb-[10px] w-full md:w-[32.5%]  md:rounded-[5px] shadow",
     footer:
       "absolute bottom-0 w-full h-10 md:h-14 flex items-center justify-center text-[24px] text-white bg-gradient-to-b from-[#00000003] to-[#000000cc] z-10",
@@ -167,15 +173,19 @@ function Header() {
     title:
       "absolute flex flex-wrap  justify-cente  qq top-[25%] xs:top-[30%]  text-[#ec6a01] text-shadow2 text-[36px]  lg:text-[52px] font-dancing font-bold rounded-[80px] px-2 ",
     // title_active: `${baseTitle} text-[#ec6a01]`,
-    navBar:
-      "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] lg:py-[15px] lg:flex-row items-center lg:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
+    // navBar:
+    //   "w-full h-auto py-[10px]   px-0 flex flex-col justify-center ml-0 md:pl-[1.5%] md:pr-[1.5%] lg:py-[15px] lg:flex-row items-center lg:justify-between border border-solid border-y-gray-500 bg-[#e0d1d1] z-50",
+    navBar: `w-full h-auto  py-[10px] px-0  flex flex-col justify-center ml-0 
+    md:pl-[1.5%] md:pr-[1.5%] lg:py-[15px] lg:flex-row items-center lg:justify-between 
+    border border-solid border-y-gray-500 bg-[#e0d1d1] z-50 
+    `,
     // fixed: "fixed top-0 pt-[46px] xs:pt-[53px] md:pt-[60px]",
     logo: "w-7 h-7 xs:w-9 xs:h-9 lg:w-10 lg:h-10 mx-2 md:mx-1 lg:mx-2",
   };
   //-----------
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-auto bg-[--bg_body] transition duration-500 ease-in-out">
+    <div className="flex flex-col items-center justify-center w-full h-auto bg-[--bg_body] ">
       {/* ----------------------- */}
 
       <div className={style.container}>
@@ -265,9 +275,13 @@ function Header() {
         </div>
         <nav
           // id="burgerMenu"
+          //'max-h-[800px] opacity-100 translate-y-0 pointer-events-auto' : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
           className={`${
-            isOpen ? "flex" : "hidden"
-          } h-auto lg:flex flex-col md:flex-row items-center pt-5 md:py-3 lg:p-0`}
+            // isOpen ? "flex" : "hidden"
+            isOpen
+              ? "pt-5 max-h-[300px] opacity-100 "
+              : " max-h-0 opacity-0 pt-0"
+          }w-auto flex h-auto flex-col md:flex-row items-center lg:p-0 lg:opacity-100  transition-height duration-500 ease-in-out overflow-hidden md:overflow-visible`}
         >
           <NavLink
             // onClick={addBgArch}

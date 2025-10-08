@@ -28,16 +28,17 @@ function Banner({ src, title }) {
       "absolute font-dancing font-semibold text-[24px] xs:text-[30px] sm:text-[40px] lg:text-[60px] 2xl:text-[72px] px-2 xs:px-5 lg:px-8 2xl:px-10 text-white",
     h2TitleServices:
       "font-dancing font-semibold text-[22px] xs:text-[28px] sm:text-[32px] md:text-[54px] lg:text-[60px] 2xl:text-[72px] services_title_color-3",
-      logo: "w-6 h-6 xxs:w-8 xxs:h-8 md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] mx-1 md:mx-2",
+    logo: "w-6 h-6 xxs:w-8 xxs:h-8 md:w-12 md:h-12 lg:w-[70px] lg:h-[70px] mx-1 md:mx-2",
   };
 
   return (
-    <div className="banner flex pt-fixed justify-end items-start w-full h-auto relative">
+    <div className="banner flex justify-end items-start w-full h-auto relative">
       <div className="flex w-full h-auto bg-gray-900 ">
-        {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}
-        {/* {loading? <Loader/> : ( <img className="object-cover w-full h-auto " src={src} alt="banner" onLoad={() => setLoading(false)} />)} */}
+       
+
+        {/*  min-h-[160px] xs:min-h-[180px]  sm:min-h-[200px] */}
         <img
-          className={`object-cover w-full h-auto ${
+          className={`object-cover relative  left-[0px] w-full h-auto  min-h-[100px] ${
             loading ? "opacity-0" : "opacity-100"
           }`}
           src={src}

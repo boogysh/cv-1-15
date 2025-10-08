@@ -41,14 +41,16 @@
     @apply flex flex-wrap text-xs xs:text-sm lg:text-base h-auto w-[260px]  xs:w-[380px] md:w-[450px] md:pt-[6px] lg:w-[650px] lg:mb-3;
   }
   /*-------- HEADER------------ */
-  /* need for scroll-blocking */  
+  /* need for scroll-blocking */
   .fixed-top {
     position: fixed;
     top: 0px;
+    height: auto;
+    
   }
   /* need for scroll-blocking */
   .pt-fixed {
-    @apply pt-[46px] xxs:pt-[52px] xs:pt-[50px] md:pt-[65px] lg:pt-[65px];
+    @apply pt-[46px] xxs:pt-[52px] xs:pt-[50px] sm:pt-[60px] md:pt-[60px] lg:pt-[70px];
     /* padding-top: 10px; */
     /* padding-top: 500px; */
   }
@@ -201,8 +203,7 @@ a {
     rgba(80, 80, 80, 0.5) 50%,
     rgba(80, 80, 80, 0.1) 70%,
     rgba(80, 80, 80, 0.001) 80%,
-    /* rgba(80, 80, 80, 0.0) 90%, */
-     rgba(80, 80, 80, 0.0) 100%
+    /* rgba(80, 80, 80, 0.0) 90%, */ rgba(80, 80, 80, 0) 100%
   );
 }
 

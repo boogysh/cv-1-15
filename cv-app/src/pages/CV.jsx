@@ -29,10 +29,11 @@ export default function Home() {
       "https://boogysh.github.io/cv-api/images/cv/cv-buga-victor-ro-pdf.pdf");
 
   return (
-    <main className="min-h-[600px] bg-bg_body flex flex-col w-auto relative ">
-      <Link to={`/${t.locale}/diplomes`}>
-        <div className=" w-auto h-auto ml-auto absolute  top-[50px]  right-[0px] md:top-0 md:right-0 rounded-[10px]  m-10 mr-5 mt-[60px] xs:mr-5   md:m-5 md:mt-8 lg:m-8  border-[1px]  border-[#ec6a01] shadow shadow:hover overflow-hidden">
+    <main id="mainCv" className="min-h-[600px] bg-bg_body flex flex-col w-auto relative ">
+      <Link to={`/${t.locale}/diplomes`} className="relative">
+        <div   className=" w-auto h-auto ml-auto absolute  top-[50px]  right-[0px] md:top-0 md:right-0 rounded-[10px]  m-10 mr-5 mt-[60px] xs:mr-5   md:m-5 md:mt-8 lg:m-8  border-[1px]  border-[#ec6a01] shadow shadow:hover overflow-hidden">
           <img
+           
             className="h-[auto] w-[120px] sm:w-[180px] md:w-[130px] lg:w-[200px]  "
             src={DiplomeArchitecture}
             alt="diplome architecture"
