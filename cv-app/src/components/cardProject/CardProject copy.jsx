@@ -27,7 +27,6 @@ function CardProjectNew({
 
   const { t } = useSelector((state) => state.langReducer);
   const hrefDev = window.location.href.includes(t.devNav);
-  // const hrefServ = window.location.href.includes(t.servicesNav);
 
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
@@ -95,7 +94,7 @@ function CardProjectNew({
               )}
             </button>
           </div>
-          <div className="flex flex-wrap relative w-full h-auto border-[1px] border-y-black">
+          <div className="flex relative w-full h-auto border-[1px] border-y-black">
             {/* SLIDER && INFO */}
             {isLoading ? (
               <div className="flex  w-full h-ratio   overflow-hidden">
@@ -106,26 +105,10 @@ function CardProjectNew({
                 <Slider slides={images} />
               </div>
             )}
-            {/* ------DEVIS SERVICES----------- */}
-            {/* {hrefServ && (
-              <div className="flex flex-wrap w-full h-auto px-[40px] py-[20px]">
-                <h3 className="pb-8 pl-[50px] uppercase text-gray-400 font-bold font-[Manrope]">Description</h3>
-                <ul className="flex flex-wrap w-full h-auto">
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px] capitalize">linteau</li>
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px]">jambages</li>
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px]">l'ouverture</li>
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px]">seuil</li>
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px]">tableau</li>
-                  <li className="w-[50%] h-auto mb-6 list-none pl-[50px]">baie vitrée</li>
-                </ul>
-              </div>
-            )} */}
-            {/* ----TECHNOS--- */}
-            {hrefDev && (
-              <div className="w-7 xs:w-8 s:w-10 h-auto flex flex-col justify-center items-center py-3 pr-[6px] bg-[#ebdede] z-10">
-                <Technos technos={technos} />
-              </div>
-            )}
+            {/* TECHNOS */}
+          { hrefDev && (<div className="w-7 xs:w-8 s:w-10 h-auto flex flex-col justify-center items-center py-3 pr-[6px] bg-[#ebdede] z-10">
+              <Technos technos={technos} />
+            </div>)}
             {/* INFO */}
             <MoreInfo
               title={title}

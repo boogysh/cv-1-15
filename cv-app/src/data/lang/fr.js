@@ -904,9 +904,18 @@ export const fr = {
     {
       id: "opening",
       mainTitle: `Création d'une baie vitrée L240xH220 ( mur épaisseur 60cm )`,
+      keyWord: [
+        "linteau",
+        "jambages",
+        "l'ouverture",
+        "seuil",
+        "tableau",
+        "baie vitrée",
+      ],
       content: [
         {
           title: `Etayage et mise en sécurité.`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -916,6 +925,7 @@ export const fr = {
         },
         {
           title: `Réalisation d'une saigné d'une coté du mur et préparation des assises.`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -926,6 +936,7 @@ export const fr = {
         {
           title:
             "Réalisation d'un linteau en béton armé avec poutrelles en béton ou fourniture et pose d'un fer dimmensionné avec une couche d'antirouille",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -935,6 +946,7 @@ export const fr = {
         },
         {
           title: "Maçonner l'espace crée au dessus du linteau",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -945,6 +957,7 @@ export const fr = {
         {
           title:
             "Réalisation d'une saigné de l'autre coté du mur et préparation des assises.",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -955,6 +968,7 @@ export const fr = {
         {
           title:
             "Réalisation d'un linteau en béton armé avec poutrelles en béton ou fourniture et pose d'un fer dimmensionné avec une couche d'antirouille",
+          type: "work",
           qty: "1",
           qtyUnit: "u",
           itemPrice: "",
@@ -964,6 +978,7 @@ export const fr = {
         },
         {
           title: "Maçonner l'éspace crée au dessus du linteau",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -973,15 +988,17 @@ export const fr = {
         },
         {
           title: "Réalisation de l'ouverture",
+          type: "work",
           qty: 2.46,
           qtyUnit: "m3",
           itemPrice: 4, //!!!!!!!!!
           itemPriceUnit: "h/m3",
           supply: 10.0,
-          //time: 9.84,
+          time: 1.11,
         },
         {
           title: "Evacuation des gravas en decharge droit inclus",
+          type: "work",
           qty: 3.51,
           qtyUnit: "m3",
           itemPrice: 4, //!!!!!!!!!
@@ -992,6 +1009,7 @@ export const fr = {
         {
           title:
             "Réalisation des jambages armés et réalisation du tableau intérieur avec ébrasement",
+          type: "work",
           qty: 2,
           qtyUnit: "u",
           itemPrice: "",
@@ -1001,6 +1019,7 @@ export const fr = {
         },
         {
           title: "Réalisation d'un seuil en mortier de ciment moulé",
+          type: "work",
           qty: 2.4,
           qtyUnit: "u",
           itemPrice: "",
@@ -1010,6 +1029,7 @@ export const fr = {
         },
         {
           title: "Réalisation du tableau éxterieur",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -1019,6 +1039,7 @@ export const fr = {
         },
         {
           title: "Réalisation des bandeaux. Dégrossi et enduit de finition.",
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: "",
@@ -1027,13 +1048,14 @@ export const fr = {
           time: 8,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Nettoyage de fin de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
-          itemPrice: 0,
+          itemPrice: "",
           itemPriceUnit: "",
-          supply: 0,
+          supply: 0.5,
           time: 4,
         },
       ],
@@ -1045,68 +1067,63 @@ export const fr = {
       mainTitle: `Pose du carrelage 60x60  (pose pieds-droits)`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du carrelage. 60mc +10%`,
+          type: "buy",
           qty: 66,
           qtyUnit: "m2",
           itemPrice: 25,
           itemPriceUnit: "€/m2",
-          // supply
-          time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Colle flex (double encollage)`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 4.5,
           itemPriceUnit: "€/m2",
-          // supply
-          time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Joints (matériaux)`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 3,
           itemPriceUnit: "€/m2",
-          // supply
-          time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Plinthes assorties ou profilés de finition 42ml + 10%`,
+          type: "buy",
           qty: 46.2,
           qtyUnit: "ml",
           itemPrice: 11.9,
           itemPriceUnit: "€/ml",
-          // supply
-          time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du produit d'accrochage)`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 1.32,
           itemPriceUnit: "€/m2",
-          // supply
-          time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du ragréage P3`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 8.9,
           itemPriceUnit: "€/m2",
-          // supply
-          time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.15,
@@ -1116,8 +1133,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Réalisation du ragréage P3`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.5,
@@ -1126,8 +1144,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose carrelage 60×60 (pose pieds-droits, double encollage)`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 1,
@@ -1136,8 +1155,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Découpes (les bordures, obstacles, angles)`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -1146,8 +1166,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Réalisation des joints de finition & nettoyage final`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.5,
@@ -1156,8 +1177,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des plinthes et joints associés 42ml`,
+          type: "work",
           qty: 42,
           qtyUnit: "ml",
           itemPrice: 0.4,
@@ -1167,8 +1189,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des seuils, decoupes des portes & mise des butées `,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -1177,13 +1200,14 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Nettoyage de fin de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
-          itemPrice: 0,
-          itemPriceUnit: "",
-          supply: 0,
+          // itemPrice: 0,
+          itemPriceUnit: "h/u",
+          supply: "0",
           time: 4,
         },
       ],
@@ -1194,8 +1218,9 @@ export const fr = {
       mainTitle: `Pose du parquet flottant`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du parquet contrecollé, stratifié où vinyl - compatible avec les pièces humides`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 35,
@@ -1204,8 +1229,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des plinthes en medium`,
+          type: "buy",
           qty: 46.2,
           qtyUnit: "m2",
           itemPrice: 1.5,
@@ -1214,8 +1240,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Sous-couche isolante / pare-vapeur`,
+          type: "buy",
           qty: 46.2,
           qtyUnit: "m2",
           itemPrice: 4,
@@ -1224,8 +1251,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Seuils des portes`,
+          type: "buy",
           qty: 4,
           qtyUnit: "u",
           itemPrice: 18,
@@ -1234,8 +1262,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du produit d'accrochage)`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 1.32,
@@ -1244,8 +1273,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du ragréage P3`,
+          type: "buy",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 8.9,
@@ -1254,8 +1284,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.15,
@@ -1265,8 +1296,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Réalisation du ragréage P3`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.5,
@@ -1275,8 +1307,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose sous-couche isolante / pare-vapeur`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.15,
@@ -1285,8 +1318,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose parquet flottant clipsé`,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.6,
@@ -1295,8 +1329,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Découpes finitions  `,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -1305,8 +1340,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des seuils, decoupes des portes & mise des butées `,
+          type: "work",
           qty: 60,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -1315,8 +1351,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des plinthes avec finition acrylique`,
+          type: "work",
           qty: 42,
           qtyUnit: "m2",
           itemPrice: 0.4,
@@ -1325,8 +1362,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Nettoyage de fin de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 0,
@@ -1342,8 +1380,9 @@ export const fr = {
       mainTitle: `Pose d'un bloc porte intérieur`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture d'un bloc-porte pleine`,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 195,
@@ -1352,8 +1391,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose d'un bloc porte intérieur coeur plein`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 4,
@@ -1362,8 +1402,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Raccords de platre associés, hors enduits et peinture`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 4,
@@ -1379,8 +1420,9 @@ export const fr = {
       mainTitle: `Devis de creation d'une cloison placostil`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des rails R48`,
+          type: "buy",
           qty: 5,
           qtyUnit: "u",
           itemPrice: 2.79,
@@ -1389,8 +1431,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des montants M48`,
+          type: "buy",
           qty: 14,
           qtyUnit: "u",
           itemPrice: 2.79,
@@ -1399,8 +1442,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture de bande résiliante en mousse autocollante 50mm, Ep 3mm`,
+          type: "buy",
           qty: 10,
           qtyUnit: "u",
           itemPrice: 0.33,
@@ -1409,8 +1453,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture de la laine de verre 45mm`,
+          type: "buy",
           qty: 11,
           qtyUnit: "u",
           itemPrice: 3.29,
@@ -1419,8 +1464,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des plaques BA13 2.5m x 1.2m KNAUF`,
+          type: "buy",
           qty: 21,
           qtyUnit: "mp",
           itemPrice: 3.6,
@@ -1429,8 +1475,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des plinthes`,
+          type: "buy",
           qty: 9,
           qtyUnit: "ml",
           itemPrice: 1.49,
@@ -1439,8 +1486,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Création structure placostil avec bande résiliante`,
+          type: "work",
           qty: 10,
           qtyUnit: "m2",
           itemPrice: 0.35,
@@ -1449,8 +1497,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose laine de verre 45mm`,
+          type: "work",
           qty: 10,
           qtyUnit: "m2",
           itemPrice: 0.15,
@@ -1459,8 +1508,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Vissage des plaque BA13`,
+          type: "work",
           qty: 20,
           qtyUnit: "m2",
           itemPrice: 0.35,
@@ -1469,8 +1519,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Collage des bandes avec 2 couches de finition`,
+          type: "work",
           qty: 20,
           qtyUnit: "m2",
           itemPrice: 0.3,
@@ -1479,8 +1530,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des plinthes avec finition acrylique`,
+          type: "work",
           qty: 8,
           qtyUnit: "ml",
           itemPrice: 0.4,
@@ -1496,8 +1548,9 @@ export const fr = {
       mainTitle: `Devis de réalisation des enduit et peinture salle à manger`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture enduit Prestonett F`,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 32.9,
@@ -1506,8 +1559,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture impression Zolpan`,
+          type: "buy",
           qty: 5,
           qtyUnit: "l",
           itemPrice: 15.65,
@@ -1516,8 +1570,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture peinture velours murs`,
+          type: "buy",
           qty: 5,
           qtyUnit: "u",
           itemPrice: 15.65,
@@ -1526,8 +1581,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture peinture mat plafond`,
+          type: "buy",
           qty: 3,
           qtyUnit: "l",
           itemPrice: 15.65,
@@ -1536,8 +1592,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture protection polyane fin`,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 9.99,
@@ -1546,8 +1603,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture diverse rouleau,scotch, papier abrasif, acrylique`,
+          type: "buy",
           qty: 43,
           qtyUnit: "u",
           itemPrice: 1.6,
@@ -1556,8 +1614,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Degraissage des murs`,
+          type: "work",
           qty: 40,
           qtyUnit: "m2",
           itemPrice: 0.08,
@@ -1566,8 +1625,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Protection / masquage`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.08,
@@ -1576,8 +1636,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Arachage du papier peint`,
+          type: "work",
           qty: 0,
           qtyUnit: "m2",
           itemPrice: 0.17,
@@ -1586,8 +1647,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Traitement des fissures (0.1-0.2 h/ml), collage des bandes`,
+          type: "work",
           qty: 10,
           qtyUnit: "ml",
           itemPrice: 0.15,
@@ -1596,8 +1658,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application impression haute de gamme`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -1606,8 +1669,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application d'enduits 1-ère couche`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.2,
@@ -1616,8 +1680,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Gratage des imperfections après la 1-ère couche`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1626,8 +1691,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application d'enduits 2-ème couche, passe croisée`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.18,
@@ -1636,8 +1702,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Gratage des imperfections après la 2-ème couche`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1646,8 +1713,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application d'enduits 3-ème couche, finition parfaite`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.16,
@@ -1657,8 +1725,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Ponçage et dépoussiérage`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.2,
@@ -1667,8 +1736,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application impression haute de gamme`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.11,
@@ -1677,8 +1747,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application peinture Zolpan haute de gamme au rouleau 1-ère couche`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.12,
@@ -1687,8 +1758,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application peinture Zolpan haute de gamme au rouleau 2-ème couche`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.12,
@@ -1697,8 +1769,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Nettoyage / finitions`,
+          type: "work",
           qty: 43,
           qtyUnit: "m2",
           itemPrice: 0.08,
@@ -1714,8 +1787,9 @@ export const fr = {
       mainTitle: `Devis de remplacement d'une fenetre exterieure bois, pvc, alu 1.5m x1.4m`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture de la menuiserie par le client`,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 0,
@@ -1724,8 +1798,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des joint précomprimés`,
+          type: "buy",
           qty: 5.8,
           qtyUnit: "ml",
           itemPrice: 1.2,
@@ -1734,8 +1809,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des pates de scellement`,
+          type: "buy",
           qty: 8,
           qtyUnit: "u",
           itemPrice: 1.5,
@@ -1744,8 +1820,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Protection des lieux`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1755,8 +1832,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
-          title: `Decouped'une bande de 30cm du placo autour de la menuiserie, ou piochage du platre`,
+          // work supply=value
+          title: `Decoupe d'une bande de 30cm du placo autour de la menuiserie, ou piochage du platre`,
+          type: "work",
           qty: 5.8,
           qtyUnit: "ml",
           itemPrice: 0.35,
@@ -1765,8 +1843,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Dépose de l'ancienne menuiserie`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 2,
@@ -1775,8 +1854,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Fixation`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 4,
@@ -1785,8 +1865,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose joints précomprimés`,
+          type: "work",
           qty: 5.8,
           qtyUnit: "ml",
           itemPrice: 0.1,
@@ -1795,8 +1876,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application mastic de finition coté exterieur`,
+          type: "work",
           qty: 5.8,
           qtyUnit: "ml",
           itemPrice: 0.15,
@@ -1805,8 +1887,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Raccord du plâtre associé, ou placo avec les bandes collées, hors peinture`,
+          type: "work",
           qty: 5.8,
           qtyUnit: "ml",
           itemPrice: 0.7,
@@ -1815,8 +1898,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Replie de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1832,8 +1916,9 @@ export const fr = {
       mainTitle: `Devis de remplacement d'une porte exterieure bois, pvc, alu 2.1m x 0.9m`,
       content: [
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture de la menuiserie par le client`,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 0,
@@ -1842,8 +1927,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des joint précomprimés`,
+          type: "buy",
           qty: 6.2,
           qtyUnit: "ml",
           itemPrice: 1.2,
@@ -1852,8 +1938,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture des pates de scellement`,
+          type: "buy",
           qty: 8,
           qtyUnit: "u",
           itemPrice: 1.5,
@@ -1862,8 +1949,9 @@ export const fr = {
           time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Protection des lieux`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1873,8 +1961,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Decoupe d'une bande de 30cm du placo autour de la menuiserie, ou piochage du platre`,
+          type: "work",
           qty: 6.2,
           qtyUnit: "ml",
           itemPrice: 0.35,
@@ -1883,8 +1972,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Dépose de l'ancienne menuiserie`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 2,
@@ -1893,8 +1983,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Fixation`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 4,
@@ -1903,8 +1994,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose joints précomprimés`,
+          type: "work",
           qty: 6.2,
           qtyUnit: "ml",
           itemPrice: 0.1,
@@ -1913,8 +2005,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application mastic de finition coté exterieur`,
+          type: "work",
           qty: 6.2,
           qtyUnit: "ml",
           itemPrice: 0.15,
@@ -1923,8 +2016,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Raccord du plâtre associé, ou placo avec les bandes collées, hors peinture`,
+          type: "work",
           qty: 6.2,
           qtyUnit: "ml",
           itemPrice: 0.7,
@@ -1933,8 +2027,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Replie de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -1950,8 +2045,9 @@ export const fr = {
       mainTitle: `Devis rénovation salle de bain 7m2 au sol  murs-27m2, faiilance 50% de murs soit 13.5m2, le autres 13.5m2  enduits 3 couches et peinture`,
       content: [
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Installation du receveur de douche ou la baignoire, la paroi de douche, la robinetrie et les meubles seront installées par le plombier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 0,
@@ -1960,8 +2056,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du carrelage par le client`,
+          type: "buy",
           qty: 7.7,
           qtyUnit: "m2",
           itemPrice: 30,
@@ -1970,8 +2067,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Plinthes assorties ou profilés de finition 5.4ml + 10%`,
+          type: "buy",
           qty: 5.4,
           qtyUnit: "ml",
           itemPrice: 11.9,
@@ -1980,8 +2078,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture de la faïence murale par le client`,
+          type: "buy",
           qty: 14.85,
           qtyUnit: "m2",
           itemPrice: 30,
@@ -1990,8 +2089,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Colle flex (double encollage)`,
+          type: "buy",
           qty: 20.5,
           qtyUnit: "m2",
           itemPrice: 4.5,
@@ -2000,8 +2100,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Joints (matériaux)`,
+          type: "buy",
           qty: 20.5,
           qtyUnit: "m2",
           itemPrice: 3,
@@ -2010,8 +2111,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture Résine d'étanchéité sous carrelage 5kg Mapei `,
+          type: "buy",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 50.9,
@@ -2020,8 +2122,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture Bande d'armature pour étanchéité 10ml - Mapei `,
+          type: "buy",
           qty: 2,
           qtyUnit: "u",
           itemPrice: 29.9,
@@ -2030,8 +2133,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture raagreage P3`,
+          type: "buy",
           qty: 7.7,
           qtyUnit: "m2",
           itemPrice: 8.9,
@@ -2040,8 +2144,9 @@ export const fr = {
           time: 0,
         },
         {
-          // €/m2 || €/ml no-supply
+          // buy  no supply  &  no time
           title: `Fourniture du produit d'accrochage`,
+          type: "buy",
           qty: 7,
           qtyUnit: "m2",
           itemPrice: 1.32,
@@ -2051,8 +2156,9 @@ export const fr = {
         },
 
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Protection des lieux`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 1,
@@ -2061,8 +2167,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Depose des meubles et sanitaires et évacuation`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 3,
@@ -2071,8 +2178,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Depose du 7m2 de carrelage`,
+          type: "work",
           qty: 7,
           qtyUnit: "m2",
           itemPrice: 0.55,
@@ -2081,8 +2189,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Depose du 13.5m2 de faïence`,
+          type: "work",
           qty: 13.5,
           qtyUnit: "m2",
           itemPrice: 0.55,
@@ -2091,8 +2200,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Préparation du support (nettoyage, produit d'accrochage)`,
+          type: "work",
           qty: 7,
           qtyUnit: "m2",
           itemPrice: 0.15,
@@ -2101,8 +2211,9 @@ export const fr = {
           // time: 4,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Réalisation du ragréage P3`,
+          type: "work",
           qty: 7,
           qtyUnit: "m2",
           itemPrice: 0.5,
@@ -2111,8 +2222,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Encollage bandes d'armature pour étanchéité`,
+          type: "work",
           qty: 16,
           qtyUnit: "ml",
           itemPrice: 0.2,
@@ -2121,8 +2233,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application produit d'étanchéité 2 couches`,
+          type: "work",
           qty: 13.5,
           qtyUnit: "m2",
           itemPrice: 0.4,
@@ -2131,8 +2244,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose carrelage et faïence (pose pieds-droits, double encollage)`,
+          type: "work",
           qty: 20.5,
           qtyUnit: "m2",
           itemPrice: 1,
@@ -2141,8 +2255,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Découpes (les bordures, obstacles, angles)`,
+          type: "work",
           qty: 20.5,
           qtyUnit: "m2",
           itemPrice: 0.1,
@@ -2151,8 +2266,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Pose des plinthes et joints associés`,
+          type: "work",
           qty: 5.4,
           qtyUnit: "ml",
           itemPrice: 0.4,
@@ -2161,8 +2277,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Réalisation des joints de finition & nettoyage final`,
+          type: "work",
           qty: 20.5,
           qtyUnit: "m2",
           itemPrice: 0.5,
@@ -2171,8 +2288,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Application d'impression, enduits 3 couches, ponçage, impression et 2 couches de peinture + 2.5m2 la porte + 7m2 le plafond`,
+          type: "work",
           qty: 23.0,
           qtyUnit: "m2",
           itemPrice: 1.5,
@@ -2181,8 +2299,9 @@ export const fr = {
           // time: 0,
         },
         {
-          // h/m2 || h/ml supply=value & notime
+          // work supply=value
           title: `Nettoyage de fin de chantier`,
+          type: "work",
           qty: 1,
           qtyUnit: "u",
           itemPrice: 0,
@@ -2190,8 +2309,6 @@ export const fr = {
           supply: 0,
           time: 1.5,
         },
-        
-        
       ],
     },
   ],

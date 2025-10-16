@@ -186,6 +186,7 @@ function Header() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-auto bg-[--bg_body] ">
+      {/* ----------------------- */}
 
       <div className={style.container}>
         <div

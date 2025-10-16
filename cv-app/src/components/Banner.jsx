@@ -32,10 +32,8 @@ function Banner({ src, title }) {
   };
 
   return (
-    <div className="banner flex justify-end items-start w-full h-auto relative">
+    <div className="banner pt-fixed flex justify-end items-start w-full h-auto relative">
       <div className="flex w-full h-auto bg-gray-900 ">
-       
-
         {/*  min-h-[160px] xs:min-h-[180px]  sm:min-h-[200px] */}
         <img
           className={`object-cover relative  left-[0px] w-full h-auto  min-h-[100px] ${
@@ -74,7 +72,7 @@ function Banner({ src, title }) {
         </div>
       )}
       {hrefDev && (
-        <div className="absolute top-[50%] left-0 flex justify-center w-full h-auto;">
+        <div className=" absolute top-[70%] left-0 flex justify-center w-full h-auto;">
           <img className={style.logo} src={html} alt="html" />
           <img className={style.logo} src={css} alt="css" />
           <img className={style.logo} src={js} alt="js" />

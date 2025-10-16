@@ -74,6 +74,7 @@ const Devis = ({ id }) => {
                 item.content.map((contentItem, i) => {
                   const {
                     title,
+                    type,
                     qty,
                     qtyUnit,
                     itemPrice,
@@ -89,6 +90,7 @@ const Devis = ({ id }) => {
                       id={id}
                       key={uuidv4()}
                          title={title}
+                         type={type}
                       qty={qty}
                       qtyUnit={qtyUnit}
                       itemPrice={itemPrice}
