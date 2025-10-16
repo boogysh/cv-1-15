@@ -29,7 +29,11 @@ function App() {
           index
           element={<Navigate replace to={`/${t.locale}/${t.archNav}`} />}
         />
-        <Route path={`/${t.locale}`} element={<Architecture />} />
+        {/* <Route path={`/${t.locale}`} element={<Architecture />} /> */}
+        <Route
+          path={`/${t.locale}`}
+          element={<Navigate replace to={`/${t.locale}/${t.archNav}`} />}
+        />
         <Route path={`/defaultsite`} element={<Architecture />} />
 
         <Route path={`/${t.locale}/${t.archNav}`} element={<Architecture />} />
