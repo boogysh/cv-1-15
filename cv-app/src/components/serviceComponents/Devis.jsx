@@ -25,7 +25,7 @@ const Devis = ({ id }) => {
 
   const groupDevis = t.cardDevis.filter((item) => item.id === id)[0]; // result is an Array => [0] flat() not working
 
-  console.log("groupDevis-maintitle", groupDevis);
+  // console.log("groupDevis-maintitle", groupDevis);
 
   useEffect(() => {
     const totalHours = getTotal(`hours ${id}`);

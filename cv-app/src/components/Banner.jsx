@@ -32,7 +32,7 @@ function Banner({ src, title }) {
   };
 
   return (
-    <div className="banner pt-fixed flex justify-end items-start w-full h-auto relative">
+    <div className="banner flex justify-end items-start w-full h-auto relative">
       <div className="flex w-full h-auto bg-gray-900 ">
         {/*  min-h-[160px] xs:min-h-[180px]  sm:min-h-[200px] */}
         <img
