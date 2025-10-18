@@ -347,7 +347,7 @@ export const fr = {
       title: "Rénovation d'une maison autour de Fontainebleau",
       cover: "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.jpg",
       pictures: [
-        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.png",
+        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-0.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-1.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-2.jpg",
