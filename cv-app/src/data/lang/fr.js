@@ -364,7 +364,7 @@ export const fr = {
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-9.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-9-10.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-10.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-11.png",
+        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-11.jpg",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-12.png",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-13.png",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-14.png",
