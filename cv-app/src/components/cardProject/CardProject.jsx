@@ -101,7 +101,7 @@ function CardProjectNew({
                 <LoaderSlider />
               </div>
             ) : (
-              <div className="flex  w-full h-ratio bg-[#ebdede]  overflow-hidden ">
+              <div className="flex w-full h-ratio bg-[#ebdede]  overflow-hidden ">
                 <Slider slides={images} />
               </div>
             )}

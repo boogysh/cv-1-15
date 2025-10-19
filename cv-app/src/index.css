@@ -3,9 +3,10 @@
 @tailwind utilities;
 @layer base {
   .h-ratio {
-    height: calc(95vw * 0.7);
+    height: calc(95vw * 0.77);
     min-height: 200px;
-    max-height: 420px;
+    /* max-height: 420px; */
+    max-height: 450px;
   }
   .title-DD {
     @apply w-full flex justify-center flex-wrap font-semibold text-[1.4rem] leading-6 xs:text-[1.7rem] xs:leading-9 sm:text-[2.2rem] mb-2 px-4 font-dancing;
