@@ -9,7 +9,7 @@ import { GiClick } from "react-icons/gi";
 import AllComments from "./_cardProject/AllComments";
 import Technos from "./_cardProject/Technos";
 import { Link } from "react-router-dom";
-import LoaderSlider from "../loader/LoaderSlider";
+// import LoaderSlider from "../loader/LoaderSlider";
 
 function CardProjectNew({
   images,
@@ -95,16 +95,10 @@ function CardProjectNew({
             </button>
           </div>
           <div className="flex relative w-full h-auto border-[1px] border-y-black">
-            {/* SLIDER && INFO */}
-            {isLoading ? (
-              <div className="flex  w-full h-ratio   overflow-hidden">
-                <LoaderSlider />
-              </div>
-            ) : (
-              <div className="flex w-full h-ratio bg-[#ebdede]  overflow-hidden ">
+            
+            <div className="flex w-full h-ratio bg-[#ebdede]  overflow-hidden ">
                 <Slider slides={images} />
               </div>
-            )}
             {/* TECHNOS */}
           { hrefDev && (<div className="w-7 xs:w-8 s:w-10 h-auto flex flex-col justify-center items-center py-3 pr-[6px] bg-[#ebdede] z-10">
               <Technos technos={technos} />

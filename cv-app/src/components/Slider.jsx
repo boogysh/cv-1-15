@@ -1,8 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import arrowPrev from "../assets/arrowPreview4.png";
 import arrowNext from "../assets/arrowNext4.png";
+import LoaderSlider from "./loader/LoaderSlider";
 
 export default function Slider({ slides = [] }) {
+  const [mainImage, setMainImage] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
   const [index, setIndex] = useState(0);
   const containerRef = useRef(null);
   const trackRef = useRef(null);
@@ -57,7 +61,74 @@ export default function Slider({ slides = [] }) {
       trackRef.current.style.transform = `translateX(${translate.current}px)`;
   };
 
-  if (!slides.length) return <div>Aucune image</div>;
+  
+   //Charger uniquement la première image dès le départ
+  useEffect(() => {
+    if (!slides || slides.length === 0) {
+      setError(true);
+      return;
+    }
+
+    let cancelled = false;
+    setLoaded(false);
+    setError(false);
+
+    // 1️⃣ Définir et charger la première image
+    const first = slides[0];
+    setMainImage(first);
+
+    const img = new Image();
+    img.onload = () => {
+      if (!cancelled) {
+        // 2️⃣ Lancer ensuite le préchargement séquentiel des autres images
+        preloadSequentially(slides.slice(1), cancelled);
+        setLoaded(true);
+      }
+    };
+    img.onerror = () => {
+      if (!cancelled) setError(true);
+    };
+    img.src = first;
+
+    // 3️⃣ Si déjà en cache
+    if (img.complete && img.naturalWidth !== 0) {
+      if (!cancelled) {
+        setLoaded(true);
+        preloadSequentially(slides.slice(1), cancelled);
+      }
+    }
+
+    return () => {
+      cancelled = true;
+      img.onload = null;
+      img.onerror = null;
+    };
+  }, [slides]);
+  // }, [currentImage]);
+
+  // 🔁 Fonction utilitaire : charge une image après l’autre
+  function preloadSequentially(urls, cancelled) {
+    if (!urls || urls.length === 0) return;
+
+    let index = 0;
+
+    const loadNext = () => {
+      if (cancelled || index >= urls.length) return;
+
+      const img = new Image();
+      img.onload = () => {
+        index++;
+        loadNext(); // quand une image est chargée, passer à la suivante
+      };
+      img.onerror = () => {
+        index++;
+        loadNext();
+      };
+      img.src = urls[index];
+    };
+
+    loadNext(); // démarrer la chaîne
+  }
 
   return (
     <div
@@ -83,15 +154,50 @@ export default function Slider({ slides = [] }) {
       >
         {slides.map((src, i) => (
           <div key={i} className="w-full h-full relative">
-            <img
-              src={src}
-              alt={`slide-${i}`}
-              className="w-full h-full object-cover select-none"
-              draggable={false}
-            />
+            {!loaded ? (
+              <div className="flex  w-full h-ratio   overflow-hidden">
+                <LoaderSlider />
+              </div>
+            ) : (
+              mainImage && (
+                <img
+                  // src={src}
+                  src={mainImage}
+                  alt={`slide-${i}`}
+                  // className="w-full h-full object-cover select-none"
+                  className={`w-full h-full object-cover select-none transition-opacity duration-500 ${
+                    loaded ? "opacity-100" : "opacity-0"
+                  }`}
+                  draggable={false}
+                  // loading="eager" // 👈 important : charge en priorité
+                  // loading="lazy" // 👈 important : charge en priorité
+                />
+              )
+            )}
           </div>
         ))}
       </div>
+
+      {/* Erreur */}
+      {error && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-red-600 text-sm font-medium bg-gray-50 p-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8 mb-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 9v2m0 4h.01M5.5 19h13a2 2 0 002-2V7a2 2 0 00-2-2h-13A2 2 0 003.5 7v10a2 2 0 002 2z"
+            />
+          </svg>
+          Image indisponible
+        </div>
+      )}
 
       {/* flèches */}
       {slides.length > 1 && (
