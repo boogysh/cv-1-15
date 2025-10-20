@@ -4,9 +4,9 @@ import arrowNext from "../assets/arrowNext4.png";
 import LoaderSlider from "./loader/LoaderSlider";
 
 export default function Slider({ slides = [] }) {
-  const [mainImage, setMainImage] = useState(null);
+  // const [mainImage, setMainImage] = useState(null);
   const [loaded, setLoaded] = useState(false);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [index, setIndex] = useState(0);
   const containerRef = useRef(null);
   const trackRef = useRef(null);
@@ -60,75 +60,31 @@ export default function Slider({ slides = [] }) {
     else
       trackRef.current.style.transform = `translateX(${translate.current}px)`;
   };
+  //
 
-  
-   //Charger uniquement la première image dès le départ
+  //Charger uniquement la première image dès le départ
   useEffect(() => {
-    if (!slides || slides.length === 0) {
-      setError(true);
-      return;
-    }
-
-    let cancelled = false;
     setLoaded(false);
-    setError(false);
 
-    // 1️⃣ Définir et charger la première image
     const first = slides[0];
-    setMainImage(first);
 
     const img = new Image();
     img.onload = () => {
-      if (!cancelled) {
-        // 2️⃣ Lancer ensuite le préchargement séquentiel des autres images
-        preloadSequentially(slides.slice(1), cancelled);
-        setLoaded(true);
-      }
-    };
-    img.onerror = () => {
-      if (!cancelled) setError(true);
+      // setMainImage(first);
+      setLoaded(true);
     };
     img.src = first;
 
-    // 3️⃣ Si déjà en cache
     if (img.complete && img.naturalWidth !== 0) {
-      if (!cancelled) {
-        setLoaded(true);
-        preloadSequentially(slides.slice(1), cancelled);
-      }
+      setLoaded(true);
     }
 
     return () => {
-      cancelled = true;
       img.onload = null;
       img.onerror = null;
+      setLoaded(true);
     };
   }, [slides]);
-  // }, [currentImage]);
-
-  // 🔁 Fonction utilitaire : charge une image après l’autre
-  function preloadSequentially(urls, cancelled) {
-    if (!urls || urls.length === 0) return;
-
-    let index = 0;
-
-    const loadNext = () => {
-      if (cancelled || index >= urls.length) return;
-
-      const img = new Image();
-      img.onload = () => {
-        index++;
-        loadNext(); // quand une image est chargée, passer à la suivante
-      };
-      img.onerror = () => {
-        index++;
-        loadNext();
-      };
-      img.src = urls[index];
-    };
-
-    loadNext(); // démarrer la chaîne
-  }
 
   return (
     <div
@@ -159,27 +115,26 @@ export default function Slider({ slides = [] }) {
                 <LoaderSlider />
               </div>
             ) : (
-              mainImage && (
+              loaded && (
                 <img
-                  // src={src}
-                  src={mainImage}
+                  src={src}
+                  // src={mainImage}
                   alt={`slide-${i}`}
                   // className="w-full h-full object-cover select-none"
-                  className={`w-full h-full object-cover select-none transition-opacity duration-500 ${
-                    loaded ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`w-full h-full object-cover select-none transition-opacity duration-500 `}
                   draggable={false}
                   // loading="eager" // 👈 important : charge en priorité
-                  // loading="lazy" // 👈 important : charge en priorité
+                  loading="lazy"
                 />
               )
             )}
           </div>
         ))}
+        {/* Image courante */}
       </div>
 
       {/* Erreur */}
-      {error && (
+      {/* {error && (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-red-600 text-sm font-medium bg-gray-50 p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +152,7 @@ export default function Slider({ slides = [] }) {
           </svg>
           Image indisponible
         </div>
-      )}
+      )} */}
 
       {/* flèches */}
       {slides.length > 1 && (
@@ -226,3 +181,47 @@ export default function Slider({ slides = [] }) {
     </div>
   );
 }
+
+// //Charger uniquement la première image dès le départ
+//   useEffect(() => {
+//     if (!slides || slides.length === 0) {
+//       setError(true);
+//       return;
+//     }
+
+//     let cancelled = false;
+//     setLoaded(false);
+//     setError(false);
+
+//     // 1️⃣ Définir et charger la première image
+//     const first = slides[0];
+
+//     const img = new Image();
+//     img.onload = () => {
+//       if (!cancelled) {
+//         // 2️⃣ Lancer ensuite le préchargement séquentiel des autres images
+//         // setMainImage(currentImage);
+//         setMainImage(first);
+//         setLoaded(true);
+//       }
+//     };
+
+//     img.onerror = () => {
+//       if (!cancelled) setError(true);
+//     };
+//     img.src = first;
+//     // // img.src = currentImage;
+
+//     // 3️⃣ Si déjà en cache
+//     if (img.complete && img.naturalWidth !== 0) {
+//       if (!cancelled) {
+//         setLoaded(true);
+//       }
+//     }
+
+//     return () => {
+//       cancelled = true;
+//       img.onload = null;
+//       img.onerror = null;
+//     };
+//   }, [slides]);

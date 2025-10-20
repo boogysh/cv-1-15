@@ -562,7 +562,7 @@ export const fr = {
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-5-1.png",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-6.png",
         "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-9.jpg",
-        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-10.png",
+        "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-10.jpg",
       ],
       info: [
         "Réalisation des chapes et ragréages",
