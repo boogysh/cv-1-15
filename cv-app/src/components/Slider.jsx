@@ -111,7 +111,7 @@ export default function Slider({ slides = [] }) {
             onClick={goPrev}
             className="bg-black/40 hover:bg-black/60 rounded-full p-[3px] pl-[2px] pr-[4px] transition"
           >
-            <IoIosArrowBack className="text-[--bg_body] w-6 h-6 md:w-9 md:h-9 " />
+            <IoIosArrowBack className="text-[--bg_body] w-7 h-7 md:w-9 md:h-9 " />
           </button>
           <button
             onClick={goNext}
@@ -123,7 +123,7 @@ export default function Slider({ slides = [] }) {
       )}
 
       {/* Compteur */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-3 py-1 rounded-full text-sm font-medium ">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-[--bg_body] px-3 py-1 rounded-full text-sm font-medium ">
         {index + 1}/{slides.length}
       </div>
     </div>
