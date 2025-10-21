@@ -1,12 +1,3 @@
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-// SLIDER 3
-
 import React, { useState, useRef, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import LoaderSlider from "./loader/LoaderSlider";

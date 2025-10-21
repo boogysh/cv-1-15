@@ -7,7 +7,12 @@ export const ro = {
   batNav: "constructie",
   devNav: "programare",
   archTitle: "Arhitectură",
+  archTitle2: "Proiectele Mele de Arhitectură",
   batTitle: "Construcţie",
+  batTitle2: "Realizările Mele",
+  devTitle2: "Programarea de aplicații pentru uz personal",
+  batTitle3: "Lucrările realizate în mare parte singur, fie sub supravegherea unui ucenic.",
+  batTitle4: "Un adevărat profesionist este capabil să realizeze opere de artă, echipat cu o serie de unelte și câteva scule electrice.",
   servicesTitle: "Servicii",
   devTitle: "Programare web",
   devTitleNav: "Programare",
@@ -115,7 +120,7 @@ export const ro = {
     },
      {
       id: "pr-maison-perso",
-      title: "Casă individuală viziune 2024",
+      title: "Casă individuală v-2024",
       description:
         "Casă pentru o familie cu 3-4 copii. Fotografiile sunt randări realizate cu 3D'S MAX + V-ray.",
       cover: "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
@@ -197,6 +202,30 @@ export const ro = {
         "Proiect cunoscut, adaptat la necesităţi cotidiene.",
         "Parter: bucătărie, sală de mese, living, WC.",
         "Etaj: 3 dormitoare, baie.",
+      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
+    },
+     {
+      id: "pr3A-maison",
+      title: "Casă individuală v-2023",
+      description:
+        "Projet personnel",
+      cover: "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-1.jpg",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-1.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-2.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-3.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-4.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-5.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-6.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-7.jpg",
+        
+      ],
+     info: [
+        "Casă din piatră sau din blocuri cu gauri.",
+        "Pentru o familie de 5-6 persoane.",
+        "Parter: living, sufragerie, bucătărie, WC, baie",
+        "Etaj: 3 dormitoare și bloc sanitar. ",
       ],
       technos: ["react", "tailwind", "node", "mongoDB"],
     },

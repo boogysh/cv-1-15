@@ -7,10 +7,15 @@ export const en = {
   batNav: "building",
   devNav: "development",
   archTitle: "Architecture",
+  archTitle2: "My Architectural Projects",
   batTitle: "Building",
+  batTitle2: "My Achievements",
+  batTitle3: "The work was carried out largely on my own, either supervised by an apprentice",
+  batTitle4: "A true professional is capable of creating works of art, equipped with a set of tools and a few power tools.",
   servicesTitle: "Services",
   devTitle: "Development web",
   devTitleNav: "Development",
+  devTitle2: "Development of applications for personal use",
   comments: "Comments",
   iLike: "I Like",
   comment: "Comment",
@@ -111,7 +116,7 @@ export const en = {
     },
     {
       id: "pr-maison-perso",
-      title: "Single-family home vision 2024",
+      title: "Single-family home v-2024",
       description:
         "House for a family with 3-4 children. The photos are renderings created using 3D'S MAX + V-ray.",
       cover: "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-1.jpg",
@@ -192,6 +197,31 @@ export const en = {
         "For a family of 4 - 5 persons.",
         "Known project, completely adapted to the daily needs.",
         "Ground floor: Kitchen, dining room, living room, WC.",
+        "Floor: 3 bedrooms, bathroom.",
+      ],
+      technos: ["react", "tailwind", "node", "mongoDB"],
+    },
+    {
+      id: "pr3A-maison",
+      title: "Single-family home v-2023",
+      description:
+        "Personal project",
+      cover: "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-1.jpg",
+      pictures: [
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-1.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-2.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-3.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-4.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-5.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-6.jpg",
+        "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-7.jpg",
+        
+      ],
+      info: [
+        "Stone or hollow block house.",
+        "For a family of 4 - 5 persons.",
+        "Known project, completely adapted to the daily needs.",
+        "Ground floor: Kitchen, dining room, living room, WC. bathroom.",
         "Floor: 3 bedrooms, bathroom.",
       ],
       technos: ["react", "tailwind", "node", "mongoDB"],
@@ -623,7 +653,7 @@ export const en = {
         "Foundation reinforcement",
       ],
       technos: ["react", "tailwind", "node", "mongoDB"],
-    }
+    },
   ],
   cardDev: [
     {

@@ -19,9 +19,9 @@ export default function Developpement() {
     <main className="flex flex-col items-center bg-bg_body  main-scroll ">
       {uri === t.devNav && <Banner title={t.devTitle} src={banner_dev} />}
       <h2 className="w-full text-center font-black text-[24px] md:text-[30px] lg:text-[44px] p-4 md:p-8 lg:pd-10 mt-3">
-        Développement d'applications pour usage personnel
+        {t.devTitle2}
       </h2>
-     
+
       <section
         id="cards"
         className="flex flex-wrap justify-center  pt-3 md:pt-5 lg:pt-7 2xl:pt-10 "
