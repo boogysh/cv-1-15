@@ -12,7 +12,8 @@ export default function Indentity() {
         <img
           src={myself}
           className="w-[120px] md:w-[150px] lg:w-[180px] h-auto md:ml-auto md:pr-5"
-          alt="myself"
+          alt="Victor Buga fondateur Boogysh Construction - Rénovation exclusive
+      d'intérieurs"
         />
       </div>
       <div>
