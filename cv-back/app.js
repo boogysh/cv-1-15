@@ -6,6 +6,7 @@ const cors = require("cors");
 const likeRoutes = require("./routes/like");
 const commentRoutes = require("./routes/comment");
 const messageRoutes = require("./routes/message");
+const ratingRoutes = require("./routes/rating");
 
 require("dotenv").config();
 //Connecting to mongoDB  // after dotenv
@@ -18,6 +19,7 @@ app.use(cors());
 app.use("/api/likes", likeRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/messages", messageRoutes);
+app.use("/api/ratings", ratingRoutes);
 
 app.listen(process.env.PORT, (error) => {
   error
