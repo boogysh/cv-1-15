@@ -19,7 +19,7 @@ exports.createRating = async (req, res) => {
       const newIpList = [...filteredExistingIPs, ip];
 
       // 3️⃣ Mettre à jour dans la base
-      if (filteredExistingIPs.length > 0) {
+      if (newIpList > 0) {
         const updatedRating = await RATING.updateOne(
           { project: project },
           {
@@ -52,7 +52,7 @@ exports.createRating = async (req, res) => {
       project,
       ip,
       rating: rating,
-      ipList: allMyIPs || [ip],
+      ipList: [ip],
       rateCount: 1,
     });
 
