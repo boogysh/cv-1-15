@@ -6,32 +6,26 @@ exports.createRating = async (req, res) => {
     const { project, ip, rating, allMyIPs } = req.body;
     console.log("📩 Requête reçue :", req.body);
 
-    const numericRating = Number(rating);
-    if (!project || !ip || isNaN(numericRating)) {
-      return res.status(400).json({ message: "Champs invalides ou rating manquant" });
-    }
-
     // 🔍 Vérifie s’il existe déjà une note pour ce projet
     const existingRating = await RATING.findOne({ project });
 
     if (existingRating) {
-      // ⚙️ Ancienne logique réintégrée : filtrer les IPs déjà présentes
-      const identicIPs = existingRating.ipList.filter((x) => allMyIPs.includes(x));
+      // 1️⃣ Retirer toutes les IPs de allMyIPs de existingRating.ipList
+      const filteredExistingIPs = existingRating.ipList.filter(
+        (x) => !allMyIPs.includes(x)
+      );
 
-      // ⚙️ IPs nouvelles = celles qui ne sont pas encore dans la BDD
-      const filteredIPs = allMyIPs.filter((x) => !identicIPs.includes(x));
+      // 2️⃣ Ajouter uniquement l'IP actuelle
+      const newIpList = [...filteredExistingIPs, ip];
 
-      // ✅ Nouvelle liste d’IP sans doublon
-      const newIpList = [...existingRating.ipList, ...filteredIPs];
-
-      // ✅ Met à jour uniquement si au moins une nouvelle IP a voté
-      if (filteredIPs.length > 0) {
+      // 3️⃣ Mettre à jour dans la base
+      if (filteredExistingIPs.length > 0) {
         const updatedRating = await RATING.updateOne(
           { project: project },
           {
             $set: {
               ipList: newIpList,
-              rating: numericRating,
+              rating: rating,
               rateCount: newIpList.length, // le vrai total unique
               updatedAt: new Date(),
             },
@@ -57,7 +51,7 @@ exports.createRating = async (req, res) => {
     const newRating = new RATING({
       project,
       ip,
-      rating: numericRating,
+      rating: rating,
       ipList: allMyIPs || [ip],
       rateCount: 1,
     });
@@ -86,7 +80,6 @@ exports.getRating = async (req, res) => {
     res.status(400).json({ error });
   }
 };
-
 
 // const RATING = require("../models/rating");
 
