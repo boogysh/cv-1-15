@@ -10,6 +10,7 @@ const commentSchema = mongoose.Schema(
     lastName: { type: String },
     commentTxt: { type: String },
     project: { type: String },
+    rating: { type: Number },
   },
   opts //   { timestamps: true }
 );
