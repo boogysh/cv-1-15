@@ -1,7 +1,7 @@
 const RATING = require("../models/rating");
 
 // ⚡️ Ajouter ou mettre à jour un rating
-exports.postRating = async (req, res) => {
+exports.createRating = async (req, res) => {
   try {
     const { project, ip, rating, allMyIPs } = req.body;
 
