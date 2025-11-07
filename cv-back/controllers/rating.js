@@ -51,16 +51,17 @@ exports.createRating = (req, res) => {
         } else return;
 
         //------------------------------------------------------
-        LIKE.updateOne(
+        RATING.updateOne(
           { project: project },
           {
-            _id: LIKE._id,
-            project: LIKE.project,
+            _id: RATING._id,
+            project: RATING.project,
             ipList: newIpList,
+            rating: rating,
             rateCount: newRateCount,
-            createdAt: LIKE.createdAt,
-            updatedAt: LIKE.updatedAt,
-            __v: LIKE.__v,
+            createdAt: RATING.createdAt,
+            updatedAt: RATING.updatedAt,
+            __v: RATING.__v,
           }
         )
           .then((updatedRating) => {
