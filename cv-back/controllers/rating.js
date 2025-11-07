@@ -4,44 +4,63 @@ const RATING = require("../models/rating");
 exports.createRating = async (req, res) => {
   try {
     const { project, ip, rating, allMyIPs } = req.body;
+    console.log("📩 Requête reçue :", req.body);
 
-    if (!project || !ip || typeof rating !== "number") {
-      return res.status(400).json({ message: "Champs invalides" });
+    const numericRating = Number(rating);
+    if (!project || !ip || isNaN(numericRating)) {
+      return res.status(400).json({ message: "Champs invalides ou rating manquant" });
     }
 
-    // 🔍 Vérifie si l’utilisateur (IP) a déjà noté ce projet
-    const existingRating = await RATING.findOne({ project, ip });
+    // 🔍 Vérifie s’il existe déjà une note pour ce projet
+    const existingRating = await RATING.findOne({ project });
 
     if (existingRating) {
-      // ✅ Met à jour la note existante
-      existingRating.rating = rating;
-      if (Array.isArray(allMyIPs)) {
-        existingRating.ipList = [...new Set([...existingRating.ipList, ...allMyIPs])];
-      }
+      // ✅ Met à jour la liste des IPs sans doublons
+      const newIpList = Array.from(new Set([...existingRating.ipList, ...(allMyIPs || [ip])]));
 
-      const updated = await existingRating.save();
+      // Optionnel : compter combien de fois le projet a été noté
+      const newRateCount = newIpList.length;
+
+      // 🧠 Met à jour la note avec les nouvelles infos
+      const updatedRating = await RATING.updateOne(
+        { project: project },
+        {
+          $set: {
+            ipList: newIpList,
+            rating: numericRating,
+            rateCount: newRateCount,
+            updatedAt: new Date(),
+          },
+        }
+      );
+
+      console.log("✅ Note mise à jour :", updatedRating);
+
       return res.status(200).json({
         message: "Note mise à jour avec succès",
-        rating: updated,
+        updatedRating,
       });
     }
 
-    // 🆕 Sinon crée une nouvelle note
+    // 🆕 Sinon, crée une nouvelle note
     const newRating = new RATING({
       project,
       ip,
-      rating,
-      ipList: allMyIPs || [],
+      rating: numericRating,
+      ipList: allMyIPs || [ip],
+      rateCount: 1,
     });
 
     const saved = await newRating.save();
 
+    console.log("🆕 Nouvelle note enregistrée :", saved);
+
     return res.status(201).json({
-      message: "Note enregistrée avec succès",
+      message: "Nouvelle note enregistrée avec succès",
       rating: saved,
     });
   } catch (error) {
-    console.error("Erreur lors de l’ajout/mise à jour du rating :", error);
+    console.error("❌ Erreur lors de l’ajout/mise à jour du rating :", error);
     res.status(500).json({ error: "Erreur serveur" });
   }
 };
@@ -52,10 +71,10 @@ exports.getRating = async (req, res) => {
     const ratings = await RATING.find().sort({ createdAt: -1 });
     res.status(200).json(ratings);
   } catch (error) {
+    console.error("❌ Erreur lors de la récupération des ratings :", error);
     res.status(400).json({ error });
   }
 };
-
 
 
 // const RATING = require("../models/rating");
