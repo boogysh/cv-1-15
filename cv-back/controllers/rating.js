@@ -6,11 +6,16 @@ exports.createRating = async (req, res) => {
     const { project, ip, rating, allMyIPs } = req.body;
     console.log("📩 Requête reçue :", req.body);
 
+    const numericRating = Number(rating);
+    if (!project || !ip || isNaN(numericRating) || numericRating < 1 || numericRating > 5) {
+      return res.status(400).json({ message: "Champs invalides ou rating manquant" });
+    }
+
     // 🔍 Vérifie s’il existe déjà une note pour ce projet
     const existingRating = await RATING.findOne({ project });
 
     if (existingRating) {
-      // 1️⃣ Retirer toutes les IPs de allMyIPs de existingRating.ipList
+      // 1️⃣ Retirer toutes les anciennes IPs de allMyIPs
       const filteredExistingIPs = existingRating.ipList.filter(
         (x) => !allMyIPs.includes(x)
       );
@@ -18,40 +23,33 @@ exports.createRating = async (req, res) => {
       // 2️⃣ Ajouter uniquement l'IP actuelle
       const newIpList = [...filteredExistingIPs, ip];
 
-      // 3️⃣ Mettre à jour dans la base
-      if (newIpList > 0) {
-        const updatedRating = await RATING.updateOne(
-          { project: project },
-          {
-            $set: {
-              ipList: newIpList,
-              rating: rating,
-              rateCount: newIpList.length, // le vrai total unique
-              updatedAt: new Date(),
-            },
-          }
-        );
+      // 3️⃣ Mettre à jour le rating et retourner le document mis à jour
+      const updatedRating = await RATING.findOneAndUpdate(
+        { project },
+        {
+          $set: {
+            ipList: newIpList,
+            rating: numericRating,
+            rateCount: newIpList.length,
+            updatedAt: new Date(),
+          },
+        },
+        { new: true } // 🔹 très important : retourne le document mis à jour
+      );
 
-        console.log("✅ Note mise à jour :", updatedRating);
+      console.log("✅ Note mise à jour :", updatedRating);
 
-        return res.status(200).json({
-          message: "Note mise à jour avec succès",
-          updatedRating,
-        });
-      } else {
-        console.log("⚠️ Aucune nouvelle IP à ajouter, pas de mise à jour.");
-        return res.status(200).json({
-          message: "L’utilisateur a déjà noté ce projet.",
-          existingRating,
-        });
-      }
+      return res.status(200).json({
+        message: "Note mise à jour avec succès",
+        updatedRating,
+      });
     }
 
-    // 🆕 Sinon, crée une nouvelle note
+    // 🆕 Sinon, création d’une nouvelle note
     const newRating = new RATING({
       project,
       ip,
-      rating: rating,
+      rating: numericRating,
       ipList: [ip],
       rateCount: 1,
     });
@@ -69,6 +67,7 @@ exports.createRating = async (req, res) => {
     res.status(500).json({ error: "Erreur serveur" });
   }
 };
+
 
 // 📥 Récupérer toutes les notes
 exports.getRating = async (req, res) => {
