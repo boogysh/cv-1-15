@@ -15,31 +15,42 @@ exports.createRating = async (req, res) => {
     const existingRating = await RATING.findOne({ project });
 
     if (existingRating) {
-      // ✅ Met à jour la liste des IPs sans doublons
-      const newIpList = Array.from(new Set([...existingRating.ipList, ...(allMyIPs || [ip])]));
+      // ⚙️ Ancienne logique réintégrée : filtrer les IPs déjà présentes
+      const identicIPs = existingRating.ipList.filter((x) => allMyIPs.includes(x));
 
-      // Optionnel : compter combien de fois le projet a été noté
-      const newRateCount = newIpList.length;
+      // ⚙️ IPs nouvelles = celles qui ne sont pas encore dans la BDD
+      const filteredIPs = allMyIPs.filter((x) => !identicIPs.includes(x));
 
-      // 🧠 Met à jour la note avec les nouvelles infos
-      const updatedRating = await RATING.updateOne(
-        { project: project },
-        {
-          $set: {
-            ipList: newIpList,
-            rating: numericRating,
-            rateCount: newRateCount,
-            updatedAt: new Date(),
-          },
-        }
-      );
+      // ✅ Nouvelle liste d’IP sans doublon
+      const newIpList = [...existingRating.ipList, ...filteredIPs];
 
-      console.log("✅ Note mise à jour :", updatedRating);
+      // ✅ Met à jour uniquement si au moins une nouvelle IP a voté
+      if (filteredIPs.length > 0) {
+        const updatedRating = await RATING.updateOne(
+          { project: project },
+          {
+            $set: {
+              ipList: newIpList,
+              rating: numericRating,
+              rateCount: newIpList.length, // le vrai total unique
+              updatedAt: new Date(),
+            },
+          }
+        );
 
-      return res.status(200).json({
-        message: "Note mise à jour avec succès",
-        updatedRating,
-      });
+        console.log("✅ Note mise à jour :", updatedRating);
+
+        return res.status(200).json({
+          message: "Note mise à jour avec succès",
+          updatedRating,
+        });
+      } else {
+        console.log("⚠️ Aucune nouvelle IP à ajouter, pas de mise à jour.");
+        return res.status(200).json({
+          message: "L’utilisateur a déjà noté ce projet.",
+          existingRating,
+        });
+      }
     }
 
     // 🆕 Sinon, crée une nouvelle note
