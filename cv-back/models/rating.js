@@ -7,9 +7,12 @@ const opts = {
 const ratingSchema = mongoose.Schema(
   {
     project: { type: String },
-    ipList: { type: [String] },
-    //  ipList: [{ ip: {type: String }, _id:false }],
-    rating: { type: Number },
+    ipList: [
+      {
+        ip: { type: String, required: true },
+        rating: { type: Number, required: true }, // note donnée par cette IP
+      },
+    ],
     rateCount: { type: Number },
   },
   opts //   { timestamps: true }

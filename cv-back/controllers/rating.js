@@ -7,8 +7,16 @@ exports.createRating = async (req, res) => {
     console.log("📩 Requête reçue :", req.body);
 
     const numericRating = Number(rating);
-    if (!project || !ip || isNaN(numericRating) || numericRating < 1 || numericRating > 5) {
-      return res.status(400).json({ message: "Champs invalides ou rating manquant" });
+    if (
+      !project ||
+      !ip ||
+      isNaN(numericRating) ||
+      numericRating < 1 ||
+      numericRating > 5
+    ) {
+      return res
+        .status(400)
+        .json({ message: "Champs invalides ou rating manquant" });
     }
 
     // 🔍 Vérifie s’il existe déjà une note pour ce projet
@@ -17,11 +25,11 @@ exports.createRating = async (req, res) => {
     if (existingRating) {
       // 1️⃣ Retirer toutes les anciennes IPs de allMyIPs
       const filteredExistingIPs = existingRating.ipList.filter(
-        (x) => !allMyIPs.includes(x)
+        (item) => !allMyIPs.includes(item.ip)
       );
 
-      // 2️⃣ Ajouter uniquement l'IP actuelle
-      const newIpList = [...filteredExistingIPs, ip];
+      // 2️⃣ Ajouter ou mettre à jour l'IP actuelle avec la note
+      const newIpList = [...filteredExistingIPs, { ip, rating: numericRating }];
 
       // 3️⃣ Mettre à jour le rating et retourner le document mis à jour
       const updatedRating = await RATING.findOneAndUpdate(
@@ -29,12 +37,12 @@ exports.createRating = async (req, res) => {
         {
           $set: {
             ipList: newIpList,
-            rating: numericRating,
+            rating: numericRating, // ou calcule la moyenne si besoin
             rateCount: newIpList.length,
             updatedAt: new Date(),
           },
         },
-        { new: true } // 🔹 très important : retourne le document mis à jour
+        { new: true } // 🔹 retourne le document mis à jour
       );
 
       console.log("✅ Note mise à jour :", updatedRating);
@@ -48,9 +56,8 @@ exports.createRating = async (req, res) => {
     // 🆕 Sinon, création d’une nouvelle note
     const newRating = new RATING({
       project,
-      ip,
+      ipList: [{ ip, rating: numericRating }],
       rating: numericRating,
-      ipList: [ip],
       rateCount: 1,
     });
 
@@ -67,7 +74,6 @@ exports.createRating = async (req, res) => {
     res.status(500).json({ error: "Erreur serveur" });
   }
 };
-
 
 // 📥 Récupérer toutes les notes
 exports.getRating = async (req, res) => {
