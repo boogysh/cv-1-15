@@ -12,14 +12,17 @@ exports.createRating = async (req, res) => {
     // 🔍 Vérifie si l’utilisateur (IP) a déjà noté ce projet
     const existingRating = await RATING.findOne({ project, ip });
 
-    if (existingRating) {
-      // 🟡 Met à jour sa note
-      existingRating.rating = rating;
-      await existingRating.save();
+   if (existing) {
+      // ✅ Met à jour la note et la liste d’IP
+      existing.rating = rating;
+      if (allMyIPs && Array.isArray(allMyIPs)) {
+        existing.ipList = [...new Set([...existing.ipList, ...allMyIPs])];
+      }
+      await existing.save();
 
       return res.status(200).json({
         message: "Note mise à jour avec succès",
-        rating: existingRating,
+        rating: existing,
       });
     }
 
