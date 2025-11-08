@@ -18,7 +18,8 @@ const RateBtn = ({ id, ip, myIpList, statePage, setStatePage }) => {
   const [rating, setRating] = useState(globalRating || 0);
 
   const { ipList, ratingCount } = useFetchFilteredLikes(
-    `${process.env.REACT_APP_URL}/api/ratings`,
+    // `${process.env.REACT_APP_URL}/api/ratings`,
+    `https://cv-back-25.vercel.app/api/ratings`,
     id,
     statePage
   );
