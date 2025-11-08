@@ -1,33 +1,50 @@
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
+
 const FooterAgreggateRange = () => {
-  const aggregate = useSelector(
-    (state) => state.ratingAggregateReducer.aggregates
+  const lastUpdate = useSelector(
+    (state) => state.ratingAggregateReducer.lastUpdate
   );
 
-  Object.entries(aggregate).forEach(([projectId, data]) => {
-    console.log(
-      `Projet ${projectId}: moyenne ${data.average}, notes ${data.count}`
-    );
-  });
+  const [globalAverage, setGlobalAverage] = useState(0);
+  const [totalVotes, setTotalVotes] = useState(0);
 
-  const allAggregates = Object.values(aggregate);
-  const totalRatings = allAggregates.reduce((acc, val) => acc + val.count, 0);
-  const globalAverage =
-    totalRatings > 0
-      ? (
-          allAggregates.reduce((acc, val) => acc + val.average * val.count, 0) /
-          totalRatings
-        ).toFixed(1)
-      : 0;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("https://cv-back-25.vercel.app/api/ratings");
+        const data = await res.json();
 
-  console.log(
-    "🌍 Moyenne globale:",
-    globalAverage,
-    "sur",
-    totalRatings,
-    "notes"
-  );
+        const withComputedRatings = data.map((item) => {
+          const ratings = item.ipList?.map((ip) => ip.rating).filter(Boolean) || [];
+          const rateCount = ratings.length;
+          const rateAverage =
+            rateCount > 0 ? ratings.reduce((acc, val) => acc + val, 0) / rateCount : 0;
+          return { ...item, rateCount, rateAverage };
+        });
+
+        const validProjects = withComputedRatings.filter((i) => i.rateCount > 0);
+        const sumVotes = validProjects.reduce((acc, i) => acc + i.rateCount, 0);
+        const globalAvg =
+          sumVotes > 0
+            ? (
+                validProjects.reduce(
+                  (acc, i) => acc + i.rateCount * i.rateAverage,
+                  0
+                ) / sumVotes
+              ).toFixed(1)
+            : 0;
+
+        setGlobalAverage(globalAvg);
+        setTotalVotes(sumVotes);
+      } catch (err) {
+        console.error("Erreur fetch global:", err);
+      }
+    };
+
+    fetchData();
+  }, [lastUpdate]); // 🟢 se relance à chaque nouveau vote
 
   // // JSON-LD pour Google
 
@@ -75,7 +92,7 @@ const FooterAgreggateRange = () => {
       ratingValue: globalAverage,
       bestRating: "5",
       worstRating: "1",
-      reviewCount: totalRatings,
+      reviewCount: totalVotes,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -85,12 +102,12 @@ const FooterAgreggateRange = () => {
 
   return (
     <>
-      <div className="w-auto h-fit footer-ratings flex items-center justify-between px-2 ">
+      <div className="w-auto h-fit footer-ratings flex items-center justify-between px-2">
         <span className="text-[12px] md:text-base pb-2 text-white font-dancing">
           Moyenne : ⭐ {globalAverage}
         </span>
         <span className="pl-2 text-[12px] md:text-base pb-2 text-white font-dancing">
-          Total des votes : {totalRatings}
+          Total des votes : {totalVotes}
         </span>
       </div>
 

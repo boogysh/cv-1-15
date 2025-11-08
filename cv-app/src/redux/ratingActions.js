@@ -52,3 +52,7 @@ export const setRatingAggregateAction = (projectId, average, count) => ({
 export const resetRatingAggregateAction = () => ({
   type: RESET_RATING_AGGREGATE,
 });
+
+
+
+

@@ -87,14 +87,16 @@ export const ratingAverageReducer = (state = ratingAverageState, action) => {
 
 // src/redux/ratingAggregateReducer.js
 
+// const initialAgregateState = {
+//   aggregates: {}, // { [projectId]: { average, count } }
+// };
+
 const initialAgregateState = {
-  aggregates: {}, // { [projectId]: { average, count } }
+  aggregates: {},   // { [projectId]: { average, count } }
+  lastUpdate: null, // 🕒 sert à détecter les changements globaux
 };
 
-export const ratingAggregateReducer = (
-  state = initialAgregateState,
-  action
-) => {
+export const ratingAggregateReducer = (state = initialAgregateState, action) => {
   switch (action.type) {
     case SET_RATING_AGGREGATE:
       return {
@@ -106,12 +108,14 @@ export const ratingAggregateReducer = (
             count: action.payload.count,
           },
         },
+        lastUpdate: Date.now(), // 🟢 on met à jour ici à chaque vote
       };
+
     case RESET_RATING_AGGREGATE:
       return initialAgregateState;
+
     default:
       return state;
   }
 };
-
 // export default ratingCountReducer;
