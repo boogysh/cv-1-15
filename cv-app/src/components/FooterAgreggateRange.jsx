@@ -29,15 +29,57 @@ const FooterAgreggateRange = () => {
     "notes"
   );
 
-  // JSON-LD pour Google
+  // // JSON-LD pour Google
+
   const jsonLd = {
-    "@context": "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-1.png",
-    "@type": "Project",
-    name: `MyProjects`,
+    "@context": "https://schema.org",
+    "@type": "CreativeWork", // Tu peux aussi utiliser "Project" ou "Product" selon ton positionnement SEO
+    name: "Projets d'architecture et de rénovation - Buga Victor",
+    alternateName:
+      "Architecture, conception, design intérieur et extérieur et tout projet de rénovation",
+    description:
+      "Découvrez les projets d'architecture réalisés par Victor Buga — maisons contemporaines, constructions sur mesure et rénovations, notés par les visiteurs.",
+    url: "https://boogysh.github.io/cv-api/",
+    inLanguage: "fr",
+    author: {
+      "@type": "Person",
+      name: "Victor Buga",
+      jobTitle:
+        "Architecte, ingénieur, concepteur 3D. Maçon polyvalent et chef de chantier.",
+      url: "https://www.linkedin.com/in/victor-buga",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Boogysh Construction",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://boogysh.github.io/cv-api/images/assets/logo-boogysh-construction-2.png",
+      },
+    },
+    image: [
+      "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-1.png",
+      "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-0.jpg",
+      "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-1.jpg",
+      "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-3.jpg",
+      "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-4.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr1/pr1-1.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-1.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2/pr2-29.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-20.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-21.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.jpg",
+      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-23.jpg",
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: globalAverage,
+      bestRating: "5",
+      worstRating: "1",
       reviewCount: totalRatings,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://boogysh.github.io/cv-api/",
     },
   };
 
