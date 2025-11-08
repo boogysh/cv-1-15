@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import HeaderContact from "./HeaderContact.jsx";
-import ButtonContactMe from "./ButtonContactMe.jsx";
+import ButtonContactMe from "./contact/ButtonContactMe.jsx";
 import HeaderBurger from "./header-burger/HeaderBurger";
 import LangSelect from "./langSelect";
 import { useSelector } from "react-redux";

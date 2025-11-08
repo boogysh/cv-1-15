@@ -1,7 +1,6 @@
 // import { useState, useEffect } from "react";
 import { useState } from "react";
 
-
 const useFormComment = () => {
   const [val, setVal] = useState({
     firstName: "",
@@ -46,23 +45,43 @@ const useFormComment = () => {
     }
   };
   //-------MATCH COMMENT------
+  // const matchComment = (e) => {
+  //   const value = e.target.value;
+  //   const matched = value.match(
+  //     /^[a-zA-Z0-9~!@#$%^&*()`{};'’:,./<>?|"+£¤áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]+$/
+  //   );
+  //   if (value.length === 0) setBorderRed({ ...borderRed, comment: false });
+  //   else if (value.length < 3) {
+  //     setVal({ ...val, comment: "" });
+  //     setBorderRed({ ...borderRed, comment: true });
+  //   } else if (matched) {
+  //     setVal({ ...val, comment: value });
+  //     setBorderRed({ ...borderRed, comment: false });
+  //   } else if (!matched) {
+  //     setVal({ ...val, comment: "" });
+  //     setBorderRed({ ...borderRed, comment: true });
+  //   }
+  // };
+
   const matchComment = (e) => {
-    const value = e.target.value;
-    const matched = value.match(
-      /^[a-zA-Z0-9~!@#$%^&*()`{};':,./<>?|"+£¤áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ._\s-]+$/
-    );
-    if (value.length === 0) setBorderRed({ ...borderRed, comment: false });
-    else if (value.length < 3) {
-      setVal({ ...val, comment: "" });
-      setBorderRed({ ...borderRed, comment: true });
-    } else if (matched) {
-      setVal({ ...val, comment: value });
-      setBorderRed({ ...borderRed, comment: false });
-    } else if (!matched) {
-      setVal({ ...val, comment: "" });
-      setBorderRed({ ...borderRed, comment: true });
-    }
-  };
+  const value = e.target.value;
+  const matched = value.match(
+    /^[\p{L}\p{N}\p{P}\p{S}\p{Zs}\-~!@#$%^&*()`{};'’:,./<>?|"+£¤]+|[\u{1F000}-\u{1FFFF}\u{200D}\u{FE0F}]+$/gu
+  );
+
+  if (value.length === 0) {
+    setBorderRed({ ...borderRed, comment: false });
+  } else if (value.length < 3) {
+    setVal({ ...val, comment: "" });
+    setBorderRed({ ...borderRed, comment: true });
+  } else if (matched) {
+    setVal({ ...val, comment: value });
+    setBorderRed({ ...borderRed, comment: false });
+  } else if (!matched) {
+    setVal({ ...val, comment: "" });
+    setBorderRed({ ...borderRed, comment: true });
+  }
+};
 
   //-----RESET ALL INPUT VALUES
   const resetValues = () => {

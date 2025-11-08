@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import Loader from "../../loader/Loader";
+import StarRatingStatic from "./StarRatingStatic";
 
 const Comments = ({ comments, isLoading }) => {
   return (
@@ -11,7 +12,7 @@ const Comments = ({ comments, isLoading }) => {
         ) : (
           <div
             key={uuidv4()}
-            className="p-1 sm:p-[10px] mt-[15px]  bg-[#f1f1f1] rounded-[10px]"
+            className="p-1 sm:p-[10px] mt-[15px] mx-2  bg-[#f1f1f1] rounded-[10px]"
           >
             <div className="flex items-center">
               <h3 className="p-2 font-semibold text-sm sm:text-base ">
@@ -21,6 +22,9 @@ const Comments = ({ comments, isLoading }) => {
                 <strong>le:</strong> {comment.createdAt.slice(0, 10)}{" "}
                 <strong> à: </strong> {comment.createdAt.slice(11, 19)}
               </span>
+            </div>
+            <div className="flex pl-2 pb-2">
+              <StarRatingStatic rating={comment.rating || 0} size={20} />
             </div>
             <p className="pl-[10px]">{comment.commentTxt}</p>
           </div>

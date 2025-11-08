@@ -2,8 +2,19 @@ import React from "react";
 // import sendComment from "../../../assets/send-comment2.png";
 import useFormComment from "../../../hooks/useForm/useFormComment";
 import { AiOutlineSend } from "react-icons/ai";
+import { useSelector } from "react-redux";
 
-export default function NewComment({ id, statePage, setStatePage }) {
+export default function NewComment({
+  id,
+  statePage,
+  setStatePage,
+  localStatePage,
+  setLocalStatePage,
+}) {
+  // const dispatch = useDispatch();
+  const globalRating = useSelector((state) => state.ratingReducer.ratings[id]);
+  // console.log("globalRating", globalRating);
+  const rating = globalRating || 0;
   //--------MATCH FIRST-NAME, MATCH-LAST-NAME, MATCH-COMMENT---------------
   const {
     borderRedFunc,
@@ -20,26 +31,52 @@ export default function NewComment({ id, statePage, setStatePage }) {
     lastName: `${val.lastName}`,
     commentTxt: `${val.comment}`,
     project: `${id}`,
+    rating: rating,
   };
   //----------COMMENT-POST-FUNCTION---------------
+  // const commentPost = (e) => {
+  //   e.preventDefault();
+  //   if (val.comment && val.firstName && val.lastName && id) {
+  //     // const fetchCommentPost = fetch("process.env.API_COMMENTS", { //? REACT_APP
+  //     const fetchCommentPost = fetch(
+  //       // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
+  //       `${process.env.REACT_APP_URL}/api/comments`,
+  //       {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify(commentToPost),
+  //       }
+  //     );
+  //     //----CLEAR INPUTS AND REFRESH COMMENTS--------
+  //     const cleanAndRefresh = async () => {
+  //       await fetchCommentPost;
+  //       resetValues();
+  //       setStatePage((prev) => prev + 1);
+  //     };
+  //     cleanAndRefresh();
+  //   } else {
+  //     borderRedFunc();
+  //   }
+  // };
+
   const commentPost = (e) => {
     e.preventDefault();
     if (val.comment && val.firstName && val.lastName && id) {
-      // const fetchCommentPost = fetch("process.env.API_COMMENTS", { //? REACT_APP
       const fetchCommentPost = fetch(
-        // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
         `${process.env.REACT_APP_URL}/api/comments`,
+        // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(commentToPost),
         }
       );
-      //----CLEAR INPUTS AND REFRESH COMMENTS--------
+
       const cleanAndRefresh = async () => {
         await fetchCommentPost;
         resetValues();
-        setStatePage(statePage + 1);
+        setStatePage((prev) => prev + 1); // global pour rating
+        setLocalStatePage((prev) => prev + 1); // local pour commentaires
       };
       cleanAndRefresh();
     } else {
