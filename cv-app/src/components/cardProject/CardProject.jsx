@@ -30,7 +30,7 @@ function CardProjectNew({
   // );
   const { ratingAverages } = useSelector((state) => state.ratingReducer);
   const ratingAverage = ratingAverages[id] || 0;
-  console.log("ratingAverage------------------", ratingAverage);
+  // console.log("ratingAverage------------------", ratingAverage);
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
     const hrefBat = window.location.href.includes(t.batNav);

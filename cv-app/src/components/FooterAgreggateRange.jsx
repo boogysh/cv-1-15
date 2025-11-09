@@ -3,14 +3,8 @@ import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 
 const FooterAgreggateRange = () => {
-   console.log("🔄 FooterAgreggateRange render"); // <-- Ajoute ce log ici
-  // const lastUpdate = useSelector(
-  //   (state) => state.ratingAggregateReducer.lastUpdate
-  // );
-
-  // const { lastUpdate } = useSelector(
-  //     (state) => state.ratingReducer
-  //   );
+  //  console.log("🔄 FooterAgreggateRange render"); // <-- Ajoute ce log ici
+ 
   const lastUpdate = useSelector((state) => state.ratingReducer.lastUpdate);
 
   const [globalAverage, setGlobalAverage] = useState(0);
