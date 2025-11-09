@@ -6,7 +6,7 @@ const cors = require("cors");
 
 // ✅ Configuration CORS : n'autoriser que ton frontend
 const allowedOrigins = [
-  "https://cv-frontend-25.vercel.app", // ton front en production
+  "https://victorbuga.com", // ton front en production
   "http://localhost:3000",             // pour le dev local
 ];
 
@@ -25,7 +25,7 @@ const corsOptions = {
 // ✅ Limiteur de requêtes (100 requêtes / 15 min / IP)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 100,
+  max: 1000,
   standardHeaders: true,
   legacyHeaders: false,
   message: "Trop de requêtes depuis cette IP. Réessayez plus tard.",
