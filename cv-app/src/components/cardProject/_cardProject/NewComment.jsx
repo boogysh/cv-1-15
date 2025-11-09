@@ -6,14 +6,17 @@ import { useSelector } from "react-redux";
 
 export default function NewComment({
   id,
+  ip,
   statePage,
   setStatePage,
   localStatePage,
   setLocalStatePage,
 }) {
   // const dispatch = useDispatch();
-  const globalRating = useSelector((state) => state.ratingReducer.ratings[id]);
-  // console.log("globalRating", globalRating);
+  // const globalRating = useSelector((state) => state.ratingReducer.ratings[id]);
+  const { ratings } = useSelector((state) => state.ratingReducer);
+  const globalRating = ratings[id] || 0;
+  console.log("globalRating", globalRating);
   const rating = globalRating || 0;
   //--------MATCH FIRST-NAME, MATCH-LAST-NAME, MATCH-COMMENT---------------
   const {
@@ -32,39 +35,18 @@ export default function NewComment({
     commentTxt: `${val.comment}`,
     project: `${id}`,
     rating: rating,
+    ip: `${ip}`,
   };
-  //----------COMMENT-POST-FUNCTION---------------
-  // const commentPost = (e) => {
-  //   e.preventDefault();
-  //   if (val.comment && val.firstName && val.lastName && id) {
-  //     // const fetchCommentPost = fetch("process.env.API_COMMENTS", { //? REACT_APP
-  //     const fetchCommentPost = fetch(
-  //       // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
-  //       `${process.env.REACT_APP_URL}/api/comments`,
-  //       {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify(commentToPost),
-  //       }
-  //     );
-  //     //----CLEAR INPUTS AND REFRESH COMMENTS--------
-  //     const cleanAndRefresh = async () => {
-  //       await fetchCommentPost;
-  //       resetValues();
-  //       setStatePage((prev) => prev + 1);
-  //     };
-  //     cleanAndRefresh();
-  //   } else {
-  //     borderRedFunc();
-  //   }
-  // };
+
+  console.log("commentToPost++", commentToPost);
 
   const commentPost = (e) => {
     e.preventDefault();
-    if (val.comment && val.firstName && val.lastName && id) {
+    // if (val.comment && val.firstName && val.lastName && id) {
+    if (val.comment && val.firstName && val.lastName && id && ip && rating) {
       const fetchCommentPost = fetch(
-        `${process.env.REACT_APP_URL}/api/comments`,
-        // "https://cv-back-git-main-boogysh.vercel.app/api/comments",
+        // `${process.env.REACT_APP_URL}/api/comments`,
+        `https://cv-back-25.vercel.app/api/comments`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

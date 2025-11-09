@@ -25,9 +25,12 @@ function CardProjectNew({
   const [moreInfo, setMoreInfo] = useState(false);
   const { t } = useSelector((state) => state.langReducer);
   const hrefDev = window.location.href.includes(t.devNav);
-  const ratingAverage = useSelector(
-    (state) => state.ratingAverageReducer?.ratingAverages?.[id] || 0
-  );
+  // const ratingAverage = useSelector(
+  //   (state) => state.ratingAverageReducer?.ratingAverages?.[id] || 0
+  // );
+  const { ratingAverages } = useSelector((state) => state.ratingReducer);
+  const ratingAverage = ratingAverages[id] || 0;
+  console.log("ratingAverage------------------", ratingAverage);
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
     const hrefBat = window.location.href.includes(t.batNav);
@@ -115,9 +118,7 @@ function CardProjectNew({
             />
           </div>
           {/* FOOTER --- LIKES & COMMENTS */}
-          <LikeCommentRateShareBtns
-            id={id}
-          />
+          <LikeCommentRateShareBtns id={id} />
         </div>
       </div>
     </div>

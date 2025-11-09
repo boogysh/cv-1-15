@@ -1,88 +1,116 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import StarRating from "./StarRating";
 import { useFetchFilteredLikes } from "../../../hooks/useFetch_filtered_likes";
 import { aggregateRange } from "../../../utils/aggregateRange";
-// import { setRatingAction } from "../../../redux/ratingActions";
-import {
-  setRatingAction,
-  setRatingCountAction,
-  setRatingAverageAction,
-  setRatingAggregateAction,
-} from "../../../redux/ratingActions";
+import { setRatingFullUpdate } from "../../../redux/ratingActions";
 
 const RateBtn = ({ id, ip, myIpList, statePage, setStatePage }) => {
   const dispatch = useDispatch();
-  const globalRating = useSelector((state) => state.ratingReducer.ratings[id]);
 
-  const [rating, setRating] = useState(globalRating || 0);
+  // 🔹 Sélecteurs sécurisés
+  const { globalRating = 0, aggregate } = useSelector((state) => {
+    const { ratings = {}, aggregates = {} } = state.ratingReducer || {};
+    return {
+      globalRating: ratings[id] ?? 0,
+      aggregate: aggregates[id] ?? { average: 0, count: 0 },
+    };
+  });
 
+  // 🔹 Récupération des votes depuis l’API
   const { ipList, ratingCount } = useFetchFilteredLikes(
-    // `${process.env.REACT_APP_URL}/api/ratings`,
-    `https://cv-back-25.vercel.app/api/ratings`,
+    "https://cv-back-25.vercel.app/api/ratings",
     id,
     statePage
   );
 
-  // 1️⃣ Extraire tous les ratings
-  const ratingsArray = ipList.map((item) => item.rating);
-  // 2️⃣ Calculer la somme des ratings
-  const sum = ratingsArray.reduce((acc, val) => acc + val, 0);
-  // 3️⃣ Calcul de la moyenne arrondie à une décimale
-  const averageRating =
-    ratingsArray.length > 0
-      ? Number((sum / ratingsArray.length).toFixed(1))
-      : 0; // console.log("Moyenne:", averageRating); // 4
+  // 🔹 Memoiser l’aggregate local pour éviter changements de référence
+  const localAggregate = useMemo(() => {
+    const ratingsArray = ipList.map((item) => item.rating).filter(Boolean);
+    return aggregateRange(ratingsArray);
+  }, [ipList]);
 
-  // Calculer moyenne et total
-  const { average, count } = aggregateRange(ratingsArray);
+  // console.log('localAggregate.average',localAggregate.average)
 
+  // 🔹 useEffect pour mettre à jour Redux uniquement si nécessaire
   useEffect(() => {
     if (!ipList || !ip) return;
     const currentUser = ipList.find((item) => item.ip === ip);
-    if (currentUser) {
-      setRating(currentUser.rating);
-      dispatch(setRatingAction(id, currentUser.rating));
-      dispatch(setRatingCountAction(id, ratingCount)); //global acces
-      // console.log("📤 Dispatch de la moyenne:", averageRating);
-      dispatch(setRatingAverageAction(id, averageRating)); //global acces
-      dispatch(setRatingAggregateAction(id, average, count));
-    }
-  }, [ipList, ip, id, dispatch, ratingCount, averageRating, average, count]);
+    if (!currentUser) return;
 
+    const needUpdate =
+      globalRating !== currentUser.rating ||
+      aggregate.average !== localAggregate.average ||
+      aggregate.count !== localAggregate.count;
+
+    if (needUpdate) {
+      dispatch(
+        setRatingFullUpdate(
+          id,
+          currentUser.rating,
+          localAggregate.average
+          // localAggregate.count
+        )
+      );
+    }
+  }, [
+    ipList,
+    ip,
+    id,
+    dispatch,
+    globalRating,
+    aggregate.average,
+    aggregate.count,
+    localAggregate.average,
+    localAggregate.count,
+  ]);
+
+  const updateCommentRating = async (selectedValue) => {
+    try {
+      await fetch("https://cv-back-25.vercel.app/api/comments/update-rating", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          project: id,
+          ip,
+          rating: selectedValue,
+        }),
+      });
+      
+    } catch (err) {
+      console.error(
+        "Erreur lors de la mise à jour du rating du commentaire :",
+        err
+      );
+    }
+  };
+
+  // 🔹 Poster une nouvelle note
   const ratePost = (selectedValue) => {
     if (!ip || !id || !myIpList) return;
-
-    const rateToPost = {
-      project: id,
-      ip,
-      rating: selectedValue,
-      allMyIPs: myIpList,
-    };
 
     fetch("https://cv-back-25.vercel.app/api/ratings", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(rateToPost),
+      body: JSON.stringify({
+        project: id,
+        ip,
+        rating: selectedValue,
+        allMyIPs: myIpList,
+      }),
     })
-      .then(() => {
-        setStatePage((prev) => prev + 1);
-        setRating(selectedValue);
-        dispatch(setRatingAction(id, selectedValue)); // 🟢 MAJ store Redux
-        dispatch(setRatingAverageAction(id, averageRating)); //MAJ store Redux
-        dispatch(setRatingAggregateAction(id, average, count));
+      .then(async () => {
+        // ✅ Met aussi à jour la note dans le commentaire associé
+        await updateCommentRating(selectedValue);
+        setStatePage((prev) => prev + 1); // force re-fetch
       })
-      .catch((err) => console.error("Erreur en postant la note :", err));
+      .catch((err) => console.error(err));
   };
 
   return (
-    <div className="w-auto-h-auto">
-      <div className="flex items-center px-4 w-auto h-auto mr-auto ">
-        <StarRating
-          rating={rating}
-          setRating={setRating}
-          handlePost={ratePost}
-        />
+    <div className="w-auto h-auto">
+      <div className="flex items-center px-4 w-auto h-auto mr-auto">
+        <StarRating rating={globalRating} handlePost={ratePost} />
         <span className="pl-2 text-sm s:text-base">{ratingCount}</span>
       </div>
     </div>
@@ -90,5 +118,3 @@ const RateBtn = ({ id, ip, myIpList, statePage, setStatePage }) => {
 };
 
 export default RateBtn;
-
-

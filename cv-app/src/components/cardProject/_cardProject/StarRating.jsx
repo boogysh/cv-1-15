@@ -5,7 +5,7 @@ import StarSparkle from "./StarSparkle";
 export default function StarRating({
   totalStars = 5,
   rating,
-  setRating,
+  // setRating,
   handlePost,
   onChange,
 }) {
@@ -18,8 +18,8 @@ export default function StarRating({
   }, []);
 
   const handleClick = (value) => {
-    setRating(value);
-    if (onChange) onChange(value);
+    // setRating(value);
+    // if (onChange) onChange(value);
 
     // 🟢 on passe directement la valeur à handlePost
     handlePost(value);

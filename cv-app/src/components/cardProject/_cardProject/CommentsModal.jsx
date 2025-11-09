@@ -87,15 +87,10 @@ const CommentsModal = ({
           />
         </div>
         {/* FOOTER */}
-        {/* <div className={`sticky bottom-0 z-10 rounded-b-[20px] `}> */}
         <div className={`  z-10 rounded-b-[20px] `}>
-          {/* <NewComment
-            id={id}
-            setStatePage={setStatePage}
-            statePage={statePage}
-          /> */}
           <NewComment
             id={id}
+            ip={ip}
             statePage={statePage} // global pour rating
             setStatePage={setStatePage} // global pour rating
             localStatePage={localStatePage} // local pour commentaires
