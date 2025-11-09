@@ -12,7 +12,8 @@ const LikeBtn = ({ ip, id, myIpList }) => {
 
   //-----------USE FETCH-------------------
   const { isLoading, ipList } = useFetchFilteredLikes(
-    `${process.env.REACT_APP_URL}/api/likes`,
+    // `${process.env.REACT_APP_URL}/api/likes`,
+    `https://cv-back-25.vercel.app/api/likes`,
     id,
     statePage //refresh after liking or unliked !!!!!!!!!!!
   );

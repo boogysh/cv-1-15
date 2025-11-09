@@ -15,7 +15,8 @@ const CommentsBtn = ({ id, ip, title, showComments, setShowComments, statePage, 
   }, [lastUpdate]);
 
   const { isLoadingComments, commentsList } = UseFetch_filtered_comments(
-    `${process.env.REACT_APP_URL}/api/comments`,
+    // `${process.env.REACT_APP_URL}/api/comments`,
+    `https://cv-back-25.vercel.app/api/comments`,
     id,
     statePageComments
   );

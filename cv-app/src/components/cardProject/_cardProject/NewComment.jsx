@@ -38,7 +38,7 @@ export default function NewComment({
     ip: `${ip}`,
   };
 
-  console.log("commentToPost++", commentToPost);
+  // console.log("commentToPost++", commentToPost);
 
   const commentPost = (e) => {
     e.preventDefault();
