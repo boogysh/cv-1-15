@@ -1,39 +1,37 @@
-// ratingReducer.js
 import { SET_RATING_FULL_UPDATE } from "./ratingActions";
 
 const initialState = {
-  ratings: {},
-  ratingCounts: {},
-  ratingAverages: {},
-  aggregates: {},
-  lastUpdate: Date.now(),
+  ratingRedux: 0, // note utilisateur locale (optionnelle)
+  ratings: {}, // { [projectId]: moyenne projet }
+  count: {}, // { [projectId]: votes projet }
+  totalAverage: 0, // moyenne globale
+  totalVotes: 0, // total des votes
+  lastUpdate: null, // timestamp
 };
 
 export const ratingReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_RATING_FULL_UPDATE: {
-      // const { projectId, rating, average, count } = action.payload;
-      const { projectId, rating, average } = action.payload;
+      const {
+        ratings,
+        count,
+        totalAverage,
+        totalVotes,
+      } = action.payload;
 
       return {
         ...state,
-        ratings: {
-          ...state.ratings,
-          [projectId]: rating,
-        },
-        ratingAverages: {
-         ...state.ratingAverages,
-         [projectId]: average,
-       },
-       lastUpdate: Date.now(),
-        // ratingCounts: {
-        //   ...state.ratingCounts,           //cree boucle infini!!!!!
-        //   [projectId]: count,
-        // },
-        // aggregates: {
-        //   ...state.aggregates,
-        //   [projectId]: { average, count },
-        // },
+        // 🔹 fusionne les moyennes de projets
+        ratings: ratings ? { ...state.ratings, ...ratings } : state.ratings,
+
+        // 🔹 fusionne le nombre de votes par projet
+        count: count ? { ...state.count, ...count } : state.count,
+
+        // 🔹 met à jour les totaux globaux
+        totalAverage: totalAverage != null ? totalAverage : state.totalAverage,
+        totalVotes: totalVotes != null ? totalVotes : state.totalVotes,
+
+        lastUpdate: Date.now(),
       };
     }
 
@@ -41,202 +39,3 @@ export const ratingReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-
-// import {
-//   SET_RATING,
-//   RESET_RATING,
-//   SET_RATING_COUNT,
-//   RESET_RATING_COUNT,
-//   SET_RATING_AVERAGE,
-//   RESET_RATING_AVERAGE,
-//   SET_RATING_AGGREGATE,
-//   RESET_RATING_AGGREGATE,
-// } from "./ratingActions";
-
-// const initialState = {
-//   ratings: {}, // { [projectId]: ratingValue }
-//   ratingCounts: {}, // { [projectId]: rateCount }
-//   ratingAverages: {}, // { [projectId]: rateAverage }
-//   aggregates: {}, // { [projectId]: { average, count } }
-//   lastUpdate: null, // timestamp pour détecter les changements globaux
-// };
-
-// export const ratingReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     // ---- Rating individuel ----
-//     case SET_RATING:
-//       return {
-//         ...state,
-//         ratings: {
-//           ...state.ratings,
-//           [action.payload.projectId]: action.payload.rating,
-//         },
-//       };
-
-//     case RESET_RATING:
-//       return { ...state, ratings: {} };
-
-//     // ---- Count ----
-//     case SET_RATING_COUNT:
-//       return {
-//         ...state,
-//         ratingCounts: {
-//           ...state.ratingCounts,
-//           [action.payload.projectId]: action.payload.rateCount,
-//         },
-//       };
-
-//     case RESET_RATING_COUNT:
-//       return { ...state, ratingCounts: {} };
-
-//     // ---- Average ----
-//     case SET_RATING_AVERAGE:
-//       return {
-//         ...state,
-//         ratingAverages: {
-//           ...state.ratingAverages,
-//           [action.payload.projectId]: action.payload.averageRating,
-//         },
-//       };
-
-//     case RESET_RATING_AVERAGE:
-//       return { ...state, ratingAverages: {} };
-
-//     // ---- Aggregate ----
-//     case SET_RATING_AGGREGATE:
-//       return {
-//         ...state,
-//         aggregates: {
-//           ...state.aggregates,
-//           [action.payload.projectId]: {
-//             average: action.payload.average,
-//             count: action.payload.count,
-//           },
-//         },
-//         lastUpdate: Date.now(), // 🔄 mise à jour globale à chaque vote
-//       };
-
-//     case RESET_RATING_AGGREGATE:
-//       return { ...state, aggregates: {}, lastUpdate: null };
-
-//     default:
-//       return state;
-//   }
-// };
-
-// // // src/redux/ratingReducer.js
-// // import {
-// //   SET_RATING,
-// //   RESET_RATING,
-// //   SET_RATING_COUNT,
-// //   RESET_RATING_COUNT,
-// //   SET_RATING_AVERAGE,
-// //   RESET_RATING_AVERAGE,
-// //   SET_RATING_AGGREGATE,
-// //   RESET_RATING_AGGREGATE,
-// // } from "./ratingActions";
-
-// // const ratingState = {
-// //   ratings: {}, // { [projectId]: ratingValue }
-// // };
-
-// // export const ratingReducer = (state = ratingState, action) => {
-// //   switch (action.type) {
-// //     case SET_RATING:
-// //       return {
-// //         ...state,
-// //         ratings: {
-// //           ...state.ratings,
-// //           [action.payload.projectId]: action.payload.rating,
-// //         },
-// //       };
-
-// //     case RESET_RATING:
-// //       return ratingState;
-
-// //     default:
-// //       return state;
-// //   }
-// // };
-
-// // // export default ratingReducer;
-
-// // // src/redux/ratingCountReducer.js
-
-// // const ratingCountState = {
-// //   ratingCounts: {}, // { [projectId]: rateCount }
-// // };
-
-// // export const ratingCountReducer = (state = ratingCountState, action) => {
-// //   switch (action.type) {
-// //     case SET_RATING_COUNT:
-// //       return {
-// //         ...state,
-// //         ratingCounts: {
-// //           ...state.ratingCounts,
-// //           [action.payload.projectId]: action.payload.rateCount,
-// //         },
-// //       };
-
-// //     case RESET_RATING_COUNT:
-// //       return ratingCountState;
-
-// //     default:
-// //       return state;
-// //   }
-// // };
-
-// // //------------------------------------------------
-// // const ratingAverageState = {
-// //   ratingAverages: {}, // { [projectId]: rateAverage }
-// // };
-
-// // export const ratingAverageReducer = (state = ratingAverageState, action) => {
-// //   switch (action.type) {
-// //     case SET_RATING_AVERAGE:
-// //       return {
-// //         ...state,
-// //         ratingAverages: {
-// //           ...state.ratingAverages,
-// //           // [action.payload.projectId]: action.payload.ratingAverage,
-// //           [action.payload.projectId]: action.payload.averageRating,
-// //         },
-// //       };
-
-// //     case RESET_RATING_AVERAGE:
-// //       return ratingAverageState;
-
-// //     default:
-// //       return state;
-// //   }
-// // };
-
-// // const initialAgregateState = {
-// //   aggregates: {},   // { [projectId]: { average, count } }
-// //   lastUpdate: null, // 🕒 sert à détecter les changements globaux
-// // };
-
-// // export const ratingAggregateReducer = (state = initialAgregateState, action) => {
-// //   switch (action.type) {
-// //     case SET_RATING_AGGREGATE:
-// //       return {
-// //         ...state,
-// //         aggregates: {
-// //           ...state.aggregates,
-// //           [action.payload.projectId]: {
-// //             average: action.payload.average,
-// //             count: action.payload.count,
-// //           },
-// //         },
-// //         lastUpdate: Date.now(), // 🟢 on met à jour ici à chaque vote
-// //       };
-
-// //     case RESET_RATING_AGGREGATE:
-// //       return initialAgregateState;
-
-// //     default:
-// //       return state;
-// //   }
-// // };
-// // // export default ratingCountReducer;

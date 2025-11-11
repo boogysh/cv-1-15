@@ -15,7 +15,7 @@ export function UseFetch_filtered_comments(url, id, statePage) {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        const commentsList = data.filter((item) => item.project === id);
+        const commentsList = data?.filter((item) => item.project === id);
         setCommentsList(commentsList);
       } catch (err) {
         console.log(err);
