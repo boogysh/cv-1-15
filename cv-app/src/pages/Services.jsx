@@ -6,6 +6,8 @@ import Banner from "../components/Banner";
 import banner_services from "../assets/pr-bat/9-7.jpg";
 import { useSelector } from "react-redux";
 import Devis from "../components/serviceComponents/Devis";
+// import BannerWrapper from "../components/BannerWrapper";
+
 // import { v4 as uuidv4 } from "uuid";
 
 export default function Building() {
@@ -26,9 +28,11 @@ export default function Building() {
   };
 
   return (
-    // <main className="min-h-[600px] flex flex-col items-center bg-bg_body  main-scroll">
-    <main className="min-h-[600px] flex flex-col items-center bg-bg_body w-auto pb-2">
-      <Banner title={t.servicesTitle} src={banner_services} />
+    // <main className="min-h-[600px] flex flex-col items-center bg-bg_body   main-scroll">
+    <main className="min-h-[600px] flex relative flex-col items-center bg-bg_body w-auto pb-2">
+      {/* <BannerWrapper w="2359" h="665"> */}
+        <Banner title={t.servicesTitle} src={banner_services} w="2359" h="665" />
+      {/* </BannerWrapper> */}
       <section
         id="cards"
         // className="flex flex-wrap justify-center  pt-3 md:pt-5 lg:pt-7 2xl:pt-10"

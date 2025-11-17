@@ -13,7 +13,7 @@ export default function Architecture() {
 
   return (
     <main className="flex flex-col items-center bg-bg_body  main-scroll min-h-[70%]">
-      <Banner src={banner} title={t.archTitle} />
+        <Banner src={banner} title={t.archTitle} w="3000" h="640" />
       <h2 className="w-full text-center font-black text-[24px] md:text-[30px] lg:text-[44px] p-4 md:p-8 lg:pd-10 mt-3">
         {t.archTitle2}{" "}
       </h2>

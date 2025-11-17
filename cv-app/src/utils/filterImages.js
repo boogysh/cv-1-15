@@ -3,17 +3,17 @@ export default function filterImages(images = []) {
 
   const priority = [
     "cv-api-omega.vercel.app", // priorité absolue
-    "boogysh.github.io"
+    "boogysh.github.io",
   ];
 
-  const formatPriority = ["webp", "jpg"];
+  const formatPriority = ["webp", "jpg", "png"];
 
   const groups = {};
 
   images.forEach((url) => {
     if (typeof url !== "string") return;
 
-    // Extraire ID unique d'image 
+    // Extraire ID unique d'image
     // ex : pr3-stade-1
     const fileName = url.split("/").pop().split(".")[0];
 
@@ -34,10 +34,7 @@ export default function filterImages(images = []) {
       const extA = a.split(".").pop();
       const extB = b.split(".").pop();
 
-      return (
-        formatPriority.indexOf(extA) -
-        formatPriority.indexOf(extB)
-      );
+      return formatPriority.indexOf(extA) - formatPriority.indexOf(extB);
     });
 
     // Garder SEULEMENT la meilleure URL
@@ -46,7 +43,6 @@ export default function filterImages(images = []) {
 
   return result;
 }
-
 
 // export default function filterImages(images) {
 //   const map = new Map();

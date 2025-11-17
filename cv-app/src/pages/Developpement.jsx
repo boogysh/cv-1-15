@@ -17,7 +17,7 @@ export default function Developpement() {
   return (
     // <main className="main_architecture main-scroll">
     <main className="flex flex-col items-center bg-bg_body  main-scroll ">
-      {uri === t.devNav && <Banner title={t.devTitle} src={banner_dev} />}
+      {uri === t.devNav && <Banner title={t.devTitle} src={banner_dev} w="1200" h="250"/>}
       <h2 className="w-full text-center font-black text-[24px] md:text-[30px] lg:text-[44px] p-4 md:p-8 lg:pd-10 mt-3">
         {t.devTitle2}
       </h2>

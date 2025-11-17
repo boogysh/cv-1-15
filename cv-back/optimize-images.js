@@ -5,8 +5,8 @@ const path = require("path");
 
 const INPUT_DIR = "./assets/";
 const OUTPUT_DIR = "./assets/assets_optimized/";
-const MAX_WIDTH = 900;      // largeur max
-const QUALITY = 75;          // qualité JPEG / WebP
+const MAX_WIDTH = 700;      // largeur max
+const QUALITY = 70;          // qualité JPEG / WebP
  
 // 🔧 Vérifie que le dossier output existe
 if (!fs.existsSync(OUTPUT_DIR)) {
@@ -39,15 +39,15 @@ async function optimizeImage(filePath) {
   try {
     const img = sharp(filePath).resize({ width: MAX_WIDTH });
 
-    // // 🎯 Génère une version JPEG optimisée
-    await img
-      .jpeg({ quality: QUALITY })
-      .toFile(`${outputBase}.jpg`);
+    // // // 🎯 Génère une version JPEG optimisée
+    // await img
+    //   .jpeg({ quality: QUALITY })
+    //   .toFile(`${outputBase}.jpg`);
 
-    // 🎯 Génère une version WebP ultra compressée
-//     await img
-//       .webp({ quality: QUALITY })
-//       .toFile(`${outputBase}.webp`);
+    //🎯 Génère une version WebP ultra compressée
+    await img
+      .webp({ quality: QUALITY })
+      .toFile(`${outputBase}.webp`);
 
 //     console.log("✔ Done:", fileName);
   } catch (err) {

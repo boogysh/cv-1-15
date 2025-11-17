@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.webp";
+import logo_boogysh_construction from "../assets/logo-boogysh-construction-70.png";
 // import logo_boogysh_construction_2 from "../assets/logo-boogysh-construction-2-70.png"; //last
 // alternative bg-opacity: 55-60-70-80-100
 // alternative bg-opacity: 55-60-70-80-100
@@ -12,15 +12,15 @@ import js from "../assets/pr-dev/js.png";
 import react from "../assets/pr-dev/react.png";
 import node from "../assets/pr-dev/node.png";
 
-function Banner({ src, title, w, h }) {
+function Banner({ src, title }) {
   const [loading, setLoading] = useState(true);
   const { t } = useSelector((state) => state.langReducer);
+
 
   const hrefArch = window.location.href.includes(t.archNav);
   const hrefBat = window.location.href.includes(t.batNav);
   const hrefDev = window.location.href.includes(t.devNav);
   const hrefServices = window.location.href.includes(t.servicesNav);
-
 
   const style = {
     title:
@@ -33,9 +33,9 @@ function Banner({ src, title, w, h }) {
   };
 
   return (
-    <div className="banner flex justify-end  items-start w-full h-auto relative">
-      {/* Wrapper avec padding-top pour conserver le ratio */}
-      <div className="w-full relative bg-[#ebdede]" style={{ aspectRatio: `${w} / ${h}` }}>
+    <div className="banner flex justify-end items-start w-full h-auto relative">
+      <div className="flex w-full h-auto bg-[#ebdede]">
+        {/*  min-h-[160px] xs:min-h-[180px]  sm:min-h-[200px] */}
         <img
           className={`object-cover relative  left-[0px] w-full h-auto  min-h-[100px] ${
             loading ? "opacity-0" : "opacity-100"
@@ -55,11 +55,11 @@ function Banner({ src, title, w, h }) {
           {title}
         </h1>
       )}
-      {(hrefBat || hrefServices) && (
+      {/* {(hrefBat || hrefServices) && (
         <span className="absolute bottom-0 right-0  p-0 pr-1 lg:p-2 lg:pr-3  text-[#ec6a01] font-semibold text-shadow2  text-[10px] xxs:text-[11px] xs:text-[14px] sm:text-[16px] md:text-[18px] tracking-[-0.4px]">
           SIRET: 75056847900026
         </span>
-      )}
+      )} */}
       <div className="absolute w-auto h-auto left-2 bg-none">
         <ButtonNewProjects />
       </div>
