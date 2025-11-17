@@ -73,7 +73,7 @@ function Banner({ src, title, w, h }) {
         </div>
       )}
       {hrefDev && (
-        <div className=" absolute top-[70%] left-0 flex justify-center w-full h-auto;">
+        <div className=" absolute top-[60%] left-0 flex justify-center w-full h-auto;">
           <img className={style.logo} src={html} alt="html" />
           <img className={style.logo} src={css} alt="css" />
           <img className={style.logo} src={js} alt="js" />

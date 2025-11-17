@@ -378,7 +378,7 @@ export const ro = {
     {
       id: "pr12-fiche-eye",
       title: "Fiche-eye",
-      description: undefined,
+      urlProject: "https://fich-eye.vercel.app/",
       info: [
         "Crearea unui site pentru fotografi",
         "Liker imaginile folosind local storage",
@@ -394,7 +394,7 @@ export const ro = {
     {
       id: "pr11-moteur-recherche",
       title: "Crearea unui motor de căutare",
-      description: undefined,
+     urlProject: "https://les-petits-plat.vercel.app/",
       info: [
         "Crearea un motor de căutare cu două axe",
         "Crearea tagurilor pentru fiecare valoare căutată",
@@ -409,7 +409,7 @@ export const ro = {
     {
       id: "pr10-social-media",
       title: "Crearea unei aplicații web tip rețea socială",
-      description: undefined,
+      urlProject: "https://sm-boogysh.vercel.app/",
       info: [
         "Utilizarea redux și react-redux, MongoDB și S3-AWS.",
         "Vedeți vizitatorii paginii utilizatorului.",
@@ -425,7 +425,7 @@ export const ro = {
     {
       id: "pr9-netflix-youtube",
       title: "Créez une application type netflix",
-      description: undefined,
+      urlProject: "https://boogysh-flix.vercel.app",
       info: [
         "Utilizarea redux și react-redux, MongoDB.",
         "Backend pentru a gestiona cererile GET, POST, PATCH, DELETE",
@@ -449,7 +449,7 @@ export const ro = {
     {
       id: "pr8-castle",
       title: "Crearea unei aplicații web cu elemente de e-comerț",
-      description: undefined,
+      urlProject: "https://castle-boogysh.vercel.app/",
       info: [
         "Utilizarea redux și react-redux.",
         "Crearea unui backend pentru a gestiona cererile GET, POST.",
@@ -465,7 +465,7 @@ export const ro = {
     {
       id: "pr7-kasa",
       title: "Crearea unei aplicații web pentru închiriere de imobile cu React",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/kasa/",
       info: [
         "Descompunerea în componente modulare și reutilizabile.",
         "Configurer la navigation entre les pages avec React Router.",
@@ -482,7 +482,7 @@ export const ro = {
       id: "pr6-api-piquante",
       title:
         "Programarea unui API securizat pentru o aplicație de evaluare a alimentelor",
-      description: undefined,
+      urlProject: "https://github.com/boogysh/piquante",
       info: [
         "Toate rutele au o autorizație tipică: Purtător <token>.",
         "Parola utilizatorului este criptată.",
@@ -497,7 +497,7 @@ export const ro = {
     {
       id: "pr5-eCommerce",
       title: "Construiți un site de e-comerț în JavaScript",
-      description: undefined,
+      urlProject: "https://github.com/boogysh/kanap",
       info: [
         "Gestionarea evenimentelor JavaScript.",
         "Interacțiunea cu un serviciu web cu JavaScript.",
@@ -511,7 +511,8 @@ export const ro = {
     {
       id: "pr4-SEO",
       title: "Optimizarea unui site web existent:",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/La-panthere/",
+      urlExistent: "https://boogysh.github.io/la-panthere_initial/",
       info: [
         "Utilizarea unui domen personalizat.",
         "Optimizarea dimensiunii și a vitezei unui site web.",
@@ -527,7 +528,7 @@ export const ro = {
     {
       id: "pr3-ohmyfood",
       title: "Faceți o pagină web dinamică cu animații CSS",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/OCR_PR3/",
       info: [
         "Utilizați un sistem de control al versiunilor pentru urmărirea și găzduirea proiectelor.",
         "Configurarea mediului frontend.",
@@ -542,7 +543,7 @@ export const ro = {
     {
       id: "pr2-booki",
       title: "Transformați o machetă într-un site web cu html și css",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/booki/",
       info: [
         "Decuparea machetei.",
         "Crearea paginii de cazări.",

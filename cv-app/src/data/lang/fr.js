@@ -375,7 +375,7 @@ export const fr = {
     {
       id: "pr12-fiche-eye",
       title: "Fiche-eye",
-      description: undefined,
+      urlProject: "https://fich-eye.vercel.app/",
       info: [
         "Creez un site pour les phographes",
         "Liker les images dans le local storage",
@@ -391,7 +391,7 @@ export const fr = {
     {
       id: "pr11-moteur-recherche",
       title: "Créez un moteur de recherche",
-      description: undefined,
+      urlProject: "https://les-petits-plat.vercel.app/",
       info: [
         "Creez un moteur de recherche avec deux axes",
         "Creez des tags pour chaque valeur recherchée",
@@ -406,7 +406,7 @@ export const fr = {
     {
       id: "pr10-social-media",
       title: "Créez une application web type reseau social",
-      description: undefined,
+      urlProject: "https://sm-boogysh.vercel.app/",
       info: [
         "Utilisation du redux et react-redux, BD MongoDB et S3-AWS.",
         "Voir les visiteurs de la page de l'utilisateur.",
@@ -422,7 +422,7 @@ export const fr = {
     {
       id: "pr9-netflix-youtube",
       title: "Créez une application type netflix",
-      description: undefined,
+      urlProject: "https://boogysh-flix.vercel.app",
       info: [
         "Utilisation du redux et react-redux, BD MongoDB",
         "Backend pour gérer les requêtes GET, POST, PATCH, DELETE",
@@ -446,7 +446,7 @@ export const fr = {
     {
       id: "pr8-castle",
       title: "Créez une application web avec des éléments e-commerce",
-      description: undefined,
+      urlProject: "https://castle-boogysh.vercel.app/",
       info: [
         "Utilisation du redux et react-redux.",
         "Réalisation d'un backend pour gérer les requêtes GET, POST.",
@@ -462,7 +462,7 @@ export const fr = {
     {
       id: "pr7-kasa",
       title: "Créez une application web de location immobilière avec React",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/kasa/",
       info: [
         "Découpage en composants modulaires et réutilisables.",
         "Configurer la navigation entre les pages avec React Router.",
@@ -479,7 +479,7 @@ export const fr = {
       id: "pr6-api-piquante",
       title:
         "Construisez une API sécurisée pour une application d'avis gastronomiques",
-      description: undefined,
+      urlProject: "https://github.com/boogysh/piquante",
       info: [
         "Toutes les routes dispose d'une autorisation type: Bearer <token>.",
         "Le mot de passe de l'utilisateur est haché.",
@@ -494,7 +494,7 @@ export const fr = {
     {
       id: "pr5-eCommerce",
       title: "Construisez un site e-commerce en JavaScript",
-      description: undefined,
+      urlProject: "https://github.com/boogysh/kanap",
       info: [
         "Gérer des événements JavaScript.",
         "Interagir avec un web service avec JavaScript.",
@@ -508,7 +508,8 @@ export const fr = {
     {
       id: "pr4-SEO",
       title: "Optimisez un site web existant:",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/La-panthere/",
+      urlExistent: "https://boogysh.github.io/la-panthere_initial/",
       info: [
         "Utiliser un domaine personalisé.",
         "Optimiser la taille et la vitesse d'un site web.",
@@ -524,7 +525,7 @@ export const fr = {
     {
       id: "pr3-ohmyfood",
       title: "Dynamisez une page web avec des animations CSS",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/OCR_PR3/",
       info: [
         "Utiliser un système de gestion de versions pour le suivi du projet et son hébergement.",
         "Mettre en place son environnement frontend.",
@@ -539,7 +540,7 @@ export const fr = {
     {
       id: "pr2-booki",
       title: "Transformez une maquette en site web avec html et css",
-      description: undefined,
+      urlProject: "https://boogysh.github.io/booki/",
       info: [
         "Découpage de la maquete.",
         "Réalisation de la page hébergements.",

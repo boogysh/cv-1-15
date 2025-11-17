@@ -1,8 +1,8 @@
 export const imagesArch = {
   "pr3-stade": {
-    "id": "pr3-stade",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-1.jpg",
-    "pictures": [
+    id: "pr3-stade",
+    cover: "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-1.jpg",
@@ -35,20 +35,16 @@ export const imagesArch = {
       "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-8.webp",
       "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-8.jpg",
       "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-8.jpg",
-      "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-9.webp",
-      "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-9.webp",
-      "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-9.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-9.jpg",
       "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-10.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-10.webp",
       "https://cv-api-omega.vercel.app/arch/pr3/pr3-stade-10.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-10.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr3/pr3-stade-10.jpg",
+    ],
   },
   "pr-maison-perso": {
-    "id": "pr-maison-perso",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr1/pr1-1.jpg",
-    "pictures": [
+    id: "pr-maison-perso",
+    cover: "https://cv-api-omega.vercel.app/arch/pr1/pr1-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr0/pr0-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr0/pr0-1.jpg",
@@ -120,13 +116,13 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr0/pr0-18.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-18.webp",
       "https://cv-api-omega.vercel.app/arch/pr0/pr0-18.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-18.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-18.jpg",
+    ],
   },
   "pr1-maison": {
-    "id": "pr1-maison",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr1/pr1-1.jpg",
-    "pictures": [
+    id: "pr1-maison",
+    cover: "https://cv-api-omega.vercel.app/arch/pr1/pr1-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr1/pr1-0.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-0.webp",
       "https://cv-api-omega.vercel.app/arch/pr1/pr1-0.jpg",
@@ -174,13 +170,13 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr1/pr1-11.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-11.webp",
       "https://cv-api-omega.vercel.app/arch/pr1/pr1-11.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-11.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-11.jpg",
+    ],
   },
   "pr2-maison": {
-    "id": "pr2-maison",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.jpg",
-    "pictures": [
+    id: "pr2-maison",
+    cover: "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.jpg",
@@ -204,13 +200,13 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr2/pr2-6.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-6.webp",
       "https://cv-api-omega.vercel.app/arch/pr2/pr2-6.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-6.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-6.jpg",
+    ],
   },
   "pr3A-maison": {
-    "id": "pr3A-maison",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.jpg",
-    "pictures": [
+    id: "pr3A-maison",
+    cover: "https://cv-api-omega.vercel.app/arch/pr2/pr2-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr3A/pr3A-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr3A/pr3A-1.jpg",
@@ -238,13 +234,13 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr3A/pr3A-7.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-7.webp",
       "https://cv-api-omega.vercel.app/arch/pr3A/pr3A-7.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-7.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-7.jpg",
+    ],
   },
   "pr4-cinema": {
-    "id": "pr4-cinema",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr4/pr4-0.jpg",
-    "pictures": [
+    id: "pr4-cinema",
+    cover: "https://cv-api-omega.vercel.app/arch/pr4/pr4-0.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr4/pr4-0.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-0.webp",
       "https://cv-api-omega.vercel.app/arch/pr4/pr4-0.jpg",
@@ -264,13 +260,13 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr4/pr4-4.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-4.webp",
       "https://cv-api-omega.vercel.app/arch/pr4/pr4-4.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-4.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr4/pr4-4.jpg",
+    ],
   },
   "pr5-reconstruction": {
-    "id": "pr5-reconstruction",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr5/pr5-1.png",
-    "pictures": [
+    id: "pr5-reconstruction",
+    cover: "https://cv-api-omega.vercel.app/arch/pr5/pr5-1.png",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr5/pr5-3.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr5/pr5-3.webp",
       "https://cv-api-omega.vercel.app/arch/pr5/pr5-3.jpg",
@@ -294,27 +290,27 @@ export const imagesArch = {
       "https://cv-api-omega.vercel.app/arch/pr5/pr5-6.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr5/pr5-6.webp",
       "https://cv-api-omega.vercel.app/arch/pr5/pr5-6.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr5/pr5-6.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr5/pr5-6.jpg",
+    ],
   },
   "pr6-urbanime": {
-    "id": "pr6-urbanime",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr6/pr6-1.jpg",
-    "pictures": [
+    id: "pr6-urbanime",
+    cover: "https://cv-api-omega.vercel.app/arch/pr6/pr6-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr6/pr6-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr6/pr6-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr6/pr6-1.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr6/pr6-1.jpg"
-    ]
+      "https://boogysh.github.io/cv-api/images/arch/pr6/pr6-1.jpg",
+    ],
   },
   "pr7-sistematisation-verticale": {
-    "id": "pr7-sistematisation-verticale",
-    "cover": "https://cv-api-omega.vercel.app/arch/pr7/pr7-1.jpg",
-    "pictures": [
+    id: "pr7-sistematisation-verticale",
+    cover: "https://cv-api-omega.vercel.app/arch/pr7/pr7-1.jpg",
+    pictures: [
       "https://cv-api-omega.vercel.app/arch/pr7/pr7-1.webp",
       "https://boogysh.github.io/cv-api/images/arch/pr7/pr7-1.webp",
       "https://cv-api-omega.vercel.app/arch/pr7/pr7-1.jpg",
-      "https://boogysh.github.io/cv-api/images/arch/pr7/pr7-1.jpg"
-    ]
-  }
+      "https://boogysh.github.io/cv-api/images/arch/pr7/pr7-1.jpg",
+    ],
+  },
 };

@@ -247,7 +247,7 @@ export const en = {
   cardDev: [{
   id: "pr12-fiche-eye",
   title: "Fiche-eye",
-  description: undefined,
+  urlProject: "https://fich-eye.vercel.app/",
   info: ["Create a site for phographers","Liker images using the local storage","Creating a slider","Sort photos by popularity, date o","Complete and validate the contact form","Send the message to database mongoDB"],
   technos: ["html","css","js","node","mongoDB"],
   cover: imagesDev["pr12-fiche-eye"].cover,
@@ -256,7 +256,7 @@ export const en = {
 {
   id: "pr11-moteur-recherche",
   title: "Create a search engine application",
-  description: undefined,
+  urlProject: "https://les-petits-plat.vercel.app/",
   info: ["Create a search engine with two axes","Create tags for each searched value","Search in Ingredients, Appliances and Utensils","Show the intersection of search result","Display a personalized message for a null result"],
   technos: ["html","css","js"],
   cover: imagesDev["pr11-moteur-recherche"].cover,
@@ -265,7 +265,7 @@ export const en = {
 {
   id: "pr10-social-media",
   title: "Create a social network web application",
-  description: undefined,
+  urlProject: "https://sm-boogysh.vercel.app/",
   info: ["Use of redux and react-redux, MongoDB and S3-AWS.","View the visitors list of the user's page.","Dark-mode and search button for registered users.","Backend to manage requests GET, POST, PATCH, DELETE","Save and delete files on S3-AWS and URLs on MongoDB.","View the entire application online with Vercel."],
   technos: ["react","tailwind","redux","node","mongoDB","aws"],
   cover: imagesDev["pr10-social-media"].cover,
@@ -274,7 +274,7 @@ export const en = {
 {
   id: "pr9-netflix-youtube",
   title: "Créez une application type netflix",
-  description: undefined,
+  urlProject: "https://boogysh-flix.vercel.app",
   info: ["Use of redux and react-redux, MongoDB.","Backend to manage requests GET, POST, PATCH, DELETE","Integrate themoviedb-api and youtube-api.","Save movies to favorites.","Generate and view the movie trailer dynamically.","View the entire application online with Vercel."],
   technos: ["react","tailwind","redux","node","mongoDB","themoviedb","youtube"],
   cover: imagesDev["pr9-netflix-youtube"].cover,
@@ -283,7 +283,7 @@ export const en = {
 {
   id: "pr8-castle",
   title: "Créez une application web avec des éléments e-commerce",
-  description: undefined,
+  urlProject: "https://castle-boogysh.vercel.app/",
   info: ["Utilisation du redux et react-redux.","Réalisation d'un backend pour gérer les requêtes GET, POST.","Utilisation de la BD MongoDB et mongoose.","Envoyer les messages et les commandes sur la base de données.","Recherche des commandes avec l'email où le numéro de la commande.","Afficher l'ensamble de l'aplication en ligne avec Vercel."],
   technos: ["react","css","redux","node","mongoDB"],
   cover: imagesDev["pr8-castle"].cover,
@@ -292,7 +292,7 @@ export const en = {
 {
   id: "pr7-kasa",
   title: "Create a propery rental web application with React",
-  description: undefined,
+  urlProject: "https://boogysh.github.io/kasa/",
   info: ["Cutting into modular and reusable components.","Configure navigation between pages with React Router.","Using the props between the components.","Using the state in components when necessary.","Event management.","The 404 page is returned for each non-existent route, or there is a mistake in the URL."],
   technos: ["react","css"],
   cover: imagesDev["pr7-kasa"].cover,
@@ -301,7 +301,7 @@ export const en = {
 {
   id: "pr6-api-piquante",
   title: "Build a secure API for a food review application",
-  description: undefined,
+  urlProject: "https://github.com/boogysh/piquante",
   info: ["All routes have a typical authorization: Bearer <token>.","The user's password is hashed.","The email address in the MongoDB database is unique (mongoose-unique-validator).","The user is checked if he is allowed to modify or delete a sauce.","Colect the errors from the database, through personalized error messages."],
   technos: ["node","mongoDB"],
   cover: imagesDev["pr6-api-piquante"].cover,
@@ -310,7 +310,7 @@ export const en = {
 {
   id: "pr5-eCommerce",
   title: "Build an e-commerce site in JavaScript",
-  description: undefined,
+  urlProject: "https://github.com/boogysh/kanap",
   info: ["Managing JavaScript events.","Interact with a web service with JavaScript.","Validate data from external sources.","Create a test plan for an application."],
   technos: ["js"],
   cover: imagesDev["pr5-eCommerce"].cover,
@@ -319,7 +319,8 @@ export const en = {
 {
   id: "pr4-SEO",
   title: "Optimize an existing website:",
-  description: undefined,
+  urlProject: "https://boogysh.github.io/La-panthere/",
+  urlExistent: "https://boogysh.github.io/la-panthere_initial/",
   info: ["Use a custom domain.","Optimize the size and speed of a website.","Research the best practices in web development.","Write maintainable HTML and CSS code.","Ensure the accessibility of a website.","Optimize the referencing of a website."],
   technos: ["html","css","js"],
   cover: imagesDev["pr4-SEO"].cover,
@@ -328,7 +329,7 @@ export const en = {
 {
   id: "pr3-ohmyfood",
   title: "Make a web page dynamic with CSS animations",
-  description: undefined,
+  urlProject: "https://boogysh.github.io/OCR_PR3/",
   info: ["Use a version control system for project versioning and hosting.","Set up its frontend environment.","Ensure the graphic consistency of a website.","Set up a navigation structure for a website.","Implement advanced graphic CSS effects."],
   technos: ["html","sass"],
   cover: imagesDev["pr3-ohmyfood"].cover,
@@ -337,7 +338,7 @@ export const en = {
 {
   id: "pr2-booki",
   title: "Turn a mock-up into a website with html and css",
-  description: undefined,
+ urlProject: "https://boogysh.github.io/booki/",
   info: ["Cutting of the mock-up.","Creation of the accommodation page.","Creation of the activities page.","Use semantic tags.","Development of the responsive part.","Validation of the code with the W3C."],
   technos: ["html","css"],
   cover: imagesDev["pr2-booki"].cover,
