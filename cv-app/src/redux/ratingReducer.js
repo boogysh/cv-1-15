@@ -1,36 +1,57 @@
-import { SET_RATING_FULL_UPDATE } from "./ratingActions";
+// redux/reducer.js
+
+import { SET_RATING_FULL_UPDATE, SET_PROJECT_DATA_FULL_UPDATE } from "./actions";
 
 const initialState = {
-  ratingRedux: 0, // note utilisateur locale (optionnelle)
-  ratings: {}, // { [projectId]: moyenne projet }
-  count: {}, // { [projectId]: votes projet }
+  // 🔹 Ratings
+  ratingRedux: 0, // note utilisateur locale
+  ratings: {},    // { [projectId]: moyenne projet }
+  count: {},      // { [projectId]: votes projet }
   totalAverage: 0, // moyenne globale
-  totalVotes: 0, // total des votes
-  lastUpdate: null, // timestamp
+  totalVotes: 0,   // total des votes
+
+  // 🔹 Projects
+  projects: {},         // tous les projets stockés
+  currentProjectId: null, // projet courant
+
+  lastUpdate: null, // timestamp général pour suivi
 };
 
-export const ratingReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_RATING_FULL_UPDATE: {
-      const {
-        ratings,
-        count,
-        totalAverage,
-        totalVotes,
-      } = action.payload;
+      const { projectId, average, count, ratings, totalAverage, totalVotes, ratingRedux } = action.payload;
+
+      let nextRatings = state.ratings;
+      let nextCount = state.count;
+
+      // 🔹 Mise à jour pour un projet spécifique
+      if (projectId != null) {
+        nextRatings = { ...state.ratings, [projectId]: average ?? state.ratings[projectId] };
+        nextCount = { ...state.count, [projectId]: count ?? state.count[projectId] };
+      } 
+      // 🔹 Mise à jour globale si ratings fourni
+      else if (ratings) {
+        nextRatings = { ...state.ratings, ...ratings };
+      }
 
       return {
         ...state,
-        // 🔹 fusionne les moyennes de projets
-        ratings: ratings ? { ...state.ratings, ...ratings } : state.ratings,
+        ratings: nextRatings,
+        count: nextCount,
+        totalAverage: totalAverage ?? state.totalAverage,
+        totalVotes: totalVotes ?? state.totalVotes,
+        ratingRedux: ratingRedux ?? state.ratingRedux,
+        lastUpdate: Date.now(),
+      };
+    }
 
-        // 🔹 fusionne le nombre de votes par projet
-        count: count ? { ...state.count, ...count } : state.count,
-
-        // 🔹 met à jour les totaux globaux
-        totalAverage: totalAverage != null ? totalAverage : state.totalAverage,
-        totalVotes: totalVotes != null ? totalVotes : state.totalVotes,
-
+    case SET_PROJECT_DATA_FULL_UPDATE: {
+      const { projects, currentProjectId } = action.payload;
+      return {
+        ...state,
+        projects: { ...state.projects, ...projects },
+        currentProjectId: currentProjectId ?? state.currentProjectId,
         lastUpdate: Date.now(),
       };
     }

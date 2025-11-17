@@ -1,73 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import shareIcon from "../../../assets/share.png";
-import axios from "axios";
 import ShareList from "./ShareList";
 import LikeBtn from "./LikeBtn";
-import useSaveMyIPs from "../../../hooks/useSaveMyIPs";
 import CommentsBtn from "./CommentsBtn";
 import RateBtn from "./RateBtn";
 
 export default function LikeCommentRateShareBtns(props) {
   const [showComments, setShowComments] = useState(false);
-  const [statePage, setStatePage] = useState(0);
   // const [statePageRating, setStatePageRating] = useState(0);
 
   const [showShareMenu, setShowShareMenu] = useState(false);
-  // const [showRateConfirmModal, setShowRateConfirmModal] = useState(false);
-  const [ip, setIp] = useState("");
-
-  //--------------------------AXIOS---------------------------------------
-  async function getIp() {
-    const res = await axios.get("https://geolocation-db.com/json/");
-    res && setIp(res.data.IPv4);
-  }
-  useEffect(() => {
-    getIp();
-  }, []);
-
-  //----------------SAVE MY-IP'S TO LOCAL STORAGE-------------------------
-  const myIpList = useSaveMyIPs(ip);
-
-  //------
-
-  // useEffect(() => {
-  //   if (showRateConfirmModal) {
-  //     const timer = setTimeout(() => {
-  //       setShowRateConfirmModal(false);
-  //     }, 2500); // ⏱️ 3 secondes
-
-  //     return () => clearTimeout(timer); // nettoyage si l’état change avant
-  //   }
-  // }, [showRateConfirmModal]);
-  //------------------------------------
 
   //------------------------------------
   return (
     <div className="w-full h-auto flex flex-col bg-[#f1f1f1] justify-between items-center p-[9px] ">
       <div className="w-full h-auto flex  items-center">
+        
         {/* LIKES*/}
-        <LikeBtn ip={ip} id={props.id} myIpList={myIpList} />
+        <LikeBtn ip={props.ip} id={props.id} />
         {/* -----COMMENTS------ */}
         <CommentsBtn
           id={props.id}
-          ip={ip}
-          title={props.title}
+          ip={props.ip}
           showComments={showComments}
           setShowComments={setShowComments}
-          statePage={statePage}
-          setStatePage={setStatePage}
-          myIpList={myIpList}
         />
 
         {/* --------------- */}
         {/* RATING  */}
-        <RateBtn
-          ip={ip}
-          id={props.id}
-          myIpList={myIpList}
-          statePage={statePage}
-          setStatePage={setStatePage}
-        />
+        <RateBtn id={props.id} />
 
         {/* ---SHARE MENU------- */}
         <div

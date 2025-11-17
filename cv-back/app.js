@@ -1,64 +1,51 @@
+// app.js
 const express = require("express");
-const app = express();
-const cors = require("cors"); // tu peux la garder, mais on utilisera celle du middleware
+// const cors = require("cors");
 require("dotenv").config();
-require("./connect_mongodb/mongodb");
+require("./connect_mongodb/mongodb"); // connexion MongoDB
 
-// ✅ Import de la sécurité
+// ✅ Import sécurité
 const applySecurityMiddleware = require("./middlewares/security");
 
-// Routes
-const likeRoutes = require("./routes/like");
-const commentRoutes = require("./routes/comment");
-const messageRoutes = require("./routes/message");
-const ratingRoutes = require("./routes/rating");
-
-// Parsing
-app.use(express.json());
-
-// ✅ Appliquer la sécurité AVANT les routes
-applySecurityMiddleware(app);
-
-// ✅ Routes
-app.use("/api/likes", likeRoutes);
-app.use("/api/comments", commentRoutes);
-app.use("/api/messages", messageRoutes);
-app.use("/api/ratings", ratingRoutes);
-
-// ✅ Lancement du serveur
-app.listen(process.env.PORT, (error) => {
-  error
-    ? console.log(error)
-    : console.log(`✅ Server is running on port ${process.env.PORT}`);
-});
-
-
-
-// const express = require("express");
-// const app = express();
-// const cors = require("cors");
-
-// //requires routes
+// ✅ Import des routes
 // const likeRoutes = require("./routes/like");
 // const commentRoutes = require("./routes/comment");
 // const messageRoutes = require("./routes/message");
 // const ratingRoutes = require("./routes/rating");
+const projectRoutes = require("./routes/project");
 
-// require("dotenv").config();
-// //Connecting to mongoDB  // after dotenv
-// require("./connect_mongodb/mongodb");
-// //Parsing
-// app.use(express.json()); //const bodyParser = require("body-parser");
-// app.use(cors());
+const app = express();
 
-// // //Setting routes
+// Parsing JSON
+app.use(express.json());
+
+// ✅ Appliquer la sécurité avant les routes
+applySecurityMiddleware(app);
+
+// ✅ CORS (optionnel, à activer si front et back sur domaines différents)
+// app.use(cors({
+//   origin: "*", // temporaire pour tester
+//   methods: ["GET","POST","PATCH","PUT","DELETE"]
+// }));
+// ✅ CORS complet
+// app.use(cors({
+//   origin: "*", // ou ["http://localhost:3000"] pour front local
+//   methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
+
+// Si tu as des routes PATCH ou PUT
+// app.options("*", cors()); // gestion du preflight OPTIONS pour toutes les routes
+// ✅ Routes
 // app.use("/api/likes", likeRoutes);
 // app.use("/api/comments", commentRoutes);
 // app.use("/api/messages", messageRoutes);
 // app.use("/api/ratings", ratingRoutes);
+app.use("/api/projects", projectRoutes);
 
-// app.listen(process.env.PORT, (error) => {
-//   error
-//     ? console.log(error)
-//     : console.log(`Server is running on port ${process.env.PORT}`);
-// });
+// ✅ Lancement serveur
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, (error) => {
+  if (error) console.error("Erreur serveur:", error);
+  else console.log(`✅ Server is running on port ${PORT}`);
+});

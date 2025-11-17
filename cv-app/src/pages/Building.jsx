@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 
 export default function Building() {
   const { t } = useSelector((state) => state.langReducer);
+  console.count("BUILDINGPAGE++++++++++");
+
 
   return (
     <main className="flex flex-col items-center bg-bg_body  main-scroll">

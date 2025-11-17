@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node scripts/migrateToProjects.js",
+    "updateDB": "node scripts/updateDB.js"
+    
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +18,7 @@
     "express-rate-limit": "^8.2.1",
     "helmet": "^8.1.0",
     "mongoose": "^7.0.0",
+    "sharp": "^0.34.5",
     "xss-clean": "^0.1.4"
   }
 }

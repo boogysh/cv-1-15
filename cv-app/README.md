@@ -63,3 +63,14 @@ Remove all css, repalce by tailwind. Update cardProject => new Model, add env fi
 
 Add projects: 2A & 2A1 to Building page. Update the CV. Delete the adresse. Desactivate the download button until the PDFs files are updated. Update of the logo & cv picture.
 
+### 1.17
+
+Add star-rating buttons at the bottom of each card, as well as inside the new-comment modal
+
+### 1.18
+
+Project refactoring and optimization:
+Update the MongoDB structure by replacing multiple collections—likes, comments, and ratings—with a single collection indexed by project ID, containing the fields: likes, comments, and ratings.
+Add a project reducer, move all component parameters into Redux instead of passing props, and implement a single fetchProject call at startup instead of multiple fetches.
+Simplified likes and ratings logic: one IP equals one like or one rating.
+Add Vercel as the primary image host with a fallback to GitHub for each image.

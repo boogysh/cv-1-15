@@ -18,14 +18,14 @@ const corsOptions = {
       callback(new Error("CORS non autorisé"));
     }
   },
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST","PATCH", "PUT", "DELETE"],
   credentials: true,
 };
 
-// ✅ Limiteur de requêtes (100 requêtes / 15 min / IP)
+// ✅ Limiteur de requêtes (500 requêtes / 15 min / IP)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 500,
+  max: 10000,   //500
   standardHeaders: true,
   legacyHeaders: false,
   message: "Trop de requêtes depuis cette IP. Réessayez plus tard.",

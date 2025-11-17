@@ -1,4 +1,5 @@
-import React, { useMemo, useState, memo } from "react";
+import { useMemo, useState, memo } from "react";
+
 import Slider from "../Slider";
 import MoreInfo from "./_cardProject/MoreInfo";
 import { useSelector } from "react-redux";
@@ -18,16 +19,30 @@ const CardProject = ({
   urlExistent,
   technos,
 }) => {
-
-  console.count("cardPROJECT++++++++++");
+  //  console.count(`cardProject-${id}`);
+  console.count(`cardProject`);
+  // console.count(`Render <CardProject id=${id}>`);
 
   const [uri, setUri] = useState();
+  // const [ip, setIp] = useState("");
+
   const [moreInfo, setMoreInfo] = useState(false);
   const { t } = useSelector((state) => state.langReducer);
   const hrefDev = window.location.href.includes(t.devNav);
 
-  const { ratings } = useSelector((state) => state.ratingReducer || {});
-  const ratingAverage = ratings[id] || 0;
+  // const { ratings, ip } = useSelector((state) => state.projectReducer || {});
+
+  // //Récupération de la moyenne du projet courant
+  // const ratingAverage = ratings[id] || 0;
+
+  //------------------------
+  // ✅ Valeurs spécifiques à cette carte
+  const ratingAverage = useSelector(
+    (state) => state.projectReducer.ratings[id] || 0
+  );
+  // ✅ Valeurs globales partagées (utilisées par plusieurs cartes)
+  const { ip } = useSelector((state) => state.projectReducer);
+  //------------------------
 
   useMemo(() => {
     const hrefArch = window.location.href.includes(t.archNav);
@@ -42,8 +57,6 @@ const CardProject = ({
 
   const truncateString = (str, num) =>
     str?.length > num ? str.slice(0, num) + "..." : str;
-
-   
 
   return (
     <div className="relative w-[98vw] max-w-[600px] xs:w-[95vw]  h-auto rounded-[10px] mx-0 sm:mx-[20px]  mb-[20px] xs:mb-[30px]  s:mb-[40px] overflow-hidden shadow">
@@ -90,7 +103,7 @@ const CardProject = ({
                   {ratingAverage}
                 </span>
               </div>
-              <Slider slides={images} />
+              <Slider slides={images}  />
             </div>
 
             {hrefDev && (
@@ -110,7 +123,7 @@ const CardProject = ({
           </div>
 
           {/* FOOTER */}
-          <LikeCommentRateShareBtns id={id} />
+          <LikeCommentRateShareBtns id={id} ip={ip} />
         </div>
       </div>
     </div>
@@ -125,7 +138,6 @@ export default memo(CardProject, (prevProps, nextProps) => {
     prevProps.id === nextProps.id
   );
 });
-
 
 // import React, { useMemo, useState } from "react";
 // import Slider from "../Slider";

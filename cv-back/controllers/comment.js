@@ -18,14 +18,40 @@ exports.createComment = (req, res) => {
 };
 
 
-exports.getComment = (req, res, next) => {
-  COMMENT.find()
-    .sort({ createdAt: -1 })
-    // .sort({ clientInfo: req.clientInfo })
+// GET COMMENT BY PROJECT-ID
 
-    .then((comments) => res.status(200).json(comments))
-    .catch((error) => res.status(400).json({ error }));
+exports.getComment = async (req, res, next) => {
+  try {
+    const projectId = req.query.project;
+
+    if (!projectId) {
+      return res.status(400).json({ error: "projectId manquant" });
+    }
+
+    const comments = await COMMENT.find({ project: projectId })
+      .sort({ createdAt: -1 }); // du plus récent au plus ancien
+
+    res.status(200).json(comments);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Erreur serveur" });
+  }
 };
+
+
+// exports.getComment = (req, res, next) => {
+//   COMMENT.find()
+//     .sort({ createdAt: -1 })
+//     // .sort({ clientInfo: req.clientInfo })
+
+//     .then((comments) => res.status(200).json(comments))
+//     .catch((error) => res.status(400).json({ error }));
+// };
+
+
+// controllers/commentController.js
+// controllers/commentController.js
+
 
 //  updateComment 
 

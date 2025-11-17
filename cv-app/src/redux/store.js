@@ -1,13 +1,10 @@
 import { createStore, combineReducers } from "redux";
 import langReducer from "./langReducer";
-import { ratingReducer } from "./ratingReducer";
+import { projectReducer } from "./projectReducer";
 
 const rootReducer = combineReducers({
   langReducer,
-  ratingReducer,
-  // ratingCountReducer,
-  // ratingAverageReducer,
-  // ratingAggregateReducer
+  projectReducer,
 });
 
 const store = createStore(rootReducer);

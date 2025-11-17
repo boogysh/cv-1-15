@@ -1,24 +1,16 @@
 import React from "react";
-// import sendComment from "../../../assets/send-comment2.png";
 import useFormComment from "../../../hooks/useForm/useFormComment";
 import { AiOutlineSend } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setProjectData } from "../../../redux/projectActions";
 
-export default function NewComment({
-  id,
-  ip,
-  statePage,
-  setStatePage,
-  localStatePage,
-  setLocalStatePage,
-}) {
-  // const dispatch = useDispatch();
-  // const globalRating = useSelector((state) => state.ratingReducer.ratings[id]);
-  const { ratings } = useSelector((state) => state.ratingReducer);
-  const globalRating = ratings[id] || 0;
-  console.log("globalRating", globalRating);
-  const rating = globalRating || 0;
-  //--------MATCH FIRST-NAME, MATCH-LAST-NAME, MATCH-COMMENT---------------
+export default function NewComment({ id }) {
+  const dispatch = useDispatch();
+
+  const { ratings, comments, ip, userRatingsByIp, ratingRedux } = useSelector(
+    (state) => state.projectReducer || {}
+  );
+
   const {
     borderRedFunc,
     resetValues,
@@ -28,41 +20,70 @@ export default function NewComment({
     matchLN,
     matchComment,
   } = useFormComment();
-  //-------COMMENT-POST-CONTENT------------
+
+  /**
+   * 🔥 LA NOTE À ENVOYER
+   * 1) si ratingRedux existe → priorité
+   * 2) sinon si userRatingsByIp[id] existe → fallback
+   * 3) sinon → 0
+   */
+  const ratingToSend =
+    ratingRedux !== undefined
+      ? ratingRedux
+      : userRatingsByIp?.[id] !== undefined
+      ? userRatingsByIp[id]
+      : 0;
+
   const commentToPost = {
-    firstName: `${val.firstName}`,
-    lastName: `${val.lastName}`,
-    commentTxt: `${val.comment}`,
-    project: `${id}`,
-    rating: rating,
-    ip: `${ip}`,
+    firstName: val.firstName,
+    lastName: val.lastName,
+    commentTxt: val.comment,
+    project: id,
+    // rating: ratingRedux !== 0 ? ratingRedux : ratingToSend,
+    rating: ratingRedux ,
+    ip,
   };
 
-  // console.log("commentToPost++", commentToPost);
+  // console.log("🔥 NOTE À ENVOYER DANS COMMENT =", commentToPost.rating);
+  // console.log("🔥ratingRedux =", ratingRedux);
+  // console.log("🔥ratingToSend =", ratingToSend);
 
-  const commentPost = (e) => {
+  const commentPost = async (e) => {
     e.preventDefault();
-    // if (val.comment && val.firstName && val.lastName && id) {
-    if (val.comment && val.firstName && val.lastName && id && ip && rating) {
-      const fetchCommentPost = fetch(
-        // `${process.env.REACT_APP_URL}/api/comments`,
-        `https://cv-back-25.vercel.app/api/comments`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(commentToPost),
-        }
+
+    if (!val.comment || !val.firstName || !val.lastName || !id || !ip) {
+      borderRedFunc();
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://localhost:4000/api/projects/comment`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(commentToPost),
+      });
+
+      if (!res.ok) throw new Error("Erreur lors de l'ajout du commentaire");
+
+      const { project } = await res.json();
+
+      // 🔹 reconstruit les commentaires du projet
+      const updatedComments = { ...comments };
+      updatedComments[id] = project.comments;
+
+      // 🔹 mise à jour Redux
+      dispatch(
+        setProjectData({
+          comments: updatedComments,
+          ratings: { ...ratings, [id]: ratingToSend },
+          userRatingsByIp: { ...userRatingsByIp, [id]: ratingToSend },
+          ratingRedux: ratingToSend, // 🔥 garde la bonne note
+        })
       );
 
-      const cleanAndRefresh = async () => {
-        await fetchCommentPost;
-        resetValues();
-        setStatePage((prev) => prev + 1); // global pour rating
-        setLocalStatePage((prev) => prev + 1); // local pour commentaires
-      };
-      cleanAndRefresh();
-    } else {
-      borderRedFunc();
+      resetValues();
+    } catch (err) {
+      console.error("Erreur NewComment :", err);
     }
   };
 
@@ -71,41 +92,40 @@ export default function NewComment({
       id="comment_form"
       className="p-3 s:p-5 w-full h-auto flex justify-center items-center rounded-[10px] z-999 bg-white"
     >
-      <div className="w-[23%] h-auto flex flex-col mr-2 ">
-        {/* -----LN-------- */}
+      <div className="w-[23%] h-auto flex flex-col mr-2">
         <input
           id="comment_LN"
           onChange={matchLN}
-          className={`w-full h-full p-[5px]  border-none rounded-[5px] text-black  text-sm sm:text-base bg-[#f1f1f1] mb-[10px] ${
-            borderRed.lastName && "border-red"
+          className={`w-full h-full p-[5px] border-none rounded-[5px] text-black bg-[#f1f1f1] mb-[10px] ${
+            borderRed.lastName ? "border-red" : ""
           }`}
           type="text"
           placeholder="Nom..."
         />
-        {/* ------FN--------*/}
         <input
           id="comment_FN"
           onChange={matchFN}
-          className={`w-full h-full p-[5px]  border-none rounded-[5px] text-black  text-sm sm:text-base bg-[#f1f1f1]  ${
-            borderRed.firstName && "border-red"
+          className={`w-full h-full p-[5px] border-none rounded-[5px] text-black bg-[#f1f1f1] ${
+            borderRed.firstName ? "border-red" : ""
           }`}
           type="text"
           placeholder="Prénom..."
         />
       </div>
-      <div className="w-[75%] h-auto flex items-center border-[1px] border-solid border-black rounded-[5px] bg-[#f1f1f1]">
+
+      <div className="w-[75%] h-auto flex items-center border border-black rounded-[5px] bg-[#f1f1f1]">
         <textarea
           id="comment_textarea"
           onChange={matchComment}
-          className={`w-full h-full p-[10px] text-sm sm:text-base resize-none flex items-center  rounded-[5px] bg-[#f1f1f1] ${
-            borderRed.comment && "border-red"
+          className={`w-full h-full p-[10px] text-sm sm:text-base resize-none rounded-[5px] bg-[#f1f1f1] ${
+            borderRed.comment ? "border-red" : ""
           }`}
-          type="text"
           placeholder="Laissez un commentaire..."
         />
+
         <button
           type="submit"
-          className="btn-icon mr-2 w-7 h-7  s:w-9 s:h-9 px-1 ml-2"
+          className="btn-icon mr-2 w-7 h-7 s:w-9 s:h-9 px-1 ml-2"
           onClick={commentPost}
         >
           <AiOutlineSend className="w-6 h-6" />

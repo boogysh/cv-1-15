@@ -3,7 +3,7 @@ import logo_tel from "../assets/logos/telephone.png";
 import logo_gmail from "../assets/logos/gmail.png";
 import logo_linkedin from "../assets/logos/linkedin.png";
 import { useSelector } from "react-redux";
-import  FooterAgreggateRange  from "./FooterAgreggateRange";
+import FooterAgreggateRange from "./FooterAgreggateRange";
 
 function Footer() {
   const { t } = useSelector((state) => state.langReducer);
@@ -59,13 +59,13 @@ function Footer() {
         </div>
         <h5 className=" text-base md:text-[18px]    text-white font-dancing">
           &copy; {t.footer_p1}
-          <span className="h5_footer_span">v_1.17</span>
+          <span className="h5_footer_span">v_1.18</span>
         </h5>
         <div className="project-footer mt-2">
           <FooterAgreggateRange />
         </div>
         <h5 className="text-[12px] md:text-base pb-4 text-white font-dancing">
-          {t.footer_p2} : <span className="h5_footer_span">08/11/2025</span>{" "}
+          {t.footer_p2} : <span className="h5_footer_span">17/11/2025</span>{" "} 
         </h5>
       </footer>
     )

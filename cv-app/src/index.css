@@ -57,11 +57,13 @@
   }
   /* bg nav - items */
   .bg-arch {
-    background-image: url(/src/assets/pr-arch/pr1-2x-2-1.jpg);
+    /* background-image: url(/src/assets/pr-arch/pr1-2x-2-1.jpg); */
+    background-image: url(/src/assets/pr-arch/pr1-2x-2-1.webp);
   }
   /* ------BATIMENT ---------*/
   .bg-bat {
-    background-image: url(/src/assets/pr-bat/3.jpg);
+    /* background-image: url(/src/assets/pr-bat/3.jpg); */
+    background-image: url(/src/assets/pr-bat/3.webp);
   }
   .bg-bat-onload {
     background-image: url(/src/assets/pr-bat/3-7.jpg);

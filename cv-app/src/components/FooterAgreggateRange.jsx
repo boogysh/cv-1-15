@@ -10,7 +10,7 @@ const FooterAgreggateRange = () => {
   const {
     totalAverage = 0,
     totalVotes = 0,
-  } = useSelector((state) => state.ratingReducer || {});
+  } = useSelector((state) => state.projectReducer || {});
   // console.log('totalAvg',totalAverage)
   // console.log("Footer updated:", totalAverage, totalVotes);
   

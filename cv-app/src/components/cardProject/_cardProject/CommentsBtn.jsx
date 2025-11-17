@@ -1,56 +1,36 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import commentIcon from "../../../assets/comment1.png";
-import { UseFetch_filtered_comments } from "../../../hooks/useFetch_filtered_comments";
+// import { UseFetch_filtered_comments } from "../../../hooks/useFetch_filtered_comments";
 import CommentsModal from "./CommentsModal";
 
-const CommentsBtn = ({ id, ip, title, showComments, setShowComments, statePage, setStatePage, myIpList }) => {
-  const [statePageComments, setStatePageComments] = useState(0);
+const CommentsBtn = ({ id, ip, showComments, setShowComments }) => {
+  const { comments } = useSelector((state) => state.projectReducer || {});
 
-  const lastUpdate = useSelector((state) => state.ratingReducer.lastUpdate);
-
-  // Re-fetch automatique à chaque update
-  useEffect(() => {
-    setStatePageComments((prev) => prev + 1);
-  }, [lastUpdate]);
-
-  const { isLoadingComments, commentsList } = UseFetch_filtered_comments(
-    // `${process.env.REACT_APP_URL}/api/comments`,
-    `https://cv-back-25.vercel.app/api/comments`,
-    id,
-    statePageComments
-  );
+  // console.log('commentsList',comments[id] )
 
   return (
     <div className="flex items-center">
-      <button onClick={() => setShowComments(!showComments)} className="btn-icon">
-        <img src={commentIcon} className="w-5 h-6 s:w-[22px] s:h-[26px]" alt="comments" />
+      <button
+        onClick={() => setShowComments(!showComments)}
+        className="btn-icon"
+      >
+        <img
+          src={commentIcon}
+          className="w-5 h-6 s:w-[22px] s:h-[26px]"
+          alt="comments"
+        />
       </button>
-      <span className="pl-1 text-sm s:text-base">{commentsList.length}</span>
+      <span className="pl-1 text-sm s:text-base">{comments[id]?.length}</span>
 
       {showComments && (
-        <CommentsModal
-          setShowComments={setShowComments}
-          comments={commentsList}
-          isLoading={isLoadingComments}
-          statePage={statePage}
-          setStatePage={setStatePage}
-          localStatePage={statePageComments}
-          setLocalStatePage={setStatePageComments}
-          title={title}
-          id={id}
-          ip={ip}
-          myIpList={myIpList}
-        />
+        <CommentsModal setShowComments={setShowComments} id={id} ip={ip} />
       )}
     </div>
   );
 };
 
 export default CommentsBtn;
-
-
-
 
 // import React, { useState } from "react";
 // import comment from "../../../assets/comment1.png";
@@ -117,5 +97,3 @@ export default CommentsBtn;
 // };
 
 // export default CommentsBtn;
-
-

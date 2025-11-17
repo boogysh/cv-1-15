@@ -14,14 +14,30 @@ import OneProject from "./pages/OneProject";
 import Services from "./pages/Services";
 import Building from "./pages/Building";
 import Messages from "./pages/Messages";
-import { useSelector } from "react-redux";
 import Diplomes from "./pages/Diplomes";
-// import Test from "./pages/Test.jsx";
+import { useFetchProjectData } from "./hooks/useFetchProjectData";
+import { useSelector } from "react-redux";
+import Loader from "./components/loader/Loader";
 
 function App() {
   const { t } = useSelector((state) => state.langReducer);
+  const { isLoading } = useSelector((state) => state.projectReducer || {});
+
+  // 🔹 Fetch global des projets (hook custom)
+  // useFetchProjectData("http://localhost:4000/api/projects");
+  useFetchProjectData("https://cv-back-25.vercel.app/api/projects");
+
+  //🔹 Afficher loader si traduction ou projets non prêts
+  if (!t || isLoading) {
+    return (
+      <div className="flex  items-center justify-center w-full h-screen">
+        <Loader />
+      </div>
+    );
+  }
+
+  //🔹 Rendu principal
   return (
-    // <Router basename="/cv/">
     <Router>
       <Header />
       <Routes>
@@ -29,13 +45,11 @@ function App() {
           index
           element={<Navigate replace to={`/${t.locale}/${t.archNav}`} />}
         />
-        {/* <Route path={`/${t.locale}`} element={<Architecture />} /> */}
         <Route
           path={`/${t.locale}`}
           element={<Navigate replace to={`/${t.locale}/${t.archNav}`} />}
         />
         <Route path={`/defaultsite`} element={<Architecture />} />
-
         <Route path={`/${t.locale}/${t.archNav}`} element={<Architecture />} />
         <Route
           path={`/${t.locale}/${t.archNav}/:id`}

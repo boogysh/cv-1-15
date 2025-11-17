@@ -6,7 +6,9 @@ import ButtonContactMe from "./contact/ButtonContactMe.jsx";
 import HeaderBurger from "./header-burger/HeaderBurger";
 import LangSelect from "./langSelect";
 import { useSelector } from "react-redux";
-import logo from "../assets/logo-boogysh-construction-2-70.png";
+// import logo from "../assets/logo-boogysh-construction-2-70.png";  // 768ko
+// import logo from "../assets/logo-boogysh-construction-2-70-2.png";   // 83ko
+import logo from "../assets/logo-boogysh-construction-2-70.webp";   // 38ko
 // import Header3ImagesBgLoading from "./Header_3_Images_bg_loading.jsx";
 
 function Header() {
@@ -115,8 +117,6 @@ function Header() {
       mainCv?.classList.remove("pt-fixed");
     };
 
-
-
     const scrollFunction = () => {
       const scroll = document.documentElement.scrollTop;
       const burger_menu_isBlocked = navBar?.classList.contains("fixed-top");
@@ -186,7 +186,6 @@ function Header() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-auto bg-[--bg_body] ">
-
       <div className={style.container}>
         <div
           id="archHighDiv"

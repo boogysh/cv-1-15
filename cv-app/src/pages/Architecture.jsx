@@ -1,17 +1,18 @@
 import CardProject from "../components/cardProject/CardProject";
 import Banner from "../components/Banner";
-// import banner from "../assets/pr-arch/front-1200.jpg";
-// import banner from "../assets/pr-arch/front-1200-1.jpg";
-import banner from "../assets/pr-arch/front-new-lg-q8.jpg";
+import banner from "../assets/pr-arch/front-new-lg-q8.webp";
 import { useSelector } from "react-redux";
+// import { useMemo } from "react";
 
 export default function Architecture() {
   const { t } = useSelector((state) => state.langReducer);
 
+  // const cardArch = useMemo(() => t.cardArch, [t.cardArch]);
+
+  // 🔹 Préparer les firstImages dès que cardArch change
+
   return (
-    <main className="flex flex-col items-center bg-bg_body  main-scroll">
-      {/* // <main className="flex flex-col items-center main-scroll bg-gradient-to-b from-[#f9f5f0] to-[#f3ede7]">
-    // <main className="flex flex-col items-center main-scroll bg-gradient-to-b from-[#fff7f7] via-[#eeeeee] to-[#dacece]"> */}
+    <main className="flex flex-col items-center bg-bg_body  main-scroll min-h-[70%]">
       <Banner src={banner} title={t.archTitle} />
       <h2 className="w-full text-center font-black text-[24px] md:text-[30px] lg:text-[44px] p-4 md:p-8 lg:pd-10 mt-3">
         {t.archTitle2}{" "}
