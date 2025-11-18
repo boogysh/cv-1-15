@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 const FooterAgreggateRange = () => {
   //  console.log("🔄 FooterAgreggateRange render"); // <-- Ajoute ce log ici
 
-  console.log("footer-----");
+  // console.log("footer-----");
 
   const {
     totalAverage = 0,

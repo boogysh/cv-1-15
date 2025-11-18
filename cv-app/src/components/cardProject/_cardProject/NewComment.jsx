@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useFormComment from "../../../hooks/useForm/useFormComment";
 import { AiOutlineSend } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,26 +21,24 @@ export default function NewComment({ id }) {
     matchComment,
   } = useFormComment();
 
-  /**
-   * 🔥 LA NOTE À ENVOYER
-   * 1) si ratingRedux existe → priorité
-   * 2) sinon si userRatingsByIp[id] existe → fallback
-   * 3) sinon → 0
-   */
-  const ratingToSend =
-    ratingRedux !== undefined
-      ? ratingRedux
-      : userRatingsByIp?.[id] !== undefined
-      ? userRatingsByIp[id]
-      : 0;
+  /* 🔥 LA NOTE À ENVOYER AU DEMARRAGE */
+  const initialRatingExist = ratingRedux === 0 && userRatingsByIp[id] > 0;
+  useEffect(() => {
+    dispatch(
+      setProjectData({
+        ratingRedux: initialRatingExist ? userRatingsByIp[id] : ratingRedux,
+      })
+    );
+  }, [id, userRatingsByIp, dispatch, initialRatingExist, ratingRedux]);
+
+  
 
   const commentToPost = {
     firstName: val.firstName,
     lastName: val.lastName,
     commentTxt: val.comment,
     project: id,
-    // rating: ratingRedux !== 0 ? ratingRedux : ratingToSend,
-    rating: ratingRedux ,
+    rating: ratingRedux,
     ip,
   };
 
@@ -58,11 +56,14 @@ export default function NewComment({ id }) {
 
     try {
       // const res = await fetch(`http://localhost:4000/api/projects/comment`, {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/comment`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(commentToPost),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/projects/comment`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(commentToPost),
+        }
+      );
 
       if (!res.ok) throw new Error("Erreur lors de l'ajout du commentaire");
 
@@ -76,9 +77,8 @@ export default function NewComment({ id }) {
       dispatch(
         setProjectData({
           comments: updatedComments,
-          ratings: { ...ratings, [id]: ratingToSend },
-          userRatingsByIp: { ...userRatingsByIp, [id]: ratingToSend },
-          ratingRedux: ratingToSend, // 🔥 garde la bonne note
+          ratings: { ...ratings, [id]: ratingRedux },
+          userRatingsByIp: { ...userRatingsByIp, [id]: ratingRedux },
         })
       );
 

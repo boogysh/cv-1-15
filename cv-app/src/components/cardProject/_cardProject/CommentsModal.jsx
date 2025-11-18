@@ -10,7 +10,7 @@ import formatProjectsForRedux from "../../../utils/helperRedux";
 
 const CommentsModal = ({ setShowComments, id }) => {
   const dispatch = useDispatch();
-  const { ip, comments, myIpList, ratingRedux } = useSelector(
+  const { ip, comments, myIpList, ratingRedux, } = useSelector(
     (state) => state.projectReducer || {}
   );
   const { t } = useSelector((state) => state.langReducer || {});

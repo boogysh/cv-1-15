@@ -19,21 +19,13 @@ const CardProject = ({
   urlExistent,
   technos,
 }) => {
-  //  console.count(`cardProject-${id}`);
-  console.count(`cardProject`);
-  // console.count(`Render <CardProject id=${id}>`);
+  // console.count(`cardProject`);
 
   const [uri, setUri] = useState();
-  // const [ip, setIp] = useState("");
 
   const [moreInfo, setMoreInfo] = useState(false);
   const { t } = useSelector((state) => state.langReducer);
   const hrefDev = window.location.href.includes(t.devNav);
-
-  // const { ratings, ip } = useSelector((state) => state.projectReducer || {});
-
-  // //Récupération de la moyenne du projet courant
-  // const ratingAverage = ratings[id] || 0;
 
   //------------------------
   // ✅ Valeurs spécifiques à cette carte
@@ -103,7 +95,7 @@ const CardProject = ({
                   {ratingAverage}
                 </span>
               </div>
-              <Slider slides={images}  />
+              <Slider slides={images} />
             </div>
 
             {hrefDev && (

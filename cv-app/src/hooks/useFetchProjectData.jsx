@@ -20,7 +20,7 @@ export const useFetchProjectData = (url) => {
   useEffect(() => {
     fetchIp(axios).then((result) => {
       setIp(result);
-      console.log("ip", result);
+      // console.log("ip", result);
     });
   }, []);
 

@@ -24,7 +24,7 @@ exports.getAllProjects = async (req, res) => {
   try {
     const { projectId } = req.query;
     const query = projectId ? { _id: projectId } : {};
-    const projects = await Project.find(query).sort({ _id: -1 }).lean();
+    const projects = await Project.find(query).sort({ _id: 1 }).lean();
     res.status(200).json(projects);
   } catch (error) {
     console.error("Erreur getAllProjects:", error);
