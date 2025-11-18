@@ -31,7 +31,8 @@ const ratePost = async (value) => {
 
   try {
     // 1️⃣ PATCH pour la note globale (existante)
-    const res = await fetch("http://localhost:4000/api/projects/rate", {
+    // const res = await fetch("http://localhost:4000/api/projects/rate", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/rate`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ project: id, ip, rating: value, }),
@@ -39,7 +40,8 @@ const ratePost = async (value) => {
     if (!res.ok) throw new Error("Erreur PATCH /rate");
 
     // 2️⃣ Re-fetch projets pour mettre à jour Redux
-    const projectRes = await fetch("http://localhost:4000/api/projects");
+    // const projectRes = await fetch("http://localhost:4000/api/projects");
+    const projectRes = await fetch(`${process.env.REACT_APP_API_URL}/projects`);
     if (!projectRes.ok) throw new Error("Erreur fetch projets après vote");
     const projectData = await projectRes.json();
     const projectsArray = Array.isArray(projectData) ? projectData : projectData.projects || [];
@@ -52,7 +54,8 @@ const ratePost = async (value) => {
       .map(c => ({ _id: c._id, rating: value }));
 
     if (commentsToUpdate.length > 0) {
-      await fetch(`http://localhost:4000/api/projects/comments/rate`, {
+      // await fetch(`http://localhost:4000/api/projects/comments/rate`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/projects/comments/rate`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         // body: JSON.stringify({ projectId: id, comments: commentsToUpdate }),

@@ -25,7 +25,8 @@ function App() {
 
   // 🔹 Fetch global des projets (hook custom)
   // useFetchProjectData("http://localhost:4000/api/projects");
-  useFetchProjectData("https://cv-back-25.vercel.app/api/projects");
+  // useFetchProjectData("https://cv-back-25.vercel.app/api/projects");
+  useFetchProjectData(`${process.env.REACT_APP_API_URL}/projects`);
 
   //🔹 Afficher loader si traduction ou projets non prêts
   if (!t || isLoading) {

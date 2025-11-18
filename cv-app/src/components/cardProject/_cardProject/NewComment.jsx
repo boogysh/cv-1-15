@@ -57,7 +57,8 @@ export default function NewComment({ id }) {
     }
 
     try {
-      const res = await fetch(`http://localhost:4000/api/projects/comment`, {
+      // const res = await fetch(`http://localhost:4000/api/projects/comment`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/comment`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(commentToPost),

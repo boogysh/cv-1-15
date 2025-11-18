@@ -28,7 +28,8 @@ const LikeBtn = ({ ip, id }) => {
     setLoading(true);
     try {
       // Toggle like/dislike sur le backend
-      const res = await fetch("http://localhost:4000/api/projects/like", {
+      // const res = await fetch("http://localhost:4000/api/projects/like", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/like`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ project: id, ip }),
