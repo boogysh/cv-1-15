@@ -10,7 +10,9 @@ const Comments = ({ comments }) => {
   if (isLoading) return <Loader />;
   return (
     <div className="mt-[0.5rem]">
-      {comments.map((comment) => (
+      {/* {comments.map((comment) => ( */}
+      {comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+      .map((comment) => (
         <div
           key={comment._id || uuidv4()}
           className="p-1 sm:p-[10px] mt-[15px] mx-2 bg-[#f1f1f1] rounded-[10px]"
