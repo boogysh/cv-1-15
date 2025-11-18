@@ -10,8 +10,8 @@ const applySecurityMiddleware = require("./middlewares/security");
 // ✅ Import des routes
 // const likeRoutes = require("./routes/like");
 // const commentRoutes = require("./routes/comment");
-// const messageRoutes = require("./routes/message");
 // const ratingRoutes = require("./routes/rating");
+const messageRoutes = require("./routes/message");
 const projectRoutes = require("./routes/project");
 
 const app = express();
@@ -39,8 +39,8 @@ applySecurityMiddleware(app);
 // ✅ Routes
 // app.use("/api/likes", likeRoutes);
 // app.use("/api/comments", commentRoutes);
-// app.use("/api/messages", messageRoutes);
 // app.use("/api/ratings", ratingRoutes);
+app.use("/api/messages", messageRoutes);
 app.use("/api/projects", projectRoutes);
 
 // ✅ Lancement serveur

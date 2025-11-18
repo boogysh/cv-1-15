@@ -32,8 +32,8 @@ const MessagesList = ({
 
   // DELETE MESSAGE
   const deleteMessage = async (id) => {
-    // await fetch(`${process.env.REACT_APP_URL}/api/messages/${id}`, {
-    await fetch(`https://cv-back-25.vercel.app/api/messages/${id}`, {
+    // await fetch(`https://cv-back-25.vercel.app/api/messages/${id}`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/messages/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

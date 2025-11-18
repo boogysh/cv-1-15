@@ -66,8 +66,8 @@ const FormContact = () => {
     // console.log("boderRED", borderRed);
     if (allValues) {
       const savedMessagePost = fetch(
-        // `${process.env.REACT_APP_URL}/api/messages`,
-        `https://cv-back-25.vercel.app/api/messages`,
+        // `https://cv-back-25.vercel.app/api/messages`,
+         `${process.env.REACT_APP_API_URL}/messages`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

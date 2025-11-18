@@ -9,11 +9,12 @@ export default function Messages() {
 
   //---------------------FETCH---------------------------------
   const { isLoading, data2 } = UseFetch2(
-    // `https://cv-back-git-main-boogysh.vercel.app/api/comments`,
-    // `${process.env.REACT_APP_URL}/api/messages`,
-    `https://cv-back-25.vercel.app/api/messages`,
+    // `https://cv-back-25.vercel.app/api/messages`,
+      `${process.env.REACT_APP_API_URL}/messages`,
     messagesUpdate
   );
+
+  console.log("data2",data2)
 
   return (
     <main className="min-h-[600px] bg-bg_body  flex flex-col w-auto ">
