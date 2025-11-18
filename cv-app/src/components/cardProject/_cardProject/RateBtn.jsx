@@ -80,7 +80,7 @@ const ratePost = async (value) => {
       ...reduxPayload,
       comments: updatedComments,
       ratings: { ...reduxPayload.ratings, [id]: newAverage },
-      ratingsCount: { ...reduxPayload.ratingsCount, [id]: updatedComments[id].length },
+      // ratingsCount: { ...reduxPayload.ratingsCount, [id]: updatedComments[id].length },
       userRatingsByIp: { ...reduxPayload.userRatingsByIp, [id]: value },
       ratingRedux: value,
     }));
@@ -97,7 +97,7 @@ const ratePost = async (value) => {
     <div className="w-auto h-auto">
       <div className="flex items-center px-4 w-auto h-auto mr-auto">
         <StarRating rating={selectedValue} handlePost={ratePost} />
-        <span className="pl-2 text-sm s:text-base">{ratingsCount?.[id]}</span>
+        <span className="pl-2 text-sm s:text-base">{ratingsCount?.[id] || 0}</span>
       </div>
     </div>
   );
