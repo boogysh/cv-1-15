@@ -3,8 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 import Loader from "../loader/LoaderMessages";
 import { MdDelete } from "react-icons/md";
 import { BsThreeDots } from "react-icons/bs";
-// import { UseFetch } from "../../hooks/useFetch";
-// import { UseFetch2 } from "../../hooks/useFetch2";
 
 const MessagesList = ({
   messages,
@@ -12,15 +10,7 @@ const MessagesList = ({
   messagesUpdate,
   setMessagesUpdate,
 }) => {
-  // const MessagesList = () => {
-  // const [messagesUpdate, setMessagesUpdate] = useState(0);
-
-  // const { data2, isLoading } = UseFetch2(
-  //   // `${process.env.REACT_APP_URL}/api/messages`,
-  //   `https://cv-back-25.vercel.app/api/messages`,
-  //   messagesUpdate
-  // );
-  // const messages = data2;
+  
 
   const [open, setOpen] = useState(Array.from(messages, () => false));
   const toggle = (index, value) => {
@@ -46,7 +36,7 @@ const MessagesList = ({
 
   //
   return (
-    <div className="mb-5  ml-auto">
+    <div className="mb-5  ml-auto h-auto">
       {messages.map((message, idx) => {
         // return <Loader  />
         // ) : (
@@ -72,8 +62,6 @@ const MessagesList = ({
                 <strong className="pl-2">Email:</strong> {message.email}
               </div>
             </div>
-            {/* <p className="pl-[10px] w-95% max-w-[700px]"> */}
-            {/* <p className="pl-[10px] w-full ">{message.messageTxt}</p> */}
             <p className="p-[10px] pt-4 w-95% max-w-[700px] ">   
               {message.messageTxt}
             </p>
@@ -86,7 +74,6 @@ const MessagesList = ({
               {open[idx] && (
                 <button
                   key={uuidv4()}
-                  // onClick={() => findMessageToDelete(message._id)}
                   onClick={() => deleteMessage(message._id)}
                   className={`w-7 h-7 flex ml-px mr-4 justify-center items-center rounded-full `}
                 >
@@ -95,7 +82,6 @@ const MessagesList = ({
               )}
               <button
                 key={uuidv4()}
-                // isOpen={open[idx]}
                 onClick={() => toggle(idx)}
                 className={`w-7 h-7 flex  justify-center items-center rounded-full `}
               >

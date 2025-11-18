@@ -25,7 +25,7 @@ const corsOptions = {
 // ✅ Limiteur de requêtes (500 requêtes / 15 min / IP)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 10000,   //500
+  max: 500,   //500
   standardHeaders: true,
   legacyHeaders: false,
   message: "Trop de requêtes depuis cette IP. Réessayez plus tard.",
