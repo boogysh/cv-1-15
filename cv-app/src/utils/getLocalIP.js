@@ -25,16 +25,49 @@ export async function getLocalIP() {
   });
 }
 
+// export async function fetchIp(axios) {
+//   try {
+//     const res = await axios.get("https://api.ipify.org?format=json");
+//     if (res?.data?.ip) {
+//       // console.log("ip+++++++", res.data.ip);
+//       return res.data.ip; // ✅ "data" et non "date"
+//     }
+//     return null;
+//   } catch (err) {
+//     console.error("Erreur récupération IP:", err);
+//     return null;
+//   }
+// }
+
 export async function fetchIp(axios) {
-  try {
-    const res = await axios.get("https://api.ipify.org?format=json");
-    if (res?.data?.ip) {
-      // console.log("ip+++++++", res.data.ip);
-      return res.data.ip; // ✅ "data" et non "date"
+  const providers = [
+    // 1️⃣ ipify : le plus rapide
+    async () => {
+      const res = await axios.get("https://api.ipify.org?format=json");
+      return res?.data?.ip || null;
+    },
+
+    // 2️⃣  ident.me IPv4 : dernier recours
+    //
+    async () => {
+      const res = await axios.get("https://v4.ident.me");
+      return res?.data?.trim() || null;
+    },
+    // 3️⃣ geolocation-db : renvoie IPv4
+    async () => {
+      const res = await axios.get("https://geolocation-db.com/json/");
+      return res?.data?.IPv4 || null;
+    },
+  ];
+
+  for (const provider of providers) {
+    try {
+      const ip = await provider();
+      if (ip) return ip;
+    } catch (err) {
+      console.error("Erreur provider IP :", err);
     }
-    return null;
-  } catch (err) {
-    console.error("Erreur récupération IP:", err);
-    return null;
   }
+
+  return null;
 }
