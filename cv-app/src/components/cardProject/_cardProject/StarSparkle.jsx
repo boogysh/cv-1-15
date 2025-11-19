@@ -4,7 +4,8 @@ const StarSparkle = ({color}) => {
   return (
     <div className="spark-container">
       {/* 🌟 éclats dorés avec dispersion aléatoire */}
-      {[...Array(10)].map((_, i) => {
+      {/* {[...Array(10)].map((_, i) => { */}
+      {[...Array(23)].map((_, i) => {
         const randomX1 = (Math.random() * 50 - 25).toFixed(0) + "px";
         const randomY1 = (-15 - Math.random() * 20).toFixed(0) + "px";
         const randomX2 = (Math.random() * 50 - 25).toFixed(0) + "px";

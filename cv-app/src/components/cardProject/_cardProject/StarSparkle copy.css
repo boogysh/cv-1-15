@@ -62,10 +62,8 @@
 /* Chaque éclat */
 .spark {
   position: absolute;
-  /* width: 6px;
-  height: 6px; */
-  width: 4.5px;
-  height: 4.5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   opacity: 0;
   animation: sparkFly 1.2s ease-out forwards;

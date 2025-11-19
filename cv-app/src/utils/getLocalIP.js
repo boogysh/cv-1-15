@@ -25,19 +25,7 @@ export async function getLocalIP() {
   });
 }
 
-// export async function fetchIp(axios) {
-//   try {
-//     const res = await axios.get("https://api.ipify.org?format=json");
-//     if (res?.data?.ip) {
-//       // console.log("ip+++++++", res.data.ip);
-//       return res.data.ip; // ✅ "data" et non "date"
-//     }
-//     return null;
-//   } catch (err) {
-//     console.error("Erreur récupération IP:", err);
-//     return null;
-//   }
-// }
+
 
 export async function fetchIp(axios) {
   const providers = [
