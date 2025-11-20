@@ -1,7 +1,7 @@
 import React from "react";
 import "./StarSparkle.css";
 
-export default function StarSparkle({ color,sparkExplodeZone}) {
+export default function StarSparkle({ color }) {
   const sparks = Array.from({ length: 500 });
 
   return (
@@ -13,7 +13,7 @@ export default function StarSparkle({ color,sparkExplodeZone}) {
         return (
           <span
             key={i}
-            className={`spark ${color} ${sparkExplodeZone}`}
+            className={`spark ${color}`}
             style={{
               "--tx": `${Math.cos(angle) * distance}px`,
               "--ty": `${Math.sin(angle) * distance}px`,

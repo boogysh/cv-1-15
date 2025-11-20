@@ -1,13 +1,6 @@
-/* Couleur du like */
-.sparkle-like {
-  background: radial-gradient(circle, #cbc2bf 0%, #cebfbf 40%, #c9b3b3 100%);
-  box-shadow: 0 0 6px #ebdede, 0 0 12px #a58d8d;
-}
 .pop-like {
   animation: popScaleLike 0.8s ease-in-out forwards;
 }
-
-
 
 @keyframes popScaleLike {
   0% {
@@ -36,11 +29,6 @@
 
 /* Animation des éclats avec translation X/Y large et aléatoire */
 
-/* glow léger au hover */
-button:hover svg {
-  filter: drop-shadow(0 2px 8px rgba(250, 204, 21, 0.2));
-}
-
 /* 500 étincelles dispersées */
 /* COULEURS DES ÉTINCELLES                       */
 .sparkle-gold {
@@ -58,14 +46,6 @@ button:hover svg {
   pointer-events: none;
 }
 
-.spark-explode-zone-like {
-  position: absolute;
-  top: 180px; /* explosion 50px plus haut */
-  left: 40%;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
 /* ÉTINCELLES                                    */
 /* --------------------------------------------- */
 .spark {
@@ -75,7 +55,7 @@ button:hover svg {
   border-radius: 50%;
   opacity: 0;
   /* animation: sparkExplosion 1.2s ease-out forwards; */
-  animation: sparkExplosion 1.2s  linear;
+  animation: sparkExplosion 1.2s linear;
 }
 
 @keyframes sparkExplosion {
@@ -93,10 +73,6 @@ button:hover svg {
   }
 }
 
-.like-fly {
-  animation: likeFloatUp 1.2s ease;
-}
-
 .star-fly {
   animation: starFloatUp 1s ease-in-out;
 }
@@ -107,34 +83,8 @@ button:hover svg {
     opacity: 1;
   }
 
-  /* 90% {
-    transform: translate(0, -162px) scale(3);
-    opacity: 1;
-  } */
-  /* 80% {
-    transform: translate(0, -144px) scale(3);
-    opacity: 1;
-  } */
-
   100% {
     transform: translate(0, -180px) scale(3);
     opacity: 100;
-  }
-}
-
-@keyframes likeFloatUp {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-
-  90% {
-    transform: translate(150px, -180px) scale(2);
-    opacity: 1;
-  }
-
-  100% {
-    transform: translate(150px, -180px) scale(5);
-    opacity: 0;
   }
 }
