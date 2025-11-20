@@ -79,7 +79,7 @@ const RateBtn = ({ id }) => {
         );
       });
 
-      const allRatings = updatedComments[id].map((c) => c.rating);
+      // const allRatings = updatedComments[id].map((c) => c.rating);
       // const newAverage = allRatings.length
       //   ? +(allRatings.reduce((a, b) => a + b, 0) / allRatings.length).toFixed(
       //       2

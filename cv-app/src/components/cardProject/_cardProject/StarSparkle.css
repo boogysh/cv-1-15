@@ -7,16 +7,7 @@
   animation: popScaleLike 0.8s ease-in-out forwards;
 }
 
-.spark {
-  position: absolute;
-  /* width: 6px;
-  height: 6px; */
-  width: 4.5px;
-  height: 4.5px;
-  border-radius: 50%;
-  opacity: 0;
-  animation: sparkFly 1.2s ease-out forwards;
-}
+
 
 @keyframes popScaleLike {
   0% {
@@ -61,7 +52,7 @@ button:hover svg {
 /* --------------------------------------------- */
 .spark-explode-zone {
   position: absolute;
-  top: -180px; /* explosion 50px plus haut */
+  top: -170px; /* explosion 50px plus haut */
   left: 40%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -83,7 +74,8 @@ button:hover svg {
   height: 5px;
   border-radius: 50%;
   opacity: 0;
-  animation: sparkExplosion 1.2s ease-out forwards;
+  /* animation: sparkExplosion 1.2s ease-out forwards; */
+  animation: sparkExplosion 1.2s  linear;
 }
 
 @keyframes sparkExplosion {
@@ -100,11 +92,13 @@ button:hover svg {
     opacity: 0;
   }
 }
-.star-fly {
-  animation: starFloatUp 1.2s ease-in
-}
+
 .like-fly {
   animation: likeFloatUp 1.2s ease;
+}
+
+.star-fly {
+  animation: starFloatUp 1s ease-in-out;
 }
 
 @keyframes starFloatUp {
@@ -117,14 +111,14 @@ button:hover svg {
     transform: translate(0, -162px) scale(3);
     opacity: 1;
   } */
-  80% {
+  /* 80% {
     transform: translate(0, -144px) scale(3);
     opacity: 1;
-  }
+  } */
 
   100% {
-    transform: translate(0, -180px) scale(5);
-    opacity: 0;
+    transform: translate(0, -180px) scale(3);
+    opacity: 100;
   }
 }
 
