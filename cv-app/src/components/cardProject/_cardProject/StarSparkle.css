@@ -18,8 +18,6 @@
   animation: sparkFly 1.2s ease-out forwards;
 }
 
-
-
 @keyframes popScaleLike {
   0% {
     transform: scale(1);
@@ -34,8 +32,6 @@
     transform: scale(1);
   }
 }
-
-
 
 /* Conteneur des éclats */
 .spark-container {
@@ -53,8 +49,6 @@
 button:hover svg {
   filter: drop-shadow(0 2px 8px rgba(250, 204, 21, 0.2));
 }
-
-
 
 /* 500 étincelles dispersées */
 /* COULEURS DES ÉTINCELLES                       */
@@ -79,7 +73,6 @@ button:hover svg {
   left: 40%;
   transform: translateX(-50%);
   pointer-events: none;
-  
 }
 
 /* ÉTINCELLES                                    */
@@ -108,10 +101,10 @@ button:hover svg {
   }
 }
 .star-fly {
-  animation: starFloatUp 1.3s ease;
+  animation: starFloatUp 1.2s ease-in
 }
 .like-fly {
-  animation: likeFloatUp 1.3s ease;
+  animation: likeFloatUp 1.2s ease;
 }
 
 @keyframes starFloatUp {
@@ -120,13 +113,17 @@ button:hover svg {
     opacity: 1;
   }
 
-  90% {
-    transform: translate(0, -180px) scale(3);
+  /* 90% {
+    transform: translate(0, -162px) scale(3);
+    opacity: 1;
+  } */
+  80% {
+    transform: translate(0, -144px) scale(3);
     opacity: 1;
   }
 
   100% {
-    transform: translate(0, -180px) scale(8);
+    transform: translate(0, -180px) scale(5);
     opacity: 0;
   }
 }
@@ -147,4 +144,3 @@ button:hover svg {
     opacity: 0;
   }
 }
-

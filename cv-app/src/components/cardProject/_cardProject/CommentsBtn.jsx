@@ -13,7 +13,7 @@ const CommentsBtn = ({ id, ip, showComments, setShowComments }) => {
     <div className="flex items-center">
       <button
         onClick={() => setShowComments(!showComments)}
-        className="btn-icon"
+        className="btn-icon hover:border-transparent hover:bg-transparent hover:scale-125 transition-all ease-in-out"
       >
         <img
           src={commentIcon}
@@ -21,7 +21,9 @@ const CommentsBtn = ({ id, ip, showComments, setShowComments }) => {
           alt="comments"
         />
       </button>
-      <span className="pl-1 text-sm s:text-base">{comments[id]?.length || 0}</span>
+      <span className="pl-1 text-sm s:text-base">
+        {comments[id]?.length || 0}
+      </span>
 
       {showComments && (
         <CommentsModal setShowComments={setShowComments} id={id} ip={ip} />

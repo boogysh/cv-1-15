@@ -60,7 +60,7 @@ const LikeBtn = ({ ip, id }) => {
 
   return (
     <div className="flex items-center relative">
-      <button onClick={handleLikeClick} className="btn-icon ml-0 relative">
+      <button onClick={handleLikeClick} className="btn-icon hover:border-transparent hover:bg-transparent ml-0 relative hover:scale-125 transition-all ease-in-out">
         {loading ? (
           <Loader2 />
         ) : (

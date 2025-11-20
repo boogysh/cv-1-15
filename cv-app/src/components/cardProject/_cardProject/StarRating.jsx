@@ -26,7 +26,8 @@ export default function StarRating({
     // explosion
     setTimeout(() => {
       setSparkIndex(value);
-    }, 850);
+      // }, 850);
+    }, 900);
 
     // reset
     timeoutRef.current = setTimeout(() => {
@@ -54,14 +55,16 @@ export default function StarRating({
             >
               <FaStar
                 className={`
-                  w-6 h-6 
-                  ${active ? "text-yellow-400 z-10" : "text-gray-300 z-10"}
+                  w-6 h-6 z-10 hover:scale-125 transition-all ease-in-out
+                  ${active ? "text-yellow-400" : "text-gray-300"}
                   ${flyingStar === value ? "star-fly" : ""}
                 `}
               />
             </button>
 
-            {sparkIndex === value && <StarSparkle color="sparkle-gold" sparkExplodeZone="" />}
+            {sparkIndex === value && (
+              <StarSparkle color="sparkle-gold" sparkExplodeZone="" />
+            )}
           </div>
         );
       })}
