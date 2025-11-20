@@ -2,7 +2,7 @@ import React from "react";
 import "./StarSparkle.css";
 
 export default function StarSparkle({ color }) {
-  const sparks = Array.from({ length:  200});
+  const sparks = Array.from({ length:  120});
 
   return (
     <div className="spark-explode-zone">
