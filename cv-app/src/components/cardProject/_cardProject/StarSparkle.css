@@ -61,10 +61,11 @@
 
 @keyframes sparkExplosion {
   0% {
-    transform: translate(0, 0) scale(1.3);
+    /* transform: translate(0, 0) scale(1.3); */
+    transform: translate(0, 0) scale(2);
     opacity: 0;
   }
-  60% {
+  80% {
     transform: translate(var(--tx), var(--ty)) scale(0.15);
     opacity: 0.8;
   }
