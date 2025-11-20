@@ -1,14 +1,14 @@
-import { useState,  useMemo } from "react";
+import { useState, useMemo } from "react";
 import Loader2 from "../../loader/Loader2";
 import like from "../../../assets/like.png";
 import like2 from "../../../assets/like3.png";
-import StarSparkle from "./StarSparkle";
+// import StarSparkle from "./StarSparkle";
 import { useSelector, useDispatch } from "react-redux";
 import { setProjectData } from "../../../redux/projectActions";
 
 const LikeBtn = ({ ip, id }) => {
   const dispatch = useDispatch();
-  const [animate, setAnimate] = useState(false);
+  // const [animate, setAnimate] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { likes } = useSelector((state) => state.projectReducer || {});
@@ -22,18 +22,21 @@ const LikeBtn = ({ ip, id }) => {
   const handleLikeClick = async () => {
     if (!ip || !id) return;
 
-    setAnimate(true);
-    setTimeout(() => setAnimate(false), 1500);
+    // setAnimate(true);
+    // setTimeout(() => setAnimate(false), 1500);
 
     setLoading(true);
     try {
       // Toggle like/dislike sur le backend
       // const res = await fetch("http://localhost:4000/api/projects/like", {
-      const res = await fetch(`${process.env.REACT_APP_API_URL}/projects/like`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ project: id, ip }),
-      });
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/projects/like`,
+        {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ project: id, ip }),
+        }
+      );
 
       if (!res.ok) throw new Error("Erreur lors de la mise à jour du like");
 
@@ -67,7 +70,12 @@ const LikeBtn = ({ ip, id }) => {
             alt="like"
           />
         )}
-        {animate && <StarSparkle color={"sparkle-like"} />}
+        {/* {animate && (
+          <StarSparkle
+            color={"sparkle-like"}
+            sparkExplodeZone={"spark-explode-zone-like"}
+          />
+        )} */}
       </button>
       <span className="pl-1 text-sm s:text-base">{ipList.length}</span>
     </div>

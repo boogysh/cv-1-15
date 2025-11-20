@@ -1,65 +1,12 @@
-/* Couleur dorée */
-.sparkle-gold {
-  background: radial-gradient(circle, #fff3b0 0%, #facc15 40%, #f59e0b 100%);
-  box-shadow: 0 0 8px #facc15, 0 0 15px #fbbf24;
-}
 /* Couleur du like */
 .sparkle-like {
   background: radial-gradient(circle, #cbc2bf 0%, #cebfbf 40%, #c9b3b3 100%);
   box-shadow: 0 0 6px #ebdede, 0 0 12px #a58d8d;
 }
-
-/* Pop de l'étoile */
-.pop-star {
-  animation: popScaleStar 0.8s ease-in-out forwards;
-}
-
-@keyframes popScaleStar {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.7) rotate(10deg);
-  }
-  60% {
-    transform: scale(1.3) rotate(-10deg);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Pop du like */
 .pop-like {
   animation: popScaleLike 0.8s ease-in-out forwards;
 }
 
-@keyframes popScaleLike {
-  0% {
-    transform: scale(1);
-  }
-  30% {
-    transform: scale(1.5) rotate(10deg);
-  }
-  60% {
-    transform: scale(1.3) rotate(-10deg);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Conteneur des éclats */
-.spark-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-/* Chaque éclat */
 .spark {
   position: absolute;
   /* width: 6px;
@@ -71,35 +18,133 @@
   animation: sparkFly 1.2s ease-out forwards;
 }
 
-/* Animation des éclats avec translation X/Y large et aléatoire */
-@keyframes sparkFly {
+
+
+@keyframes popScaleLike {
   0% {
-    transform: translate(0, 0) scale(0.6) rotate(0deg);
-    opacity: 1;
+    transform: scale(1);
   }
   30% {
-    transform: translate(var(--x1, 25px), var(--y1, -15px)) scale(1.4)
-      rotate(15deg);
-    opacity: 0.9;
+    transform: scale(1.8) rotate(10deg);
   }
   60% {
-    transform: translate(var(--x2, -25px), var(--y2, -35px)) scale(1)
-      rotate(-10deg);
-    opacity: 0.7;
-  }
-  80% {
-    transform: translate(var(--x3, 20px), var(--y3, -50px)) scale(0.8)
-      rotate(10deg);
-    opacity: 0.5;
+    transform: scale(1.3) rotate(-10deg);
   }
   100% {
-    transform: translate(var(--x4, 0px), var(--y4, -70px)) scale(0.5)
-      rotate(0deg);
-    opacity: 0;
+    transform: scale(1);
   }
 }
+
+
+
+/* Conteneur des éclats */
+.spark-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Animation des éclats avec translation X/Y large et aléatoire */
 
 /* glow léger au hover */
 button:hover svg {
   filter: drop-shadow(0 2px 8px rgba(250, 204, 21, 0.2));
 }
+
+
+
+/* 500 étincelles dispersées */
+/* COULEURS DES ÉTINCELLES                       */
+.sparkle-gold {
+  background: radial-gradient(circle, #fff5c4 0%, #facc15 40%, #e29a0b 100%);
+  box-shadow: 0 0 8px #facc15, 0 0 15px #fbbf24;
+}
+
+/* POSITION DE L’EXPLOSION                       */
+/* --------------------------------------------- */
+.spark-explode-zone {
+  position: absolute;
+  top: -180px; /* explosion 50px plus haut */
+  left: 40%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.spark-explode-zone-like {
+  position: absolute;
+  top: 180px; /* explosion 50px plus haut */
+  left: 40%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  
+}
+
+/* ÉTINCELLES                                    */
+/* --------------------------------------------- */
+.spark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkExplosion 1.2s ease-out forwards;
+}
+
+@keyframes sparkExplosion {
+  0% {
+    transform: translate(0, 0) scale(1.3);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(var(--tx), var(--ty)) scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0.02);
+    opacity: 0;
+  }
+}
+.star-fly {
+  animation: starFloatUp 1.3s ease;
+}
+.like-fly {
+  animation: likeFloatUp 1.3s ease;
+}
+
+@keyframes starFloatUp {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translate(0, -180px) scale(3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0, -180px) scale(8);
+    opacity: 0;
+  }
+}
+
+@keyframes likeFloatUp {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translate(150px, -180px) scale(2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(150px, -180px) scale(5);
+    opacity: 0;
+  }
+}
+
