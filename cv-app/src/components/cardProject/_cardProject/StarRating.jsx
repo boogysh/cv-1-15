@@ -26,8 +26,8 @@ export default function StarRating({
     // explosion
     setTimeout(() => {
       setSparkIndex(value);
-      // }, 850);
-    }, 600);
+      // }, 600);
+    }, 650);
 
     // reset
     timeoutRef.current = setTimeout(() => {
@@ -35,7 +35,6 @@ export default function StarRating({
     }, 2000);
     timeoutRef.current = setTimeout(() => {
       setFlyingStar(null);
-      // }, 1280);
     }, 1000);
   };
 
