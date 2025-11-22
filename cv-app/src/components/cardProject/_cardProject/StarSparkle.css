@@ -42,7 +42,7 @@
 /* --------------------------------------------- */
 .spark-explode-zone {
   position: absolute;
-  top: -170px; /* explosion 50px plus haut */
+  top: -160px; /* explosion 50px plus haut */
   left: 40%;
   transform: translateX(-50%);
   pointer-events: none;
@@ -52,10 +52,12 @@
 /* --------------------------------------------- */
 .spark {
   position: absolute;
-  /* width: 8px; */
-  /* height: 8px; */
-  width: 24px;
-  height: 24px;
+  /* width: 24px;
+  height: 24px; */
+  /* width: 28px;
+  height: 28px; */
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   opacity: 0;
   animation: sparkExplosion 1.2s linear;
@@ -64,14 +66,14 @@
 
 @keyframes sparkExplosion {
   0% {
-    /* transform: translate(0, 0) scale(1.3); */
     transform: translate(0, 0) scale(1);
-    opacity: 0;
+    opacity: 0.7;
   }
+
   80% {
     transform: translate(var(--tx), var(--ty)) scale(0.15);
     /* opacity: 0.8; */
-    opacity: 0.5;
+    opacity: 0.45;
   }
   100% {
     transform: translate(var(--tx), var(--ty)) scale(0.01);
