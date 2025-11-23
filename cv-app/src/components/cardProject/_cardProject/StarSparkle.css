@@ -27,15 +27,9 @@
   pointer-events: none;
 }
 
-/* Animation des éclats avec translation X/Y large et aléatoire */
-
-/* 500 étincelles dispersées */
 /* COULEURS DES ÉTINCELLES                       */
 .sparkle-gold {
-  /* background: radial-gradient(circle, #fff5c4 0%, #facc15 40%, #e29a0b 100%); */
-  /* box-shadow: 0 0 8px #facc15, 0 0 15px #fbbf24; */
   background: #facc15;
-  /* box-shadow: 0 0 4px #facc15; */
 }
 
 /* POSITION DE L’EXPLOSION                       */
@@ -50,15 +44,14 @@
 
 /* ÉTINCELLES                                    */
 /* --------------------------------------------- */
+
 .spark {
   position: absolute;
-  /* width: 24px;
-  height: 24px; */
-  /* width: 28px;
-  height: 28px; */
-  width: 14px;
-  height: 14px;
+  width: 3px;
+  height: 3px;
   border-radius: 50%;
+  /* PENTAGON */
+  /* clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
   opacity: 0;
   animation: sparkExplosion 1.2s linear;
   will-change: transform, opacity;
@@ -66,7 +59,7 @@
 
 @keyframes sparkExplosion {
   0% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(0, 0) scale(6);
     opacity: 0.7;
   }
 
