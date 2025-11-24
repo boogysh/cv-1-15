@@ -14,7 +14,7 @@ const FooterAgreggateRange = () => {
     "name": "Projets d'architecture et de rénovation - Buga Victor",
     "alternateName": "Architecture, conception, design intérieur et extérieur et tout projet de rénovation",
     "description": "Découvrez les projets d'architecture réalisés par Victor Buga — maisons contemporaines, constructions sur mesure et rénovations, notés par les visiteurs.",
-    "url": "https://boogysh.github.io/cv-api/",
+    "url": "https://victorbuga.com/fr/architecture",
     "inLanguage": "fr",
     "author": {
       "@type": "Person",
