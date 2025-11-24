@@ -46,10 +46,10 @@ const FooterAgreggateRange = () => {
     ],
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": Number(totalAverage) || 0,
-      "bestRating": Number(5),
-      "worstRating": Number(1),
-      "ratingCount": Number(totalVotes) || 0
+      "ratingValue": Number(totalAverage),
+      "bestRating":  Number(5),
+      "worstRating":  Number(1),
+      "ratingCount":  Number(totalVotes)
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
