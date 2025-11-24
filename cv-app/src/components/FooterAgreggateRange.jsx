@@ -11,27 +11,30 @@ const FooterAgreggateRange = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "Projets d'architecture et de rénovation - Buga Victor",
-    "alternateName": "Architecture, conception, design intérieur et extérieur et tout projet de rénovation",
-    "description": "Découvrez les projets d'architecture réalisés par Victor Buga — maisons contemporaines, constructions sur mesure et rénovations, notés par les visiteurs.",
-    "url": "https://boogysh.github.io/cv-api/",
-    "inLanguage": "fr",
-    "author": {
+    name: "Projets d'architecture et de rénovation - Buga Victor",
+    alternateName:
+      "Architecture, conception, design intérieur et extérieur et tout projet de rénovation",
+    description:
+      "Découvrez les projets d'architecture réalisés par Victor Buga — maisons contemporaines, constructions sur mesure et rénovations, notés par les visiteurs.",
+    url: "https://boogysh.github.io/cv-api/",
+    inLanguage: "fr",
+    author: {
       "@type": "Person",
-      "name": "Victor Buga",
-      "jobTitle": "Architecte, ingénieur, concepteur 3D. Maçon polyvalent et chef de chantier.",
-      "url": "https://www.linkedin.com/in/victor-buga"
+      name: "Victor Buga",
+      jobTitle:
+        "Architecte, ingénieur, concepteur 3D. Maçon polyvalent et chef de chantier.",
+      url: "https://www.linkedin.com/in/victor-buga",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "Boogysh Construction",
-      "logo": {
+      name: "Boogysh Construction",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://boogysh.github.io/cv-api/images/assets/logo-boogysh-construction-2.png"
-      }
+        url: "https://boogysh.github.io/cv-api/images/assets/logo-boogysh-construction-2.png",
+      },
     },
-    "image": [
-      "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-1.png",
+    image: [
+      "https://boogysh.github.io/cv-api/images/arch/pr0/pr0-1.jpg",
       "https://boogysh.github.io/cv-api/images/arch/pr1/pr1-0.jpg",
       "https://boogysh.github.io/cv-api/images/arch/pr2/pr2-1.jpg",
       "https://boogysh.github.io/cv-api/images/arch/pr3A/pr3A-3.jpg",
@@ -42,19 +45,19 @@ const FooterAgreggateRange = () => {
       "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-20.jpg",
       "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-21.jpg",
       "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.jpg",
-      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-23.jpg"
+      "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-23.jpg",
     ],
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": Number(totalAverage) || 0,
-      "bestRating": 5,
-      "worstRating": 1,
-      "reviewCount": Number(totalVotes) || 0
+      ratingValue: Number(totalAverage) || 0,
+      bestRating: Number(5),
+      worstRating: Number(1),
+      reviewCount: Number(totalVotes) || 0,
     },
-    "mainEntityOfPage": {
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://boogysh.github.io/cv-api/"
-    }
+      "@id": "https://victorbuga.com/fr/architecture",
+    },
   };
 
   return (
