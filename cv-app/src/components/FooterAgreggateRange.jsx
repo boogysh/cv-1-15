@@ -44,13 +44,13 @@ const FooterAgreggateRange = () => {
       "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-22.jpg",
       "https://boogysh.github.io/cv-api/images/bat/pr2A/pr2A-23.jpg"
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": Number(totalAverage),
-      "bestRating":  Number(5),
-      "worstRating":  Number(1),
-      "ratingCount":  Number(totalVotes)
-    },
+    // "aggregateRating": {
+    //   "@type": "AggregateRating",
+    //   "ratingValue": Number(totalAverage),
+    //   "bestRating":  Number(5),
+    //   "worstRating":  Number(1),
+    //   "ratingCount":  Number(totalVotes)
+    // },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://victorbuga.com/fr/architecture"
