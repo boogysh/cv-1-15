@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const FooterAgreggateRange = () => {
   // Récupération des données depuis Redux

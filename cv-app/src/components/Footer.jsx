@@ -59,7 +59,7 @@ function Footer() {
         </div>
         <h5 className=" text-base md:text-[18px]    text-white font-dancing">
           &copy; {t.footer_p1}
-          <span className="h5_footer_span">v_1.18</span>
+          <span className="h5_footer_span">v_1.18.1</span>
         </h5>
         <div className="project-footer mt-2">
           <FooterAgreggateRange />

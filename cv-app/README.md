@@ -74,3 +74,7 @@ Update the MongoDB structure by replacing multiple collections—likes, comments
 Add a project reducer, move all component parameters into Redux instead of passing props, and implement a single fetchProject call at startup instead of multiple fetches.
 Simplified likes and ratings logic: one IP equals one like or one rating.
 Add Vercel as the primary image host with a fallback to GitHub for each image.
+
+### 1.18.1
+
+Add react-snap
