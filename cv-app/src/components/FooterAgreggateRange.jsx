@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 
 const FooterAgreggateRange = () => {
   // Récupération des données depuis Redux
@@ -70,12 +70,12 @@ const FooterAgreggateRange = () => {
       </div>
 
       {/* Injection JSON-LD compatible SPA */}
-      <Helmet>
+      {/* <Helmet> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </Helmet>
+      {/* </Helmet> */}
     </>
   );
 };
