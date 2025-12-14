@@ -51,7 +51,7 @@ const CardProject = ({
     str?.length > num ? str.slice(0, num) + "..." : str;
 
   return (
-    <div className="relative w-[98vw] max-w-[600px] xs:w-[95vw]  h-auto rounded-[10px] mx-0 sm:mx-[20px]  mb-[20px] xs:mb-[30px]  s:mb-[40px] overflow-hidden shadow">
+    <div className="relative w-[98vw] max-w-[600px] xs:w-[95vw]  h-auto rounded-[10px] mx-0 sm:mx-[20px]  mb-[20px] xs:mb-[30px]  s:mb-[40px] overflow-hidden shadow transition-all duration-300 ease-in-out">
       <div className="w-full h-auto flex" id={id}>
         <div className="w-full h-auto flex flex-col">
           {/* TITLE */}
